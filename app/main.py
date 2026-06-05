@@ -3,12 +3,15 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import AzureOpenAI, APIConnectionError, AuthenticationError
+from langsmith import traceable
 import os
 import logging
 from dotenv import load_dotenv
 
+load_dotenv()  # must run before langsmith reads LANGCHAIN_* vars
+
 import app.pormpts as prompts
-load_dotenv()
+from app.graph import mini_promotion_graph
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -57,6 +60,8 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 
+
+
 @app.get("/")
 def read_root():
     return {"message": "Hello World"}
@@ -79,6 +84,7 @@ def parsePromotionRequest(request: ChatRequest):
     return {"reply": reply}
 
 @app.post("/chat/intent-classifier/llm")
+@traceable(name="intent-classifier", run_type="chain")
 def intent_classifier(request: ChatRequest):
     logger.info(f"request: {request}")
     message = request.message
@@ -96,6 +102,7 @@ def intent_classifier(request: ChatRequest):
 
 
 @app.post("/chat/intent-classifier/triggers/llm")
+@traceable(name="intent-triggers-classifier", run_type="chain")
 def intent_triggers_classifier(request: ChatRequest):
     logger.info(f"request: {request}")
     message = request.message
@@ -110,3 +117,20 @@ def intent_triggers_classifier(request: ChatRequest):
     reply = response.choices[0].message.content
     reply_dict = json.loads(reply)
     return {"reply": reply_dict}
+
+
+
+@app.post("/chat/mini-promotion-agent")
+@traceable(name="mini-promotion-agent", run_type="chain")
+def mini_promotion_agent(request: ChatRequest):
+    result = mini_promotion_graph.invoke({"message": request.message})
+    return {
+        "reply": {
+            "feature": result.get("feature"),
+            "tiers": result.get("tiers", []),
+            "tier_behavior": result.get("tier_behavior"),
+            "customer_eligibility": result.get("customer_eligibility", []),
+            "status": result.get("status"),
+            "blockers": result.get("blockers", []),
+        }
+    }

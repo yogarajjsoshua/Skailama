@@ -9,6 +9,7 @@ INTENTS:
 2. buy_x_get_y
 3. tiered_discount
 4. unsupported
+5. clarification
 '''
 
 EXAMPLE:
@@ -41,6 +42,7 @@ You need to do the following :
 1. classify the intent from the given intents mentioned as INTENTS in the triple encoded backticks
 2. Detect triggers from the given intents mentioned as TRIGGERS in the triple encoded backticks
 3. return the results in a JSON format 
+4. if message from the user is unfinished and needs clairty return "clarification" as intent 
 **IMPORTANT**
 for tiered_discount intents the trigger objects will be in a list called 'tiers'
 tiered_discount Example :
@@ -55,6 +57,7 @@ INTENTS:
 2. buy_x_get_y
 3. tiered_discount
 4. unsupported
+5. clarification
 '''
 '''
 TRIGGERS:
@@ -118,13 +121,22 @@ product_subtotal
 EXAMPLES
 '''
 user_query : if a user spends more than 100 dollars on a order,the user will get a free gift
-output:{
+Output Fromat:
+{
   "feature": "free_gift",
-  "trigger": {
+  tiers:[
+  {
+    "trigger": {
     "type": "cart_subtotal",
     "operator": ">=",
     "value": 100,    
+    },
+    "reward": {
+    "type": "free_gift",
+    "value": "free_gift"
+    }
   }
+  ]
 }
 '''
 
