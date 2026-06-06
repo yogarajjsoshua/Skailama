@@ -3,7 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import AzureOpenAI, APIConnectionError, AuthenticationError
-from langsmith import traceable
+from langsmith import traceable, Client as LangSmithClient
 import os
 import logging
 from dotenv import load_dotenv
@@ -49,10 +49,68 @@ def check_azure_openai_connection() -> None:
         raise RuntimeError(f"connectivity check failed: {e}") from e
 
 
+def check_langsmith_connection() -> None:
+    """Verify LangSmith API key and connectivity at startup.
+
+    Attempts to reach the LangSmith API and list projects.
+    Logs a clear message for each failure mode so you know exactly
+    what went wrong (missing key, bad key, or network issue).
+    Does NOT raise — a tracing outage should not kill the server.
+    """
+    api_key = os.getenv("LANGCHAIN_API_KEY", "")
+    tracing_enabled = os.getenv("LANGCHAIN_TRACING_V2", "false").lower() == "true"
+    project = os.getenv("LANGCHAIN_PROJECT", "default")
+
+    if not tracing_enabled:
+        logger.warning("LangSmith tracing is DISABLED (LANGCHAIN_TRACING_V2 != 'true')")
+        return
+
+    if not api_key or api_key == "YOUR_LANGSMITH_API_KEY_HERE":
+        logger.warning(
+            "LangSmith API key is not set. "
+            "Add your key to .env: LANGCHAIN_API_KEY=ls__..."
+        )
+        return
+
+    try:
+        ls_client = LangSmithClient(
+            api_url=os.getenv("LANGCHAIN_ENDPOINT", "https://api.smith.langchain.com"),
+            api_key=api_key,
+        )
+        # list_projects() makes a real HTTP call — cheapest connectivity check
+        projects = list(ls_client.list_projects())
+        project_names = [p.name for p in projects]
+        if project not in project_names:
+            logger.info(
+                f"LangSmith connected ✓  "
+                f"(project '{project}' will be auto-created on first trace)"
+            )
+        else:
+            logger.info(
+                f"LangSmith connected ✓  "
+                f"Tracing to project: '{project}'"
+            )
+    except Exception as e:
+        err = str(e)
+        if "401" in err or "Unauthorized" in err or "403" in err:
+            logger.error(
+                "LangSmith connection FAILED — invalid API key. "
+                "Check LANGCHAIN_API_KEY in your .env file."
+            )
+        elif "ConnectionError" in err or "ConnectTimeout" in err or "Name or service" in err:
+            logger.error(
+                "LangSmith connection FAILED — network error. "
+                f"Could not reach {os.getenv('LANGCHAIN_ENDPOINT', 'https://api.smith.langchain.com')}."
+            )
+        else:
+            logger.error(f"LangSmith connection FAILED — {err}")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # --- Startup ---
     check_azure_openai_connection()
+    check_langsmith_connection()
     yield
     # --- Shutdown (add cleanup here if needed) ---
 
