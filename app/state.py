@@ -9,3 +9,4 @@ class PromotionState(TypedDict):
     customer_eligibility: List[Any]
     status: str
     blockers: List[Any]
+    missing_fields: List[Any]  # populated when intent == clarification

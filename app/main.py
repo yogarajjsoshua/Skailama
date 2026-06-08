@@ -185,10 +185,11 @@ def mini_promotion_agent(request: ChatRequest):
     return {
         "reply": {
             "feature": result.get("feature"),
+            "status": result.get("status"),
+            "blockers": result.get("blockers", []),
+            "missing_fields": result.get("missing_fields", []),
             "tiers": result.get("tiers", []),
             "tier_behavior": result.get("tier_behavior"),
             "customer_eligibility": result.get("customer_eligibility", []),
-            "status": result.get("status"),
-            "blockers": result.get("blockers", []),
         }
     }

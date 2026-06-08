@@ -14,12 +14,55 @@ def intent_classification_node(state: PromotionState) -> PromotionState:
     raw = llm(INTENT_CLASSIFICATION_PROMPT, state["message"])
     result = json.loads(raw)
     state["feature"] = result.get("intent", "unsupported")
+    # initialise defaults so all downstream nodes always have valid keys
+    state["tiers"] = []
+    state["tier_behavior"] = ""
+    state["customer_eligibility"] = []
+    state["status"] = ""
+    state["blockers"] = []
+    state["missing_fields"] = []
+    return state
+
+
+@traceable(name="unsupported_node", run_type="chain")
+def unsupported_node(state: PromotionState) -> PromotionState:
+    """Terminal node for unsupported intents.
+    Builds the standard {status, blockers} response structure.
+    """
+    state["status"] = "unsupported"
+    state["blockers"] = [
+        {
+            "field": "intent",
+            "reason": (
+                f"The requested promotion type '{state.get('feature', 'unknown')}' "
+                "is not supported by this app."
+            ),
+        }
+    ]
+    return state
+
+
+@traceable(name="clarification_node", run_type="chain")
+def clarification_node(state: PromotionState) -> PromotionState:
+    """Terminal node for clarification intents.
+    Builds the standard {status, blockers} response structure listing missing fields.
+    """
+    state["status"] = "clarification"
+    state["blockers"] = [
+        {
+            "field": "intent",
+            "reason": (
+                "Your request is missing key details. "
+                "Please specify the trigger condition (e.g. spend $X, buy N items) "
+                "and the exact reward product or discount so we can configure the promotion."
+            ),
+        }
+    ]
     return state
 
 
 @traceable(name="trigger_detection_node", run_type="chain")
 def trigger_detection_node(state: PromotionState) -> PromotionState:
-    prompt = TRIGGER_ONLY_CLASSIFICATION_PROMPT + f"\nDetected intent: {state['feature']}"
     raw = llm(TRIGGER_ONLY_CLASSIFICATION_PROMPT, state["message"])
     result = json.loads(raw)
     state["tiers"] = result.get("tiers", [])

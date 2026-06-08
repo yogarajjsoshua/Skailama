@@ -1,0 +1,35 @@
+Requirement
+I need a buy X get Y free but I need to control what product gets the discount if people add more than those 2 products.
+Customer gets a free headband where they can choose the color when they reach $75 in the cart.
+Buy 2 extra 15% OFF & Buy 3 extra 25% OFF from collections (all).
+Get 15% off on one item.
+Customers receive a free gift when they spend $75 or more. The offer appears on cart/checkout and automatically adds the gift to cart with selectable variants.
+"BOGO on End of Season Sale collection. Items already 55% off. Buy 1 at 55% off, get the 2nd for $10 (lowest priced item fixed to $10)."
+"Buy 3, get the cheapest one free."
+"Spend $50 get 1 free clearance item, $75 get 2, $100 get 3, $125 get 4, $150 get 5. Cart value from all products but free items from clearance collection."
+"Tiered rewards with code 'paypal': $250 free shipping, $500 $50 off + free shipping, $1000 $100 off + free shipping + free product automatically added. Non-stacking."
+Spend RM80 and above to get 5 free items.
+Offer a free wash mitt when customers spend more than $200.
+Promotion accessible only via a special link with 10% discount on a selected collection.
+Free shipping at $99 and free gift at $119.
+Spend $250 or more and get two spa headwraps and a sticker.
+"Spend $400 get free gift MT52, spend $600 get MT52 + MT75."
+"Spend $100 get 20% off, spend $200 get a free liquid foundation."
+Customers who spend more than 50€ receive product 10432325058826 automatically added as a gift.
+"When applying a discount code, a product named 'mystery gift' is added."
+New users enter a specific code and a free gift is automatically added. Multiple codes should trigger the same action.
+"Trade fair offer with free gifts for orders above $1000, $1500, and $2000."
+Get 20% off Final Fantasy VII Rebirth with code FFVII.
+"Buy 1 for $20 get 1 free for shirts in one collection, and BOGO for socks in another collection."
+Free water bottle with a discount code.
+Gift card code gives a free bag of coffee and free shipping (code: freecoffee2026).
+30% off archive shoe collection.
+15% discount code for selected customers on all items and an additional free item if cart exceeds 75€.
+Spend $150 and get a free scrunchy.
+20% off order but exclude specific products.
+Orders over £50 get Biotin as free gift. Orders over £100 can choose between two products. Gift should be removed if cart drops below threshold.
+Free gift when purchasing certain products.
+25% off wine plus free shipping.
+Free gift on orders over $75 with manual claim so customer can choose size.
+"When someone buys a product above €2150 in a specific category, they get a free service product."
+"Buy 2 items get 3% off, buy 3 items get 7% off."
