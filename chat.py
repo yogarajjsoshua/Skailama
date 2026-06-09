@@ -8,6 +8,8 @@ MINI_PROMOTION_AGENT = "mini-promotion-agent"
 
 def chat():
     print("CLI Chatbot started (FastAPI backend). Type 'exit' to quit.\n")
+    thread_id = None
+    in_clarification = False
 
     while True:
         user_input = input("You: ")
@@ -15,15 +17,35 @@ def chat():
         if user_input.lower() == "exit":
             print("Bot: Bye!")
             break
+        
         api_start = time.perf_counter()
-        response = requests.post(
-            API_URL_BASE+MINI_PROMOTION_AGENT,
-            json={"message": user_input}
-        )
+        if in_clarification and thread_id:
+            response = requests.post(
+                API_URL_BASE + MINI_PROMOTION_AGENT + "/clarify",
+                json={
+                    "thread_id": thread_id,
+                    "clarification": user_input
+                }
+            )
+        else:
+            response = requests.post(
+                API_URL_BASE + MINI_PROMOTION_AGENT,
+                json={"message": user_input}
+            )
+            
         data = response.json()
         api_end = time.perf_counter()
         total_time = api_end - api_start
-        print("Bot:", data["reply"],"\n",total_time)
+        
+        reply = data.get("reply", {})
+        print("Bot:", reply, "\n", total_time)
+        
+        if isinstance(reply, dict) and reply.get("status") == "clarification":
+            in_clarification = True
+            thread_id = reply.get("thread_id")
+        else:
+            in_clarification = False
+            thread_id = None
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 from langgraph.graph import StateGraph, END
+from app.mongo_checkpointer import MongoEngineCheckpointer
 from app.state import PromotionState
 from app.nodes import (
     intent_classification_node,
@@ -45,17 +46,22 @@ def build_graph():
         },
     )
 
-    # terminal edges for short-circuit nodes
+    # clarification loops back to intent_classification after user provides input
+    # (interrupt() inside clarification_node pauses execution between these two edges)
+    graph.add_edge("clarification", "intent_classification")
+
+    # unsupported is truly terminal
     graph.add_edge("unsupported", END)
-    graph.add_edge("clarification", END)
 
     # happy-path pipeline
     graph.add_edge("trigger_detection", "state_assembly")
     graph.add_edge("state_assembly", "validation")
     graph.add_edge("validation", END)
 
-    return graph.compile()
+    # MongoEngineCheckpointer is required for interrupt() to persist state across calls
+    MongoEngineCheckpointer.connect_db()
+    checkpointer = MongoEngineCheckpointer()
+    return graph.compile(checkpointer=checkpointer)
 
 
 mini_promotion_graph = build_graph()
-

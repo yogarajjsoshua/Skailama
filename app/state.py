@@ -1,12 +1,3 @@
-from typing import TypedDict, List, Any
+from app.models import PromotionState
 
-
-class PromotionState(TypedDict):
-    message: str
-    feature: str
-    tiers: List[Any]
-    tier_behavior: str
-    customer_eligibility: List[Any]
-    status: str
-    blockers: List[Any]
-    missing_fields: List[Any]  # populated when intent == clarification
+__all__ = ["PromotionState"]

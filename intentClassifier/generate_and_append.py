@@ -46,9 +46,9 @@ DEPLOYMENT = os.getenv("OPEN_API_4_ENGINE")
 # ── constants ────────────────────────────────────────────────────────────────
 TARGET_PER_CLASS = 400
 BATCH_GENERATE = 120   # examples requested per API generation call
-VALID_LABELS = {"free_gift", "buy_x_get_y", "tiered_discount", "unsupported"}
+VALID_LABELS = {"free_gift", "buy_x_get_y", "tiered_discount", "unsupported", "clarification"}
 VALIDATION_BATCH_SIZE = 50
-LABELS = ["free_gift", "buy_x_get_y", "tiered_discount", "unsupported"]
+LABELS = ["free_gift", "buy_x_get_y", "tiered_discount", "unsupported", "clarification"]
 
 
 # ════════════════════════════════════════════════════════════════════════════

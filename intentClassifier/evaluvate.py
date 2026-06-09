@@ -18,7 +18,7 @@ TEST_PATH  = Path("data/test.csv")
 MAX_LEN    = 128
 BATCH_SIZE = 32
 
-LABEL_NAMES = ["free_gift", "buy_x_get_y", "tiered_discount", "unsupported"]
+LABEL_NAMES = ["free_gift", "buy_x_get_y", "tiered_discount", "unsupported", "clarification"]
 
 
 def load_csv(path):

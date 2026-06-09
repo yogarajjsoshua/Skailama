@@ -35,8 +35,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CSV = ROOT / "intentClassifier" / "TestSetLabeledAndValidated.csv"
 
 # ── Valid values ─────────────────────────────────────────────────────────────────
-VALID_FEATURES = {"free_gift", "buy_x_get_y", "tiered_discount", "unsupported", None, ""}
-VALID_STATUSES = {"supported", "unsupported"}
+VALID_FEATURES = {"free_gift", "buy_x_get_y", "tiered_discount", "unsupported", "clarification", None, ""}
+VALID_STATUSES = {"supported", "unsupported", "clarification"}
 
 # ANSI colours
 GREEN  = "\033[92m"
@@ -59,6 +59,32 @@ def warn(msg): print(f"  {YELLOW}⚠{RESET}  {msg}")
 def validate_response_structure(reply: dict) -> list[str]:
     """Return a list of structural error messages (empty = pass)."""
     errors = []
+
+    # status
+    if "status" not in reply:
+        errors.append("Missing field: 'status'")
+    elif reply["status"] not in VALID_STATUSES:
+        errors.append(f"Invalid 'status' value: {reply['status']!r} — must be one of {VALID_STATUSES}")
+
+    # blockers
+    if "blockers" not in reply:
+        errors.append("Missing field: 'blockers'")
+    elif not isinstance(reply["blockers"], list):
+        errors.append(f"'blockers' must be a list, got {type(reply['blockers']).__name__}")
+
+    # Special handling for clarification status
+    if reply.get("status") == "clarification":
+        if "question" not in reply:
+            errors.append("Missing field: 'question' for clarification status")
+        elif not isinstance(reply["question"], str):
+            errors.append(f"'question' must be a string, got {type(reply['question']).__name__}")
+        
+        if "attempt" not in reply:
+            errors.append("Missing field: 'attempt' for clarification status")
+        elif not isinstance(reply["attempt"], int):
+            errors.append(f"'attempt' must be an integer, got {type(reply['attempt']).__name__}")
+        
+        return errors
 
     # feature
     if "feature" not in reply:
@@ -84,18 +110,6 @@ def validate_response_structure(reply: dict) -> list[str]:
     elif not isinstance(reply["customer_eligibility"], list):
         errors.append(f"'customer_eligibility' must be a list, got {type(reply['customer_eligibility']).__name__}")
 
-    # status
-    if "status" not in reply:
-        errors.append("Missing field: 'status'")
-    elif reply["status"] not in VALID_STATUSES:
-        errors.append(f"Invalid 'status' value: {reply['status']!r} — must be one of {VALID_STATUSES}")
-
-    # blockers
-    if "blockers" not in reply:
-        errors.append("Missing field: 'blockers'")
-    elif not isinstance(reply["blockers"], list):
-        errors.append(f"'blockers' must be a list, got {type(reply['blockers']).__name__}")
-
     return errors
 
 
@@ -112,6 +126,11 @@ def validate_label_match(reply: dict, expected_label: str) -> list[str]:
         if status != "unsupported":
             warnings.append(
                 f"Expected status='unsupported' (label=unsupported) but got status={status!r}"
+            )
+    elif expected_label == "clarification":
+        if status != "clarification":
+            warnings.append(
+                f"Expected status='clarification' (label=clarification) but got status={status!r}"
             )
     else:
         if feature != expected_label:
@@ -218,11 +237,17 @@ def run_tests(url: str, csv_path: Path):
         row_result["reply"] = reply
 
         # Print what came back
-        print(f"  feature          : {reply.get('feature')!r}")
-        print(f"  status           : {reply.get('status')!r}")
-        print(f"  tier_behavior    : {reply.get('tier_behavior')!r}")
-        print(f"  tiers            : {json.dumps(reply.get('tiers', []))[:120]}")
-        print(f"  blockers         : {reply.get('blockers', [])}")
+        if reply.get("status") == "clarification":
+            print(f"  status           : {reply.get('status')!r}")
+            print(f"  question         : {reply.get('question')!r}")
+            print(f"  attempt          : {reply.get('attempt')!r}")
+            print(f"  blockers         : {reply.get('blockers', [])}")
+        else:
+            print(f"  feature          : {reply.get('feature')!r}")
+            print(f"  status           : {reply.get('status')!r}")
+            print(f"  tier_behavior    : {reply.get('tier_behavior')!r}")
+            print(f"  tiers            : {json.dumps(reply.get('tiers', []))[:120]}")
+            print(f"  blockers         : {reply.get('blockers', [])}")
 
         # ── Structural validation ────────────────────────────────────────────────
         struct_errors = validate_response_structure(reply)

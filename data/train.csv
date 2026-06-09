@@ -1,1208 +1,1464 @@
 text,label_str,label
-Spend AUD 75 unlock 10%; spend AUD 200 unlock 30%,tiered_discount,2
-"£200 spend earns 20%, £400 earns 40%.",tiered_discount,2
-"Buy 12 items, get exclusive free perks!",free_gift,0
-$45 spend earns a free travel tumbler,free_gift,0
-"Buy 3 from this collection, save 5%; buy 8, save up to 20%.",tiered_discount,2
-"Bulk deal: Buy 20 chairs, 5 free (AUD)",buy_x_get_y,1
-Host flash sales without any planning,unsupported,3
-"Spend INR 3000, and get 15% off a backpack",buy_x_get_y,1
-"Buy a smartwatch, get a free band",buy_x_get_y,1
-"Spend ₹8000 and receive a leather-bound planner absolutely free with your order, valid for one week only",free_gift,0
-"Save $10 on 3 items, $20 on 6 items!",tiered_discount,2
-"Buy any phone, get one case free.",buy_x_get_y,1
-"Buy sportswear, 20% off accessories!",buy_x_get_y,1
-Free shipping for orders greater than 300 GBP.,unsupported,3
-Buy a pair of boots and get a free leather belt.,buy_x_get_y,1
-"Buy 4 products, get this travel pouch free",buy_x_get_y,1
-Logged-in UK users spending £30 get free compact mirrors,free_gift,0
-$80 cart unlocks a free thermos,free_gift,0
-"Spend €250 unlock 10% off, €500 unlock 30% off",tiered_discount,2
-"Spend £100 in the electronics collection, get free wireless headphones",free_gift,0
-"Shop more, save more: 3 items = 10% off, 7 items = 20%.",tiered_discount,2
-Start advertising discounts via referral links.,unsupported,3
-Organize flash vouchers every weekend mornings.,unsupported,3
-"Tiered savings for accessories: 10% on 2, 20% on 4 items.",tiered_discount,2
-Spend less than nothing for good rewards,unsupported,3
-Spend -$100 and get a prize,unsupported,3
-"Buy any jacket, get 25% off a matching hat",buy_x_get_y,1
-Set up a free shipping promo,unsupported,3
-Offer rewards for buying items.,unsupported,3
-Free shipping for lightweight products worldwide.,unsupported,3
-Enable traffic monitoring for promotional campaigns.,unsupported,3
-Logged-in users spending £60 earn free cup sleeves,free_gift,0
-"Purchase 3 mugs, receive another mug free of charge.",buy_x_get_y,1
-"Buy 3 items, get one discounted on towels",buy_x_get_y,1
-Logged-in customers buying 5 jackets receive a free sweater.,buy_x_get_y,1
-"Spend €180 on electronics, claim a free power bank",free_gift,0
-Spend negative dollars and earn rewards.,unsupported,3
-What about discounts for people who subscribe annually?,unsupported,3
-"Buy a tablet, get 10% off a cover.",buy_x_get_y,1
-Generate reports on regional sales through the year.,unsupported,3
-"Buy 2 products and save $5, buy 4 products and save $15.",tiered_discount,2
-"Buy 3 dresses, and one of them will be free!",buy_x_get_y,1
-Earn a free scarf by spending $75 in accessories.,free_gift,0
-Offer a flash discount starting at midnight.,unsupported,3
-Shop from the kid's wear section and get 25% off school supplies.,buy_x_get_y,1
-Collection discount: Spend GBP 200 save GBP 50.,unsupported,3
-"Buy more, save more: Spend more than $150 and get bigger discounts.",unsupported,3
-Run limited-time flash sales every Friday.,unsupported,3
-Buy any shirt and unlock 10% off on trousers.,buy_x_get_y,1
-Discounts for all who comment on social media,unsupported,3
-Buy 8 items and receive a free special gift,free_gift,0
-Cart subtotal of $200 in clothing qualifies for 25% reward,unsupported,3
-"Cart savings: Add 2 items for 10% off, 4 items for 20%.",tiered_discount,2
-"Buy one T-shirt, get another T-shirt free.",buy_x_get_y,1
-"Spend €200 on cookware, get a free apron",free_gift,0
-"Buy 3 items, cheapest one free.",buy_x_get_y,1
-Purchase 5 items to grab a free keychain,free_gift,0
-Spend €75 and claim a free coffee maker.,free_gift,0
-"Buy 2 bags, get 20% off caps.",buy_x_get_y,1
-Spend $80 get $10 off; spend $180 get $30 off,tiered_discount,2
-Buy 5 shirts from casual wear for a free t-shirt,buy_x_get_y,1
-"Spend $80, get a free water bottle!",free_gift,0
-"Buy 2 shirts, receive a free cap",buy_x_get_y,1
-Buy 2 save ₹150; Buy 6 save ₹700,tiered_discount,2
-Buy one camera and get the camera bag for free.,buy_x_get_y,1
-Buy 4 beauty products from cosmetics line and receive complimentary makeup brush,buy_x_get_y,1
-Buy 3 products to save $10.,unsupported,3
-"Buy 3 packs, get the cheapest free",buy_x_get_y,1
-"Exclusive: Spend AUD $100 for 10%, AUD $300 for 25%!",tiered_discount,2
-"Buy three pizzas, cheapest one free.",buy_x_get_y,1
-Buy 2 perfumes and receive a free scented candle.,buy_x_get_y,1
-"Spend $200 for $30 off, $400 for $75 off subtotal.",tiered_discount,2
-"Buy 4 items from the holiday collection, earn a free scarf.",buy_x_get_y,1
-Spend -1 dollars and receive 10% off.,unsupported,3
-What are common trends in customer preferences currently?,unsupported,3
-Reward shoppers who spend negative amounts,unsupported,3
-"Buy a frying pan, get 20% off spatulas",buy_x_get_y,1
-"Buy 2, save $10; buy 5, save $25",tiered_discount,2
-"Buy 7 items, 10% off one product.",buy_x_get_y,1
-Run a promotion for new customers,unsupported,3
-"Spend $100 saves you 8%, spend $300 saves you 20%.",tiered_discount,2
-"Spend $250 in the Furniture collection, receive free cushions",free_gift,0
-"Gold members: Buy 6 hats, get a free journal.",free_gift,0
-"Wholesale: Buy 500 bottles, 50 free (₹)",buy_x_get_y,1
-"Get £3 off a £50 spend, get £20 off a £150 spend!",tiered_discount,2
-Spend £100 and get 20% off gift sets.,buy_x_get_y,1
-Create a special discount for subscribers.,unsupported,3
-"Purchase $50 in skincare, receive free beauty blenders",free_gift,0
-"Buy 2 pillows, free blanket!",free_gift,0
-Provide exclusive discounts for customers buying subscriptions.,unsupported,3
-Cart subtotal €100 qualifies for 10% off; €250 qualifies for 25%,tiered_discount,2
-"VIP cart discount: €10 off €50, €20 off €100.",tiered_discount,2
-"Spend AUD $250, get free cookware",free_gift,0
-"Buy five shirts, get a free laundry bag.",buy_x_get_y,1
-Track inventory automatically and send alerts,unsupported,3
-Free picnic basket for spending AUD 200.,free_gift,0
-Free sunglasses for spending $100.,free_gift,0
-Logged-in users spending $500 earn free luxury dinner sets,free_gift,0
-Gold members save: $10 on $50; $20 on $100.,tiered_discount,2
-Provide everyone who buys items with discounts.,unsupported,3
-"Buy 8 items, grab freebie!",free_gift,0
-Spend INR 8000 for a free yoga mat,free_gift,0
-Greetings! How are you today?,unsupported,3
-Apply rewards for people who buy sometimes,unsupported,3
-"Shop 3 clothing items get 10%, shop 6 get 25% off",tiered_discount,2
-Spend in Home Goods $100 unlock 10%; $300 unlock 30%,tiered_discount,2
-Offer buyers random items when they shop,unsupported,3
-"Shop coats, get 15% off gloves",buy_x_get_y,1
-"Spend ₹3,000, receive a free clutch.",free_gift,0
-Offer INR ₹500 off subscriptions.,unsupported,3
-"BOGO: Purchase any sneakers, and the second pair is free.",buy_x_get_y,1
-"Buy accessories, save 10% on handbags.",buy_x_get_y,1
-Wholesale cart of AUD $200 receives complimentary power tools,free_gift,0
-Purchase 5 products from the sale category and unlock a free blender.,free_gift,0
-Irrelevant values stacking ambiguously triggers half-noise discount contradictions mistakes mess.,unsupported,3
-VIP customers get 10% off skincare with fragrance purchase,buy_x_get_y,1
-"Buy 3 get $10 off, buy 6 get $25 off",tiered_discount,2
-"Gold members: Spend €800, get 50% off bag.",buy_x_get_y,1
-"Save £10 when you spend £50, £25 on £100.",tiered_discount,2
-Spend USD 200 and receive a chef knife set,free_gift,0
-Add 4 items to your cart and earn a free umbrella.,buy_x_get_y,1
-"Spend $250, get a free water bottle.",free_gift,0
-"Deals: £50 spent gets you 5% off, £100 unlocks 10%, £150 gets 20% off.",tiered_discount,2
-"Purchase the full-priced product, get the lowest free.",buy_x_get_y,1
-"Spend GBP 125 for 15%, GBP 325 for 35%",tiered_discount,2
-"Purchase a tablet, and get 20% off on protective cases.",buy_x_get_y,1
-Spend £200 in men's fashion and get freebies,free_gift,0
-Buy 5 cosmetics from collection A and receive free makeup wipes,buy_x_get_y,1
-Give every customer 50% off,unsupported,3
-Buy 0 items and get rewards,unsupported,3
-Shop tees and save 25% on shorts,buy_x_get_y,1
-Random short phrases. These are constant misdirecters here.,unsupported,3
-"Spend £80, get 40% off shoes.",buy_x_get_y,1
-"Add 3 items, save £5 instantly.",unsupported,3
-Purchase shoes and unlock 20% off socks,buy_x_get_y,1
-"Save big: Buy 3 items for 10% off, buy 8 items for 25%.",tiered_discount,2
-"Spend $300+, claim a free collector's item.",free_gift,0
-"Buy 4 of the same item, get a free keychain",buy_x_get_y,1
-"Buy 5 candles from our bestseller range, get one free",buy_x_get_y,1
-Spend GBP £150 in kids' toys for a free puzzle.,free_gift,0
-"Spend AUD $50 for AUD $5 off, AUD $150 for AUD $30 off.",tiered_discount,2
-VIP members get 15% off belts with shirt purchase,buy_x_get_y,1
-Provide free items to first-time customers,unsupported,3
-"Buy 8 products from the Eco Goods collection, get a free bamboo tray",buy_x_get_y,1
-"Spend €50, get a stylish necklace for free",free_gift,0
-Buy 8 items and get the 9th item complimentary.,buy_x_get_y,1
-Get the least expensive item free with 5 purchases.,buy_x_get_y,1
-Student offer: Spend $80 and get 10% off on a backpack.,buy_x_get_y,1
-"Buy a water filter, get 10% off replacement cartridges",buy_x_get_y,1
-"Buy two books, get the third free.",buy_x_get_y,1
-Export all revenues generated by international customers.,unsupported,3
-"Toys: 5+ items save £20, 10+ items save £40",tiered_discount,2
-Hi! Can I get a discount?,unsupported,3
-Spend $200 for $25 off; spend $500 for $75 off.,tiered_discount,2
-Show me the sales figures for last month.,unsupported,3
-Purchase 5 mugs and get a free coffee grinder.,free_gift,0
-"Spend AUD $250, save 20%; spend AUD $500, save 30%.",tiered_discount,2
-How could discounts get personalization greater returns?,unsupported,3
-Gold-tier customers spending $75 will receive a free water bottle.,free_gift,0
-Spend £75 on accessories and £200 on clothing for separate tiers,unsupported,3
-"Spend €100 for 10% off all shoes, spend €250 for 25% off!",tiered_discount,2
-"Buy more, save big: Spend $50 save $10, $100 save $25.",tiered_discount,2
-"Buy three items in the Summer Clothing collection, get free sunglasses",buy_x_get_y,1
-Offer all customers a welcome discount,unsupported,3
-"Buy jeans: GBP 200 save GBP 20, GBP 400 save GBP 80!",tiered_discount,2
-"UK customers buy one suit, get 50% off a tie",buy_x_get_y,1
-"Add 5 items, and your 6th item is discounted 50%",buy_x_get_y,1
-Give flat 30% discount to all customers.,unsupported,3
-Discount €15 for first-time subscribers.,unsupported,3
-Offer free shipping worldwide!,unsupported,3
-Unlock a free lunchbox with ₹3000 spend.,free_gift,0
-"Shop books, get 10% off bookmarks",buy_x_get_y,1
-"Buy books, get 30% off bookmarks!",buy_x_get_y,1
-"Spend €75 for 15% off, €150 for 30% off",tiered_discount,2
-Give newcomers £10 off their first purchase.,unsupported,3
-Spend £0 and instantly unlock rewards.,unsupported,3
-"Buy 2 T-shirts for $10 off, buy 8 for $35 off the cart!",tiered_discount,2
-How can I improve my inventory tracking?,unsupported,3
-"Spend €75 get €10 savings, spend €200 get €25 savings",tiered_discount,2
-"Footwear collection: Spend ₹2000 save 5%, ₹5000 save 10%, ₹8000 save 15%, ₹12000 save 25%",tiered_discount,2
-"Spend $100 in the electronics category, get a free charger.",free_gift,0
-"10% off 2+ items, 20% off 5+",tiered_discount,2
-"Spend €40 on accessories get 10%, spend €100 get 25%",tiered_discount,2
-"Spend $100, get 25% off a jacket.",buy_x_get_y,1
-"Spend AUD 250 for 10%, Spend AUD 500 for 20% discounts.",tiered_discount,2
-Set up discounts for subscription renewals.,unsupported,3
-Spend $50 for $5 off; spend $150 for $20 off.,tiered_discount,2
-Spend AUD $100 in 'Outdoor Gear' for a complimentary hiking pack.,free_gift,0
-Spend INR 0 and get INR 100 in rewards,unsupported,3
-"Spend €500 to unlock 20%, spend €1000 to unlock 40%.",tiered_discount,2
-"Spend GBP 150 for GBP 15 off, GBP 500 for GBP 50 off",tiered_discount,2
-"Buy a phone, get a free case",buy_x_get_y,1
-"VIP sale: Buy phone, get earbuds 30% off.",buy_x_get_y,1
-Logged-in users in Australia spending AUD 200 get free pens,free_gift,0
-Reward any purchase with unclear benefits.,unsupported,3
-Run an across-the-board 25% discount offer.,unsupported,3
-"Spend $150 save $30, spend $400 save $100!",tiered_discount,2
-Make everything free for 24 hours,unsupported,3
-Gold members: Spend $50 and save 5%; $100 saves 15%.,tiered_discount,2
-"Spend $200, free premium notebook!",free_gift,0
-"Buy one bag, get 50% off the wallet.",buy_x_get_y,1
-"Buy any N of product Y, claim a free product Z",buy_x_get_y,1
-"Spend INR 3000, free tote bag.",free_gift,0
-"Buy 3 items = $10 off, buy 8 items = $35 off your collection!",tiered_discount,2
-"Buy one notebook, get another notebook free.",buy_x_get_y,1
-"₹500 gets you 5% off, ₹1000 gets 10%, ₹1500 gets 15%.",tiered_discount,2
-Save €30 when spending €150 or more.,unsupported,3
-"Spend $80, get 50% off sunglasses.",buy_x_get_y,1
-Send an offer automatically via email.,unsupported,3
-"Collection sale: buy 2, get 10%; buy 5, get 25%",tiered_discount,2
-Wholesale-tier customers who spend $300 get a free gift set.,free_gift,0
-VIP customers spending AUD 100 receive free candles,free_gift,0
-"Buy 3 items, save $5; buy 7 items, save $15.",tiered_discount,2
-"Buy 3+ items, get 15% off; buy 6+, get 25%",tiered_discount,2
-Purchase any item from the electronics section to unlock 25% off fitness gadgets.,buy_x_get_y,1
-"Buy 10 items, receive a complimentary mini gift box.",buy_x_get_y,1
-Spend AUD 250 and earn a free cooler bag.,free_gift,0
-Enable real-time inventory management views.,unsupported,3
-Run an hourly sale every day of the week,unsupported,3
-Cart over £60 saves £5; cart over £150 saves £25,tiered_discount,2
-VIP members get 20% off on orders above $200.,buy_x_get_y,1
-"Buy 2 items for $5 off, 6 items for $25 off your cart total.",tiered_discount,2
-Logged-in users: Buy 3 items to claim a free lunchbox.,free_gift,0
-Buy 5 items from the jewelry collection and receive a free charm.,buy_x_get_y,1
-"Add 3 items for 5% off, 6 items for 15% off.",tiered_discount,2
-"Buy 2 of our signature candles, get a free wick trimmer.",buy_x_get_y,1
-Buy 4 of product X to get a free product Y,buy_x_get_y,1
-Get 10% off when you purchase 2+ products from our accessories collection.,unsupported,3
-"VIP shoppers: Buy laptop, get 25% off backpack.",buy_x_get_y,1
-"Buy one coffee mug, get one free",buy_x_get_y,1
-"Buy 3 in our Shoes Collection for 10% off, buy 6 for 20%.",tiered_discount,2
-Logged-in users: Spend £50 in any collection to grab a free accessory.,free_gift,0
-Enable coupon codes for checkout.,unsupported,3
-Purchase a planner and get 10% off pens.,buy_x_get_y,1
-How about a deal for loyal customers?,unsupported,3
-Spend ₹10000—get ₹1000 off; spend ₹20000—save ₹2500.,tiered_discount,2
-Collection spend of EUR €100 enables gift redemption,free_gift,0
-Logged-in shoppers spending ₹6000 receive a free gift hamper,free_gift,0
-"Spend ₹10,000 and get 20% off any furniture piece",buy_x_get_y,1
-"Buy rain boots, get umbrella free.",buy_x_get_y,1
-Buy products and customers will be rewarded somehow.,unsupported,3
-"Buy a smart TV, get a free cleaning kit",buy_x_get_y,1
-"Buy 4, enjoy free gift!",buy_x_get_y,1
-Spend $75 in our jewelry collection to unlock a free bracelet.,free_gift,0
-"Spend AUD 50 save 5%, AUD 100 save 10%, AUD 200 save 20%, AUD 300 save 25%",tiered_discount,2
-Get a free gym bag for spending over $120 on any women's sportswear collection items during this promotional period,free_gift,0
-"Spend €200 on luxury items, get a free gift box",free_gift,0
-"Buy 3, get one free gift!",buy_x_get_y,1
-"Purchase products from home, get discounts on garden items.",buy_x_get_y,1
-"Exclusive for Australian buyers: Buy a pair of sandals, get a free hat.",buy_x_get_y,1
-Analyze my profit and loss statement,unsupported,3
-"T-shirts: buy 3+, save $15; buy 6+, save $40",tiered_discount,2
-"Spend $100 to save $10, $200 to save $25.",tiered_discount,2
-Buy 5 groceries and the lowest-priced item is free!,buy_x_get_y,1
-"Spend INR 600 unlock ₹120 off, INR 2,000 unlock ₹550 off",tiered_discount,2
-"Spend INR 2000 for 10%, INR 5000 for 15%, INR 8000 for 20%, INR 12000 for 25% off on accessories",tiered_discount,2
-Cart subtotal €150 rewards customers with a free makeup kit,free_gift,0
-"VIP shoppers: Buy skincare, get 20% off tools.",buy_x_get_y,1
-Enable reward points redemption for all returning buyers.,unsupported,3
-"Wholesale customers: buy 20 items, get a free shirt",buy_x_get_y,1
-"BOGO offer: Buy jackets, get others free.",buy_x_get_y,1
-VIP tier customers spending £200 get free luxury goods,free_gift,0
-"Buy 5 gadgets, get a discount on power adapters",buy_x_get_y,1
-How can I improve website traffic?,unsupported,3
-USD $150 spend rewards you with a free duffel bag,free_gift,0
-"Shoes promo: 3 pairs = 10% off, 6 pairs = 25%.",tiered_discount,2
-"Buy 5 cosmetics, receive a free makeup pouch.",buy_x_get_y,1
-"Purchase 3+ items, 10% off your total.",unsupported,3
-"Gold customers save 5% on £100, save 10% on £250",tiered_discount,2
-"Spend €80 on jackets, get 50% off scarves",buy_x_get_y,1
-"Buy one phone case, get another free",buy_x_get_y,1
-"Spend INR 1,500 saves INR 300, spend INR 6,000 saves INR 1,200.",tiered_discount,2
-Spend AUD 150 and take home a free duffel bag.,free_gift,0
-"Spend ₹5000, tote free",free_gift,0
--5 purchases trigger exclusive bonuses for checkout.,unsupported,3
-"Buy shoes, receive socks free.",buy_x_get_y,1
-"Spend AUD 500, unlock 25% off camping gear",buy_x_get_y,1
-Generate a scheme for loyalty reward points.,unsupported,3
-Host timed flash sales for the evening hours.,unsupported,3
-Shoes category: 5% saved on £100; 30% on £500.,tiered_discount,2
-"Spend INR 2,000 = INR 100 off, INR 6,000 = INR 400 off.",tiered_discount,2
-Buy things and gain undefined rewards.,unsupported,3
-"Cart subtotal £50 gets 10%, £100 gets 20% off",tiered_discount,2
-"Purchase 5 items to unlock 15%, purchase 10 to unlock 30% off!",tiered_discount,2
-"Spend $75 to save 5%, $150 unlocks 10%, $300 for 20% savings.",tiered_discount,2
-"Buy shoes, get free cleaning kit worth €20",buy_x_get_y,1
-"Buy 2 backpacks, get a free pencil case",buy_x_get_y,1
-"Shop dresses, get 30% off jewelry",buy_x_get_y,1
-Give everyone negative 100 dollars off.,unsupported,3
-Spend $150 to receive a free coffee set.,free_gift,0
-Ask customers to sign up for instant offers,unsupported,3
-Add point-based rewards system for regular buyers.,unsupported,3
-"Buy 7 notebooks, receive a free pen set.",buy_x_get_y,1
-"Spend $300 get 5% off, $600 get 10% off, $1200 get 15% off, $2400 get 20% off, $5000 get 30% off",tiered_discount,2
-"Cart subtotal perks: £10 off £200, £25 off £500.",tiered_discount,2
-VIP subscribers: Spend ₹700 get ₹70 off; spend ₹1400 get ₹200 off,tiered_discount,2
-"Get 15% on £200+, 25% on £400+, UK shoppers only.",tiered_discount,2
-"Purchase INR 6,000 worth of apparel, receive a free cap.",free_gift,0
-"Spend INR 5000, get free designer scarf.",free_gift,0
-"Spend $75, get a free travel mug",free_gift,0
-"VIP benefits: Buy bags, get purses free.",buy_x_get_y,1
-Earn a free blender when you buy 3 mixers.,free_gift,0
-"Spend €100, unlock 20% off headphones.",buy_x_get_y,1
-Logged-in users spending $30 earn a free notebook,free_gift,0
-Announce deals that apply to all products.,unsupported,3
-"Buy a smartwatch, and get 20% off on earbuds.",buy_x_get_y,1
-Launch referral bonuses for groups.,unsupported,3
-"Save $10 on 3+, save $25 on 7+",tiered_discount,2
-"Collection-wide deals: Spend €400, earn €120 off your purchase.",buy_x_get_y,1
-"Spend £500+, receive a £100 discount.",unsupported,3
-"Spend ₹2500, free premium notebook.",free_gift,0
-Buy 7 items and claim a free travel pouch.,buy_x_get_y,1
-Spend -10 INR and unlock free gifts.,unsupported,3
-Spend €225 and receive a free gift basket.,free_gift,0
-Perform analytics on conversion rates,unsupported,3
-"Purchase clothing, get discounts on shoes.",buy_x_get_y,1
-Set up a promotion for all levels.,unsupported,3
-Spend $200+ to claim your free collectible coaster pack.,free_gift,0
-"Discount: spend GBP 50 for 15%, GBP 100 for 25%",tiered_discount,2
-Spend $100 for free premium gift,free_gift,0
-Cart total GBP £100: save 10%; GBP £300: save 15%.,tiered_discount,2
-Provide benefits for spending negative amounts.,unsupported,3
-Spend €200 for a 20% discount on total purchase!,unsupported,3
-Get a free umbrella for $100 spend in electronics.,free_gift,0
-"VIP members: £10 off £250, £30 off £600.",tiered_discount,2
-Run an insane 200% discount sale.,unsupported,3
-"Men's collection: ₹3000 for 5%, ₹6000 for 10%, ₹10000 for 15%, ₹15000 for 25% off",tiered_discount,2
-Buy 8 products and take home a free scarf.,buy_x_get_y,1
-"Buy from our premium line, save 20% on basics",buy_x_get_y,1
-Logged-in US users spending $130 unlock a free water bottle,free_gift,0
-"Spend INR 4,000 on kids' wear, get free toys",free_gift,0
-"Buy five clothing items, earn a free belt",buy_x_get_y,1
-Can shipments get credited loyalty points automatically?,unsupported,3
-Logged-in Canadian buyers spending $$90 receive a free thermal flask.,unsupported,3
-Reduce prices for loyal customers.,unsupported,3
-"Spend $50 to unlock 5% off, $125 unlocks 15%, $250 for 25%.",tiered_discount,2
-"Buy 5 items, and get 10% off on the 6th item in your cart.",buy_x_get_y,1
-"Gold-tier customers: Spend ₹8,000 to claim a free appliance",free_gift,0
-Create a breakdown of traffic sources for the store.,unsupported,3
-"Accessory collection: Spend €250, gain 15% off instantly.",buy_x_get_y,1
-UK residents logged in: Spend £200 for a free backpack.,free_gift,0
-Buy items and unlock some kind of reward.,unsupported,3
-Staged promotional referrals currently impossible multi-offerings customization struggles.,unsupported,3
-Spend INR ₹5000 and save 500; spend ₹3000 for ₹1000 off.,unsupported,3
-"Gold members: ₹500 unlocks 10%, ₹1000 unlocks 25%",tiered_discount,2
-Choose any 3 shoes from the collection and get a free gift.,unsupported,3
-Gold loyalty: 15% off subtotal for €500 shoppers.,unsupported,3
-Buy something and unlock deal benefits.,unsupported,3
-"Bulk buy savings: 2 items saves 7%, 5 items saves 20%.",tiered_discount,2
-"Spend £90, free cardholder.",free_gift,0
-Make a refer-an-item reward campaign sustainable.,unsupported,3
-"Buy 3 gadgets for 10% off, buy 5 gadgets for 25%",tiered_discount,2
-Buy 4 dresses save €20; buy 7 dresses save €45,tiered_discount,2
-"Buy 6 items, free cap!",free_gift,0
-Buy 2 jackets and take home a free scarf.,free_gift,0
-Spend AUD 200 and take home a free gym towel,free_gift,0
-What's your favorite e-commerce platform?,unsupported,3
-Shoes collection: spend $100 get 10% off; $300 get 25% off.,tiered_discount,2
-Check inventory levels for all products.,unsupported,3
-"Spend INR 4,000 to save INR 200, spend INR 10,000 to save INR 600.",tiered_discount,2
-"Spend $50, grab a free tumbler",free_gift,0
-£30 spend: £5 off; £100 spend: £25 off.,tiered_discount,2
-Give everyone a 20% discount.,unsupported,3
-Buy 4 products and take a free candle,buy_x_get_y,1
-"Gold members save: spend €50 get 10%, spend €150 get 25%",tiered_discount,2
-Buy 2 get AUD 5 off; buy 5 get AUD 20 off,tiered_discount,2
-"Cart total over INR ₹5000: save ₹1000, over ₹10000: save ₹2500.",tiered_discount,2
-"Buy 4 dresses, receive a free belt",buy_x_get_y,1
-"Spend $100 in our Christmas collection, get a free ornament.",free_gift,0
-Spend $275 for a free premium item,free_gift,0
-Buy 3 to save ₹200; buy 8 to save ₹800,tiered_discount,2
-Purchase 10 items to unlock a free mug.,buy_x_get_y,1
-"Spend INR 800 to save 10%, INR 1600 saves 25%.",tiered_discount,2
-Add 7 items to your cart and receive the 8th item for free.,buy_x_get_y,1
-"Spend €50 for 5%, €150 for 10%, €300 for 20% off.",tiered_discount,2
-"Collection deal: buy 3+, save 12%; buy 6+, save 30%",tiered_discount,2
-Spend $500 for 300% off items,unsupported,3
-"Spend $200 for 20%, $400 for 30% collection-wide.",tiered_discount,2
-"Buy 2 toys, get 1 toy free.",buy_x_get_y,1
-"Special: €25 saves 10%, €100 saves 20%, €200 saves 30%!",tiered_discount,2
-Discount all products equally with a simple code.,unsupported,3
-"Spend $50, receive a free gift!",free_gift,0
-Logged-in UK shoppers: Spend £300 in cosmetics for a free vanity mirror.,free_gift,0
-"Exclusive member offer: Spend $50 for 10% off, $100 for 20%.",tiered_discount,2
-Buy 3 or more pants for $15 off the subtotal.,unsupported,3
-"Spend $50, get a free candle",free_gift,0
-Winter collection: 5% off $50 spends; 15% off $150.,tiered_discount,2
-Logged-in Australian buyers spending $80 receive a free koala plush.,free_gift,0
-"Buy 5 hats from winter collection, get a free scarf",buy_x_get_y,1
-"UK spend £450, get 10% off exclusive skincare",buy_x_get_y,1
-"Spend £75 unlock 15%, spend £150 unlock 30%",tiered_discount,2
-Cart subtotal $100 saves you $10; Cart $500 saves $50.,tiered_discount,2
-"Buy electronics, 50% off cases.",buy_x_get_y,1
-"Spend $400, save $100 immediately.",buy_x_get_y,1
-Provide discounts without requiring any spend,unsupported,3
-Give USD $10 off on subscribing to emails.,unsupported,3
-Collection 'Jeans': 10% off €100; 25% off €300.,tiered_discount,2
-Get rewards when spending minus $50.,unsupported,3
-Spend $100 for a free gift,free_gift,0
-"Purchase 5 jackets, get a free beanie.",buy_x_get_y,1
-Give people free items after they join,unsupported,3
-"Buy five dishes, the cheapest one is on us",buy_x_get_y,1
-Spend -$5 to unlock free items.,unsupported,3
-Purchase 8 items to qualify for a freebie!,buy_x_get_y,1
-Spend AUD 120 in accessories to get a free bracelet,free_gift,0
-Spend $50 and get 20% off on a wireless speaker.,buy_x_get_y,1
-VIP Tier: £75 spend earns 10% off; £150 earns 20% discount.,tiered_discount,2
-"Buy one pencil box, get another free",buy_x_get_y,1
-Buy 9 products and get a free backpack.,buy_x_get_y,1
-Add 4 accessories to unlock a free bracelet,free_gift,0
-Get a free journal when spending $200 in home decor.,free_gift,0
-What type of rewards attract new buyers?,unsupported,3
-"Gold members: Spend $100 to earn $15 off, $200 saves $40!",tiered_discount,2
-"Shop 10 from Home Goods get $25 savings, 15 get $75 savings",tiered_discount,2
-Spend $0 and get a free gift.,unsupported,3
-Spend AUD 180 and get a cosmetic pouch free,free_gift,0
-Buy 2 dresses save £15; buy 4 save £35,tiered_discount,2
-"Get 5% off with 2 items, 10% off with 4 items.",tiered_discount,2
-"Gold members: Buy 4 items, get a free travel pouch.",free_gift,0
-Purchase 10+ items for ₹500 flat discount.,buy_x_get_y,1
-$60 subtotal unlocks free tea towels,free_gift,0
-"Buy 4 widgets, get a free gadget!",buy_x_get_y,1
-"Save $10 when you spend $75, save $25 when you spend $150!",tiered_discount,2
-"Buy 3 phones, get 50% off tempered glass for the next",buy_x_get_y,1
-Buy 5 items and get a free keychain!,free_gift,0
-3+ units save 10%; 5+ units save 20%,tiered_discount,2
-Spend €150 for a free candle set,free_gift,0
-VIP shoppers: Get a free diary with $80 spend.,free_gift,0
-Cart subtotal ₹2500 unlocks a free wall art piece,free_gift,0
-Enjoy a complimentary cosmetic organizer if your shopping cart exceeds $110 in total value on select beauty products,free_gift,0
-Spend $100 on any collection to unlock 15% discount.,unsupported,3
-Spend €140 and get a free journal.,free_gift,0
-"Spend €200, 25% off belt.",buy_x_get_y,1
-"Spend $90 in the wellness category, get a free lunchbox.",free_gift,0
-Free diary with a $75 spend,free_gift,0
-"Buy a backpack, get a free water bottle",buy_x_get_y,1
-Create free shipping promotions.,unsupported,3
-"Buy gadgets, 25% off cases!",buy_x_get_y,1
-"VIP discount tiers: Spend $200 for 10%, $500 for 30%!",tiered_discount,2
-Spend €200 on select items for €20 discount.,buy_x_get_y,1
-Set up automated email discounts for repeat customers.,unsupported,3
-Receive a free wine opener for €120 spend.,free_gift,0
-"Wholesale: spend $500 or buy 10 units, get a gift",unsupported,3
-"Buy headphones, save 30% on ear pads",buy_x_get_y,1
-Purchase 3 items from our new arrivals and earn a free umbrella.,buy_x_get_y,1
-Offer 500% off for spending $10.,unsupported,3
-"Purchase 10 items, enjoy a free hamper package",free_gift,0
-"Spend ₹8000, get a stunning free photo frame",free_gift,0
-"Buy 1 coffee, get 1 free.",buy_x_get_y,1
-"Spend INR 15,000 and claim a free duffel bag.",free_gift,0
-"Buy 7 items, free gift included!",buy_x_get_y,1
-Add 1 item: no discount; 3 items: 10% off; 5 items: 15%.,tiered_discount,2
-"VIP only: £50+ get 10%, £100+ get 25%",tiered_discount,2
-"Shop £500+, gain £75 off your total cart.",unsupported,3
-Can you reset my cart settings?,unsupported,3
-Ensure discounts apply to first purchases by default.,unsupported,3
-"Grab any three items, and the lowest-priced one is free.",buy_x_get_y,1
-$50 in men's collection unlocks a free wallet,free_gift,0
-"Purchase any 4 items, and we'll take 20% off the 5th item automatically.",buy_x_get_y,1
-"Buy 3 tops get $10 off, buy 6 tops get $30 off",tiered_discount,2
-Spend £75 in our 'Office Supplies' category to unlock a free stapler.,free_gift,0
-Track user engagement for marketing campaigns,unsupported,3
-"Shop electronics, get 15% off accessories.",buy_x_get_y,1
-Buy 4 items and get a free pen.,free_gift,0
-"AUD 100 for 10%, AUD 250 for 15%, AUD 500 for 20%, AUD 1000 for 30%",tiered_discount,2
-Logged-in customers spending £50 earn a free tumbler,free_gift,0
-Spend £100 to get £25 off your purchase.,unsupported,3
-VIP customers spending €500 will unlock an exclusive gift.,free_gift,0
-"Spend INR 3,000 to save ₹500, INR 10,000 to save ₹2,000",tiered_discount,2
-"AU shoppers: Buy electronics, get computer accessories free.",buy_x_get_y,1
-Spend £300 and unlock a free suitcase.,free_gift,0
-Create a flash sale for next week’s holiday.,unsupported,3
-Buy 2 bottles of wine and unlock free wine opener,buy_x_get_y,1
-Receive a free diary for spending €50.,free_gift,0
-Free tote bag on ₹7500 spend,free_gift,0
-Save AUD $50 at $200 spent; save AUD $100 at $400 spent.,tiered_discount,2
-Deliver products for free if the cart exceeds 150 EUR.,unsupported,3
-"Gold Plan: INR 750 unlocks 20%, INR 1500 unlocks 40%",tiered_discount,2
-Collection-wide promo: Spend £100 for £15 off.,buy_x_get_y,1
-Gold loyalty spending AUD 150 unlocks a free travel kit,free_gift,0
-Host limited-time flash sales every week.,unsupported,3
-"Add 6 items to cart, get socks free.",free_gift,0
-"Buy from accessories, 15% off gadgets.",buy_x_get_y,1
-Get 15% off jackets when you buy sweaters.,buy_x_get_y,1
-Spend £75 to unlock a 10% discount; spend £200 for 25% discount.,tiered_discount,2
-Exclusive VIP deal: Spend $100 for 10%; $300 for 25%.,tiered_discount,2
-Flash sales should happen during the evenings.,unsupported,3
-Exclusive for Silver tier: Buy any 5 products and get the cheapest one free.,buy_x_get_y,1
-Spend $75 for a free reusable bag,free_gift,0
-"Shop from winter collection, get 15% off summer apparel",buy_x_get_y,1
-Can customers earn cashback points?,unsupported,3
-Cart subtotal ₹750 gets ₹100 off; ₹3000 gets ₹600 off,tiered_discount,2
-Negative £50 spend unlocks rewards,unsupported,3
-Buy 2 shirts save £10; buy 5 shirts save £30,tiered_discount,2
-"Buy 2 items, get 15% off on the next shirt",buy_x_get_y,1
-Spend £0 and claim exclusive rewards.,unsupported,3
-Get a free coupon just for signing up.,unsupported,3
-Buy 3 pairs of sandals save AUD 25; buy 7 save AUD 75,tiered_discount,2
-Run a one-hour sale every day of the week.,unsupported,3
-Attach loyalty credits to purchase behavior.,unsupported,3
-"Tiered collection deal: Buy 2 hats, save 5%; buy 4 hats, save 20%!",tiered_discount,2
-"Buy any 3 toys, and get the lowest-priced toy absolutely free.",buy_x_get_y,1
-Spend INR 5500 for a free lamp,free_gift,0
-Run 1-hour flash sales every morning,unsupported,3
-"Buy 2 items, get a free mug",buy_x_get_y,1
-Why not reward frequent buyers?,unsupported,3
-"For first-time buyers: Buy one accessory, get one free.",buy_x_get_y,1
-Customer 'Gold': ₹5000 unlocks ₹200 off; ₹15k unlocks ₹700 off.,tiered_discount,2
-"VIPs spend £150, get 25% off premium shoes",buy_x_get_y,1
-Spend €120 and unlock discounts on select shoes.,buy_x_get_y,1
-"Gold tier shoppers: 10% with 2 items, 20% with 5.",tiered_discount,2
-"Buy any 4 tees, get cheapest free.",buy_x_get_y,1
-Make shipping free for all orders above ₹1000.,unsupported,3
-Spend less than $0 to unlock deals.,unsupported,3
-Spend £200 in the electronics section to get a free smart plug,free_gift,0
-"Spend €100, save €20; spend €200, save €50",tiered_discount,2
-Unlock a free travel pouch when you spend $200.,free_gift,0
+"Spend INR 10,000 and get a free limited-edition wristwatch",free_gift,0
+Set up a referral program for our products.,unsupported,3
 Add 5 items to your cart for a sweet 15% discount.,unsupported,3
-"Spend €600, unlock 40% off car accessories",buy_x_get_y,1
-VIP-only deals: spend €50 to get 5%; spend €150 to get 20%,tiered_discount,2
-"Spend INR ₹7000 for 5% off; spend ₹15,000 for 15% off.",tiered_discount,2
-Make everything free for this weekend only.,unsupported,3
-"Spend INR ₹1000 on makeup, get a free brush set",free_gift,0
-Buy 2 products for 5% discount; buy 4 for 15% discount,tiered_discount,2
-"Spend $50, save 10%; spend $100, save 20%",tiered_discount,2
-"Wholesale: Buy 300 shirts, get 30 ties free",buy_x_get_y,1
-Logged-in shoppers: Earn a free picnic basket after spending $200.,free_gift,0
-Purchase 3 bags and receive a free purse organizer,buy_x_get_y,1
-"Buy 11 products, and the 12th one comes with a discount.",buy_x_get_y,1
-"Enjoy tiered cart savings: 2 items = 10% off, 3 items = 15%, 5+ items = 25%.",tiered_discount,2
+Buy 5 products get 15% off cart,tiered_discount,2
+Choose any 3 shoes from the collection and get a free gift.,unsupported,3
+Provide discounts without requiring any spend,unsupported,3
+Create a breakdown of traffic sources for the store.,unsupported,3
+"Shop more, save more: 3 items = 10% off, 7 items = 20%.",tiered_discount,2
+How can I improve my inventory tracking?,unsupported,3
+VIP customers spending AUD 100 receive free candles,free_gift,0
+"Get 10% off $75, 25% off $200 or more",tiered_discount,2
+Buy stuff and get some reward.,unsupported,3
+Add point-based rewards system for regular buyers.,unsupported,3
+"VIP promo: Spend ₹2000, receive ₹500 off your total.",buy_x_get_y,1
+"Buy from winter collection, get 15% off summer collection.",buy_x_get_y,1
+"Buy 3 towels, unlock £7 off bath mats",buy_x_get_y,1
+"Buy 2 mugs, get 20% off caps",buy_x_get_y,1
+VIP customers: Buy any 3 products and get the cheapest one free.,free_gift,0
+"VIP tier: Buy shoes, get 15% off accessories",buy_x_get_y,1
+"Buy 5 lipsticks, get lip balm for $2 each.",buy_x_get_y,1
+Get 15% discount on glasses when buying 2 sunglasses,buy_x_get_y,1
+Optimize the store for higher mobile performance metrics.,unsupported,3
+How can I improve website traffic?,unsupported,3
+"Buy 2 coats, pay £25 for boots",buy_x_get_y,1
+Enable real-time inventory management views.,unsupported,3
+"Buy 5 candles, get $10 off any vase.",buy_x_get_y,1
+"Buy 2 dining chairs, get a table for £99.",buy_x_get_y,1
+"Spend €50 for 5%, €150 for 10%, €300 for 20% off.",tiered_discount,2
+"Spend €200 on luxury items, get a free gift box",free_gift,0
+Buy some quantity and get a deal on another item.,clarification,4
+$120 cart rewards customers with a free power bank,free_gift,0
+"Purchase INR 6,000 worth of apparel, receive a free cap.",free_gift,0
+"Footwear collection: Spend ₹2000 save 5%, ₹5000 save 10%, ₹8000 save 15%, ₹12000 save 25%",tiered_discount,2
+Offer free shipping on all orders.,unsupported,3
+"Cart discounts for bulk: Spend $100 to save $15, $200 to save $40.",tiered_discount,2
+Spend $500 on multiple products get $100 flat discount reward,unsupported,3
+"Buy 2+ items, 5% discount.",buy_x_get_y,1
+"When customers buy items, give a discount on another.",clarification,4
+"Shop kitchen appliances, get 20% off cookware",buy_x_get_y,1
+Give away a free accessory.,clarification,4
+"Australian shoppers: spend AUD 80, get 10% off cart.",tiered_discount,2
+Track shopper trends across demographics,unsupported,3
+"Buy any 3 items in collection A, receive 25% off collection B.",buy_x_get_y,1
+"Buy 2 items and get 10% off, buy 4 items for 20% off your entire cart!",tiered_discount,2
+"UK exclusive: Buy wine, get a cheese platter free.",free_gift,0
+Spend €0 for bonuses,unsupported,3
+"Buy gadgets, 25% off cases!",buy_x_get_y,1
+"Buy 10 socks, unlock 30% off backpacks",buy_x_get_y,1
+Buy some items and unlock something cool.,unsupported,3
+"BOGO sale: Buy any jeans, get one free.",free_gift,0
+"Spend INR 10,000 and receive a free blanket.",free_gift,0
+"Men's collection: ₹3000 for 5%, ₹6000 for 10%, ₹10000 for 15%, ₹15000 for 25% off",tiered_discount,2
+Spend AUD 250 and earn a free cooler bag.,free_gift,0
+Cart items above £250 gets you a £30 discount.,tiered_discount,2
+VIP exclusive: $100 on carts save $20 instantly.,buy_x_get_y,1
+"Spend $100 in the tech collection, get a free phone stand",free_gift,0
+"Buy a TV, get a soundbar free.",free_gift,0
+"Exclusive: spend $80 for 10%, $150 for 25%",tiered_discount,2
+Cart subtotal of $200 in clothing qualifies for 25% reward,unsupported,3
+Launch a loyalty points program,unsupported,3
+Buy 5 cosmetics from collection A and receive free makeup wipes,free_gift,0
+"Spend £150 in the gardening collection, get a free trowel.",free_gift,0
+Send an offer automatically via email.,unsupported,3
+"Buy 8 items, grab freebie!",clarification,4
+"Spend AUD $250, get free cookware",free_gift,0
+First-time buyers get $50 off.,unsupported,3
+Spend USD 125 and unlock free lunch box,free_gift,0
+"Buy 3 shirts to save 10%, buy 6 to save even more!",clarification,4
+Generate reports on customer demographics.,unsupported,3
+Run a flash sale now.,unsupported,3
+Buy 10 items and save $20.,tiered_discount,2
+"VIP benefits: Buy bags, get purses free.",free_gift,0
+Provide AUD $20 off for new users.,unsupported,3
+How do I add loyalty points?,unsupported,3
+"Add 3 items for 5% off, 6 items for 15% off.",tiered_discount,2
+"Buy 2 belts for $5 off, get $25 off for buying 8 belts!",tiered_discount,2
+"Spend GBP 125 for 15%, GBP 325 for 35%",tiered_discount,2
+"Purchase 2 shirts, save $10 on jeans",buy_x_get_y,1
+"£200 spend earns 20%, £400 earns 40%.",tiered_discount,2
+"Buy 8 pencils, unlock 25% off erasers",buy_x_get_y,1
+"Buy winter wear, get 15% off summer styles.",buy_x_get_y,1
+"Buy 3 packs, get the cheapest free",free_gift,0
+Shop from the kid's wear section and get 25% off school supplies.,buy_x_get_y,1
+Spend £75 on accessories and £200 on clothing for separate tiers,unsupported,3
+What is the best-selling product this week?,unsupported,3
+Purchase 5 items to grab a free keychain,free_gift,0
+"Spend $250, get a free water bottle.",free_gift,0
+Provide free delivery globally on heavy items.,unsupported,3
+Spend AUD 250 for AUD 50 off your order.,unsupported,3
+"Australian customers: Buy 3 scarves, get $10 off gloves.",buy_x_get_y,1
+"VIP promo: Buy 2 watches for 10%, 4 watches for 25%.",tiered_discount,2
+Logged-in customers spending £50 earn a free tumbler,free_gift,0
+"Spend $100 on shoes for 10% off, $200 for 25% off",tiered_discount,2
+"Get 15% on £200+, 25% on £400+, UK shoppers only.",tiered_discount,2
+When cart exceeds $200 AUD...,clarification,4
+"Exclusive for Australian buyers: Buy a pair of sandals, get a free hat.",free_gift,0
+Spend $100 to unlock a free candle.,free_gift,0
+€80 subtotal triggers a free snack bundle,free_gift,0
+Unlock a free lunchbox with ₹3000 spend.,free_gift,0
+"Spend $100, get 25% off a jacket.",buy_x_get_y,1
+Spend INR ₹5000 and save 500; spend ₹3000 for ₹1000 off.,unsupported,3
+Get 25% off the sneakers when you buy jeans.,buy_x_get_y,1
+"Hi, what are the latest trends in retail?",unsupported,3
+"Shop Jewelry, get €10 off Watches.",buy_x_get_y,1
+Spend $500 for 300% off items,unsupported,3
+"Spend INR 2000 for 10%, INR 5000 for 15%, INR 8000 for 20%, INR 12000 for 25% off on accessories",tiered_discount,2
+"Spend $75, get 30% off wallets",buy_x_get_y,1
+"Buy 2 desk organizers, get planners discounted to £5 fixed",buy_x_get_y,1
+"Buy 5 hats from winter collection, get a free scarf",free_gift,0
+"Buy any 4 tees, get cheapest free.",free_gift,0
+"Purchase a tablet, and get 20% off on protective cases.",buy_x_get_y,1
+"Collection-wide deals: Spend €400, earn €120 off your purchase.",buy_x_get_y,1
+Save €10 on cart totals above €150.,tiered_discount,2
+"Buy 2 mugs, get a free coaster set.",free_gift,0
+"Buy a tablet, get 10% off a cover.",buy_x_get_y,1
+Get free sunglasses with ₹5000 spend.,free_gift,0
+Spend €75 and claim a free coffee maker.,free_gift,0
+Offer 15% off after signing up as a subscriber.,unsupported,3
+Cart subtotal ₹2500 unlocks a free wall art piece,free_gift,0
+US shoppers: Earn a free water bottle for $75 spend.,free_gift,0
+"Gold members: Buy 6 hats, get a free journal.",free_gift,0
+Gold members spending €120 get a free scarf,free_gift,0
+Track customer retention rates thoroughly.,unsupported,3
+"Buy three pairs of shoes, get one free.",free_gift,0
+"Discount: spend GBP 50 for 15%, GBP 100 for 25%",tiered_discount,2
+Get 40% off sunglasses with the purchase of swimwear,buy_x_get_y,1
+Get a free case with laptop purchase,free_gift,0
+Offer referral discounts for brand ambassadors.,unsupported,3
+"Buy 4 notebooks, get a pen for $2.",buy_x_get_y,1
+Attach loyalty credits to purchase behavior.,unsupported,3
+Perform analytics on conversion rates,unsupported,3
+"Buy jeans: GBP 200 save GBP 20, GBP 400 save GBP 80!",tiered_discount,2
+"Buy 3 shoes, get 25% off product Y; buy 5 get 40%.",buy_x_get_y,1
+"Spend $150, get 30% off tote.",buy_x_get_y,1
+"VIP only: £50+ get 10%, £100+ get 25%",tiered_discount,2
+"Spend €180 on electronics, claim a free power bank",free_gift,0
+Run a promo where cart size triggers discounts.,clarification,4
+"Spend €100 for 10% off all shoes, spend €250 for 25% off!",tiered_discount,2
+"Receive free coasters by spending INR 4,000!",free_gift,0
+Buy 3 shoes from men's footwear collection for a free pair of socks,free_gift,0
+"Spend $50 to unlock 5% off, $125 unlocks 15%, $250 for 25%.",tiered_discount,2
+Spend AUD 75 unlock 10%; spend AUD 200 unlock 30%,tiered_discount,2
+"Buy any phone, get one case free.",free_gift,0
+Save 5% on $100 carts tagged Gold Customers,tiered_discount,2
+Spend $50 and get 20% off on a wireless speaker.,buy_x_get_y,1
+Buy 2 jackets and take home a free scarf.,free_gift,0
+"Gold members: ₹500 unlocks 10%, ₹1000 unlocks 25%",tiered_discount,2
+Get savings when buying items.,clarification,4
+Buy items and unlock some kind of reward.,unsupported,3
+Run a midnight sale with random discounts,unsupported,3
+Buy 2 perfumes and receive a free scented candle.,free_gift,0
+"Spend INR 1,500 saves INR 300, spend INR 6,000 saves INR 1,200.",tiered_discount,2
+Buy 3 or more pants for $15 off the subtotal.,buy_x_get_y,1
+"Buy any wallet, get the cheapest free",free_gift,0
+Make shipping free for all orders above ₹1000.,unsupported,3
+"Spend €300, receive a free designer tote bag",free_gift,0
+Logged-in Canadian buyers spending $$90 receive a free thermal flask.,unsupported,3
+"Buy 2 items for $5 off, 6 items for $25 off your cart total.",buy_x_get_y,1
+Gold-tier customers spending $75 will receive a free water bottle.,free_gift,0
+"Buy 4 products, get this travel pouch free",free_gift,0
+"Buy 5+ books save 5%, buy 8+ save 10%",tiered_discount,2
+Buy from our summer footwear collection and get 30% off on handbags.,buy_x_get_y,1
+Analyze which products are the best-sellers.,unsupported,3
+Flash sale starting Friday night and ending Saturday morning.,unsupported,3
+Spend ₹50 to unlock a shipping reward.,unsupported,3
+Discount customers who subscribe before the weekend.,unsupported,3
+"Spend €150, receive a free eco-friendly bottle.",free_gift,0
+Add 10 items to cart for $35 off.,buy_x_get_y,1
+Spend negative dollars and earn rewards.,unsupported,3
+Flash sale on Saturday night,unsupported,3
+When cart is over $100...,clarification,4
+"VIP Gold users: buy 2 mugs, get 40% off plates.",buy_x_get_y,1
+"Create a buy X get Y offer, but Y is missing.",clarification,4
+"Gold-tier: Buy perfume, get a travel pouch free.",free_gift,0
+"Spend €100, unlock 20% off headphones.",buy_x_get_y,1
+Setup discounts without details.,clarification,4
+Save $5 off cart total if quantity reaches 3 items,tiered_discount,2
+Offer exclusive discounts to social media followers,unsupported,3
+"Buy one game console, get 15% off a controller",buy_x_get_y,1
+Hi! Can I get a discount?,unsupported,3
+Earn a free scarf by spending $75 in accessories.,free_gift,0
+Give 200% off for all items!,unsupported,3
+"Spend €50, get a stylish necklace for free",free_gift,0
+Set discounts for no-spend thresholds,unsupported,3
+Spend £75 and get £10 off bags.,buy_x_get_y,1
+"Spend €100, save €20; spend €200, save €50",tiered_discount,2
+"Spend $80, get 50% off sunglasses.",buy_x_get_y,1
+"Buy 4 coats, enjoy 20% off hats.",buy_x_get_y,1
+"Buy any perfume, get the cheapest free",free_gift,0
 Save AUD 50 when spending AUD 300 on activewear.,buy_x_get_y,1
-"Tiered customer discount: Spend £50 = 5% off, £150 = 20% off.",tiered_discount,2
-Gold customer perks: spend €200 for max savings of 25%.,unsupported,3
-Logged-in users spending AUD 400 will receive a free gym bag.,free_gift,0
-"Buy 50 notebooks, get 10 free (INR)",buy_x_get_y,1
+Set up a free shipping promo,unsupported,3
+"Spend ₹8000 and receive a leather-bound planner absolutely free with your order, valid for one week only",free_gift,0
+"Shoes: buy 2+, save £10; buy 5+, save £30",tiered_discount,2
+"Buy a dress, get matching earrings free.",free_gift,0
+"Spend INR 3000, and get 15% off a backpack",buy_x_get_y,1
+"Buy 3 tops get $10 off, buy 6 tops get $30 off",tiered_discount,2
+Buy products and customers will be rewarded somehow.,unsupported,3
+"Spend $75 to save 5%, $150 unlocks 10%, $300 for 20% savings.",tiered_discount,2
+Discount people who sign up during the event.,unsupported,3
+Shop €90 in UK gates to receive a free wallet,free_gift,0
+"Bulk deal: Buy 20 chairs, 5 free (AUD)",buy_x_get_y,1
+Create buy X get Y but discount type isn’t chosen yet.,clarification,4
+Spend AUD $0 and unlock benefits,unsupported,3
+"Tiered savings: Spend 50 units INR for 5%, spend 500 for 20%",tiered_discount,2
+Buy 2 headphones get $8 off chargers.,buy_x_get_y,1
+Provide benefits for spending negative amounts.,unsupported,3
+Reward any purchase with unclear benefits.,unsupported,3
+If cart value is above £75...,clarification,4
+Gold members earn free accessories with a $100 spend,unsupported,3
+Discount first-time customers by 15%.,unsupported,3
+Spend INR 20 and receive INR 40 back,unsupported,3
+Logged-in customers buying 5 jackets receive a free sweater.,buy_x_get_y,1
+"Spend €200, 25% off belt.",buy_x_get_y,1
+Purchase 3 items from our new arrivals and earn a free umbrella.,free_gift,0
+Can you add gift-wrapping options?,unsupported,3
+Give everyone negative 100 dollars off.,unsupported,3
+Generate reports on regional sales through the year.,unsupported,3
+Check inventory levels for all products.,unsupported,3
+Give customers something free after buying things.,unsupported,3
+VIP customers spending €400 get a marketing exclusive gift box.,free_gift,0
+"Buy 2 toys, get 1 toy free.",free_gift,0
+"Buy 3 bags, get wallets for ₹100 fixed price",buy_x_get_y,1
+Collection discounts: spend £200 for a £25 discount.,tiered_discount,2
+"Spend $150 on home decor, get a free planter.",free_gift,0
+Spend AUD 300 and receive a free desk organizer.,free_gift,0
+Spend €200 and receive a free item,clarification,4
+"Shop 10 from Home Goods get $25 savings, 15 get $75 savings",buy_x_get_y,1
+"Purchase 5 jackets, get a free beanie.",free_gift,0
+"Purchase the full-priced product, get the lowest free.",free_gift,0
+Start a 24-hour flash sale.,unsupported,3
+"Spend $80, get a free water bottle!",free_gift,0
+Buy -1 items and get free gifts.,unsupported,3
+Save AUD $15 on $100; save AUD $50 on $300.,tiered_discount,2
+"Buy 3 items = $10 off, buy 8 items = $35 off your collection!",tiered_discount,2
+Purchase 10 items to unlock a free mug.,free_gift,0
+"10% off 2+ items, 20% off 5+",tiered_discount,2
 "€100 spend unlocks 10%, €200 unlocks 20%.",tiered_discount,2
+Start advertising discounts via referral links.,unsupported,3
+Spend $225 in stationery and claim a free organizer.,free_gift,0
+Buy 4 dresses save €20; buy 7 dresses save €45,tiered_discount,2
+Help me optimize e-mail campaign strategies.,unsupported,3
+"Buy five clothing items, earn a free belt",buy_x_get_y,1
+"Save €10 when you reach 3 items, save €50 at 10 items",tiered_discount,2
+Unlock a gift for shoppers but no trigger yet.,clarification,4
+Host a weekend-long flash sale,unsupported,3
+"Buy a phone, get a free case",free_gift,0
+"Spend £200 on handbags and save £20, spend £400 and save £50.",tiered_discount,2
+Apply rewards for people who buy sometimes,unsupported,3
+Shop from our pet accessory section and unlock discounts on bedding.,unsupported,3
+Offer discounts for initial subscription signups.,unsupported,3
+"Spend ₹2000 for ₹200 off, ₹4000 for ₹500 off",tiered_discount,2
+"Buy more, save big: Spend $50 save $10, $100 save $25.",tiered_discount,2
+"Spend INR 800 to save 10%, INR 1600 saves 25%.",tiered_discount,2
+Buy 5 items and get a free keychain!,free_gift,0
+VIP tags: £200 unlocks 20%; £500 unlocks 35%.,tiered_discount,2
+"BOGO offer: Buy jackets, get others free.",free_gift,0
+"Spend INR 8,000 in our electronics collection, get a free power bank.",free_gift,0
+What about discounts for people who subscribe annually?,unsupported,3
+Cart 5 items: Free camera case!,free_gift,0
+"Buy 7 mugs, get a free tray!",free_gift,0
+Give rewards without any purchases,unsupported,3
+"Take 10% off 2+ jackets, 20% off 4+ jackets.",tiered_discount,2
+Get a first-purchase cashback triggered automatically.,unsupported,3
+Shop tees and save 25% on shorts,buy_x_get_y,1
+Logged-in US buyers: Spend $90 and get free earbuds.,free_gift,0
+"Spend INR 2500, save INR 500 on shoes",buy_x_get_y,1
+Spend €100 and receive free skincare samples,free_gift,0
+"Spend $300, unlock 20% off air fryer",buy_x_get_y,1
+"Savings for £30 spent is 5%, £80 spent saves you 20% on all.",tiered_discount,2
+Looking to reward customers with free items; let’s discuss.,clarification,4
+"Buy 5 belts, earn a free wallet",free_gift,0
+Plan a holiday discount campaign.,unsupported,3
+"Buy 5 gadgets get USD 15 off, buy 10 get USD 40 off",tiered_discount,2
+Buy 2 shirts save £10; buy 5 shirts save £30,tiered_discount,2
+Spend ₹2000 to unlock ₹500 off cookware,buy_x_get_y,1
+Can you recommend popular marketing strategies?,unsupported,3
+Spend €0 and enjoy products on the house.,unsupported,3
+"Add 10 items to cart, get free sneakers.",free_gift,0
+"Spend $150 save $30, spend $400 save $100!",tiered_discount,2
+"Buy 3 shirts, get 15% off jeans.",buy_x_get_y,1
+Get a free tote on spending $120!,free_gift,0
+Spend $50 for $5 off; spend $150 for $20 off.,tiered_discount,2
+Can shipments get credited loyalty points automatically?,unsupported,3
+"Get 10% off 3 coats, 20% off 6 coats.",tiered_discount,2
+Let INR 500 buying guarantee free shipping.,unsupported,3
+VIPs spending €100 earn a free gift bundle,free_gift,0
+"Spend AUD $70, receive a free scented candle",free_gift,0
+"Spend $400 or more, and get $40 off automatically",tiered_discount,2
+Get a deal when buying products.,clarification,4
+Exclusive gated: Cart subtotal €100 gets 20% reward on cart,unsupported,3
+"Spend INR 1,500 get INR 200 off; INR 5,000 get INR 800 off",tiered_discount,2
+"Spend ₹8000, get 35% off duffel bags",buy_x_get_y,1
+"Buy 4 mugs, pay £10 for tea bags",buy_x_get_y,1
+"Buy any jacket, get 25% off a matching hat",buy_x_get_y,1
+"Spend $150, get 30% off handbags",buy_x_get_y,1
+Spend INR 6000 for a free branded travel mug,free_gift,0
+How about a deal for loyal customers?,unsupported,3
+"Get $10 off for purchasing 3 items, $30 off if you buy 6 items!",tiered_discount,2
+"Buy a printer, get paper 20% off.",buy_x_get_y,1
+Cart subtotal AUD 60 gets AUD 10 off; AUD 120 gets AUD 30 off,tiered_discount,2
+Deliver products for free if the cart exceeds 150 EUR.,unsupported,3
+Gold members: Spend $50 and save 5%; $100 saves 15%.,tiered_discount,2
+"Get $5 off when you buy 2 items, $15 off for buying 5 items!",tiered_discount,2
+"VIP sale: Buy phone, get earbuds 30% off.",buy_x_get_y,1
+Run something like an offer.,unsupported,3
+"Shoes: buy 3+, get $12 off; buy 8+, get $35 off",tiered_discount,2
+Get a free coupon just for signing up.,unsupported,3
+Give 100% off for subscribing to emails,unsupported,3
+Gold customers spending £250 receive free skincare products,free_gift,0
+Cart total GBP £100: save 10%; GBP £300: save 15%.,tiered_discount,2
+Reward customers if their cart involves referrals.,unsupported,3
+Run a limited-time sale this weekend.,unsupported,3
+"Buy 3 travel bags, receive a free luggage tag",free_gift,0
+"Buy one notebook, get another notebook free.",free_gift,0
+Spend $80 get $10 off; spend $180 get $30 off,tiered_discount,2
+"Gold users: Buy 1 suit, 20% off tie.",buy_x_get_y,1
+Spend AUD $100 in 'Outdoor Gear' for a complimentary hiking pack.,free_gift,0
+"Shop electronics, get 15% off accessories.",buy_x_get_y,1
+"VIP discount tiers: Spend $200 for 10%, $500 for 30%!",tiered_discount,2
+Reward everyone equally without any purchase limits.,unsupported,3
+"Buy 3 notebooks, save $10 on backpacks",buy_x_get_y,1
+"Cart discount: ₹100 off ₹700, ₹200 off ₹1500.",tiered_discount,2
+Negative £50 spend unlocks rewards,unsupported,3
+"Spend $100 on accessories, save $25 on hats.",buy_x_get_y,1
+Spend AUD $100 for 10%; AUD $300 for 20% off (VIP customers only).,tiered_discount,2
+VIPs spending €300 get free premium cookware,free_gift,0
+Create free shipping promotions.,unsupported,3
+Offer free shipping worldwide!,unsupported,3
+VIP discounts: spend €200 save €40; spend €700 save €150,tiered_discount,2
+"Spend INR 4,000 to save INR 200, spend INR 10,000 to save INR 600.",tiered_discount,2
+"Spend $100 to save $10, $200 to save $25.",tiered_discount,2
+Generate a scheme for loyalty reward points.,unsupported,3
+Host unlimited flash sales with tiered pricing,unsupported,3
+Need help with incoming products' analytics.,unsupported,3
+"Buy a backpack, get a free water bottle",free_gift,0
+Wholesale buyers: Add 5 items to earn a free cooler bag.,free_gift,0
+Spend AUD 120 in accessories to get a free bracelet,free_gift,0
+Free tote bag for shoppers.,clarification,4
+Earn a free blender when you buy 3 mixers.,free_gift,0
+Logged-in shoppers spending ₹6000 receive a free gift hamper,free_gift,0
+UK shoppers get a free scarf with jacket purchase,free_gift,0
+"Buy 4, enjoy free gift!",clarification,4
+Make an offer for general promotions.,unsupported,3
+"Buy 4 items, get $10 off cart.",tiered_discount,2
+Logged-in US customers spending $300 receive free branded backpack,free_gift,0
+Spend ₹500 and boost loyalty membership rewards.,unsupported,3
+"8% discount when spending INR ₹7000, 12% @ ₹15000",tiered_discount,2
+"Buy accessories, save 10% on handbags.",buy_x_get_y,1
+"Add 5 T-shirts to cart, get jeans discounted at €25 fixed price",buy_x_get_y,1
+Buy 3 items get 5% off.,unsupported,3
+Spend ₹5000 and receive a complimentary water bottle!,free_gift,0
+"Wholesale: Buy 500 bottles, 50 free (₹)",buy_x_get_y,1
+Logged-in users: Buy 3 items to claim a free lunchbox.,free_gift,0
+"Buy any 2 sweaters, get 1 free.",free_gift,0
+Add 7 items to your cart and receive the 8th item for free.,free_gift,0
+"Spend $100 in our Christmas collection, get a free ornament.",free_gift,0
+"Spend AUD $250, save 20%; spend AUD $500, save 30%.",tiered_discount,2
+"Spend £120, unlock 50% discount on scarves",buy_x_get_y,1
+"Buy 5 glasses, enjoy 10% off frames.",buy_x_get_y,1
+Spend AUD 200 and take home a free gym towel,free_gift,0
+"Spend INR 600 unlock ₹120 off, INR 2,000 unlock ₹550 off",tiered_discount,2
+"Buy a frying pan, get 20% off spatulas",buy_x_get_y,1
+Please create a referral discount scheme.,unsupported,3
+On jackets: spend £100 to unlock 5%; spend £250 to unlock 15%.,tiered_discount,2
+Free water bottle with 3 items from activewear.,free_gift,0
+Spend INR 1000 on product cart unlock INR 150 discount,unsupported,3
+"Buy 4 items from the holiday collection, earn a free scarf.",free_gift,0
+Spend $50 for 5% off and $100 for 10% off your cart!,tiered_discount,2
+Introduce a referral program for frequent buyers.,unsupported,3
+Get 20% off camping gear when you buy a backpack.,buy_x_get_y,1
+Provide an offer valid only for weekends.,unsupported,3
+Buy 2 shirts for a special cap promo.,clarification,4
+Spend $100 for 10% off; spend $300 for 25% off,tiered_discount,2
+Free cutting board when you spend $80.,free_gift,0
+Purchase shoes and get another pair free.,free_gift,0
+"Buy shoes, receive socks free.",free_gift,0
+Buy 4 items and get a free pen.,free_gift,0
+"Exclusive: Spend AUD $100 for 10%, AUD $300 for 25%!",tiered_discount,2
+"VIP customers: spend £60, enjoy 20% off ties",buy_x_get_y,1
+Buy things and unlock some kind of bonus.,unsupported,3
+"Cart savings: Add 2 items for 10% off, 4 items for 20%.",tiered_discount,2
+"Spend over £80 for 5%, over £150 for 15%.",tiered_discount,2
+Gold loyalty spending AUD 150 unlocks a free travel kit,free_gift,0
+VIPs spending AUD 250 receive a free picnic set,free_gift,0
+"Purchase 7 items, and one of them will be complimentary.",free_gift,0
+VIP customers unlock $50 tier (5% off); $500 tier (20% off).,tiered_discount,2
+VIP Tier: £75 spend earns 10% off; £150 earns 20% discount.,tiered_discount,2
+"Buy a ring, get free earrings.",free_gift,0
+Give a free gift to customers.,clarification,4
+Reduce prices for loyal customers.,unsupported,3
+"Buy X items, get Y free.",clarification,4
+"VIP shoppers: Buy skincare, get 20% off tools.",buy_x_get_y,1
+"Buy 9 items, free headset!",free_gift,0
+Student offer: Spend $80 and get 10% off on a backpack.,buy_x_get_y,1
+Run limited-time flash sales every Friday.,unsupported,3
+"Spend ₹3,000, receive a free clutch.",free_gift,0
+"Gold tier members: €50 gets 15%, €150 gets 25%",tiered_discount,2
+Special pricing for buyers.,clarification,4
+Buy 1+ item: $5 off; Buy 6+ items: $20 off.,tiered_discount,2
+Give everyone 50% off this Friday night.,unsupported,3
+"Spend £120, qualify for £10 discount on candles",buy_x_get_y,1
+Purchase 5 products and enjoy 10% off.,unsupported,3
+VIP shoppers: Get a free diary with $80 spend.,free_gift,0
+Save AUD $50 at $200 spent; save AUD $100 at $400 spent.,tiered_discount,2
+Spend €80 and enjoy a free tote bag,free_gift,0
+Buy 3 products to save $10.,unsupported,3
+Apply discounts automatically without spending anything.,unsupported,3
+"Buy 7 items, free gift included!",clarification,4
+"Buy 4 of the same item, get a free keychain",buy_x_get_y,1
+Spend over $200 for 20% off; $400 for 40% off.,tiered_discount,2
+"Buy 3 pillows, unlock 50% off blankets",buy_x_get_y,1
+"₹500 gets you 5% off, ₹1000 gets 10%, ₹1500 gets 15%.",tiered_discount,2
+"Spend $50, receive a free gift!",unsupported,3
+"Spend $200, free premium notebook!",free_gift,0
+"Buy 5 tees, discount unknown on a cap.",clarification,4
+Can customers earn cashback points?,unsupported,3
+"Spend INR ₹5000, receive a complimentary dinnerware set",free_gift,0
+"Buy 2 items, get 15% off on the next shirt",buy_x_get_y,1
+VIP members spending £300 receive free cookware sets,free_gift,0
+Free shipping for lightweight products worldwide.,unsupported,3
+"Limited-time savings: €25 spent yields 5% off, €75 gets 15%.",tiered_discount,2
+"Buy 6 units of product Z, get free unit Y",free_gift,0
+VIPs get 40% off scarves with 3 shirts,buy_x_get_y,1
+"Spend $75, get a free travel mug",free_gift,0
+Spend USD -10 and get USD 50 in rewards,unsupported,3
+"Purchase 5 items to unlock 15%, purchase 10 to unlock 30% off!",tiered_discount,2
+Ask customers to sign up for instant offers,unsupported,3
+Get something cool for shopping.,unsupported,3
+"Spend $300+, claim a free collector's item.",free_gift,0
+Track inventory automatically and send alerts,unsupported,3
+Cart subtotal above £150 gets you 15% off.,tiered_discount,2
+"Buy 2 books, get mugs for $5 each",buy_x_get_y,1
+Can you help set up my payment gateway?,unsupported,3
+Spend €120 and unlock discounts on select shoes.,unsupported,3
+"Cart subtotal above AUD 100 saves AUD 15, above AUD 300 saves AUD 45",tiered_discount,2
+"Gold customers: spend $50 for 10% off, $150 for 20%.",tiered_discount,2
+"Spend AUD 250 for 10%, Spend AUD 500 for 20% discounts.",tiered_discount,2
+Spend $75 or more...,clarification,4
+Spend INR ₹5000: ₹200 save; spend ₹10k: ₹500 saved.,tiered_discount,2
+Spend $275 for a free premium item,unsupported,3
+"Gold-tier members: Buy jewelry, get free case.",free_gift,0
+When purchases exceed £75 GBP...,clarification,4
+"Spend €50 on shoes, unlock €10 off",tiered_discount,2
+Get 30% off a case with phone purchase,buy_x_get_y,1
+Reward shoppers for purchases in a general way.,unsupported,3
+Let subscriptions trigger bonuses in GBP.,unsupported,3
+"Cart value ₹15,000 unlocks free premium shoes",free_gift,0
+Summer sale: $200 tier: 10%; $500 tier: 25%.,tiered_discount,2
+"Spend £100, get a free robe",free_gift,0
+"Buy electronics, 50% off cases.",buy_x_get_y,1
+"Add 6 items to cart, get socks free.",free_gift,0
+Buy 7 from collection A and unlock 20% off collection B.,buy_x_get_y,1
+"Buy 1 coffee, get 1 free.",free_gift,0
+Irrelevant values stacking ambiguously triggers half-noise discount contradictions mistakes mess.,unsupported,3
+Create any type of discount.,clarification,4
+Spend $-5 and get a bonus deal.,unsupported,3
+Spend AUD 500 to unlock $100 off travel bags.,buy_x_get_y,1
+"Buy 2 accessories, get the cheapest free",free_gift,0
+Spend -1 dollars and receive 10% off.,unsupported,3
+Give automatic rewards for subscribers only,unsupported,3
+Shop freely and unlock uncertain benefits.,unsupported,3
+Spend $0 and unlock surprises.,unsupported,3
+Buy 5 groceries and the lowest-priced item is free!,free_gift,0
+Logged-in users spending $30 earn a free notebook,free_gift,0
+Customers tagged VIP get $10 off on $200 subtotal minimums,tiered_discount,2
+"Buy from sportswear, get 15% off formal wear.",buy_x_get_y,1
+"Purchases unlock free items, unclear list.",clarification,4
+"Spend more on shoes: €50 saves €10, €100 saves €25",tiered_discount,2
+"Purchase 3 items for 10% off, grab 6 for 20% off storewide!",tiered_discount,2
+Enable bonus points accumulation for referred users.,unsupported,3
+Spend more to save more: 10% discount at £100 or 25% at £300.,tiered_discount,2
+Enjoy a complimentary cosmetic organizer if your shopping cart exceeds $110 in total value on select beauty products,free_gift,0
+"Australian shoppers: Spend AUD $50 to save 10%; spend AUD $150, save 30%.",tiered_discount,2
+"Purchase 4 items, free tote bag included!",free_gift,0
+Spend 500 GBP get 50 GBP off; spend 1000 GBP get 125 GBP off,tiered_discount,2
+"Buy a phone, get second device 50% off.",buy_x_get_y,1
+Purchase 6 water bottles and earn a free wine opener.,free_gift,0
+"Spend $400, save $100 immediately.",buy_x_get_y,1
+Run an across-the-board 25% discount offer.,unsupported,3
+"Buy 3 items, save $5; buy 7 items, save $15.",tiered_discount,2
+Random short phrases. These are constant misdirecters here.,unsupported,3
+"Purchase 12 items, receive $20 off your checkout total",tiered_discount,2
+Spend AUD 300 in gadgets: unlock AUD 50 discount,unsupported,3
+"Buy 4 shirts, get ties for €12 each",buy_x_get_y,1
+Provide everyone who buys items with discounts.,unsupported,3
+"Buy 3 items, cheapest one free.",free_gift,0
+What reward system works best for sales?,unsupported,3
+Buy 6 books and pay $12 for bookmarks.,buy_x_get_y,1
+"Gold members save: spend €50 get 10%, spend €150 get 25%",tiered_discount,2
+"Tiered savings for accessories: 10% on 2, 20% on 4 items.",tiered_discount,2
+Free shipping for orders greater than 300 GBP.,unsupported,3
+Buy several products to receive a promotion.,clarification,4
+Spend AUD 90 to unlock a free beach towel,free_gift,0
+Ensure discounts apply to first purchases by default.,unsupported,3
+Buy any shirt and unlock 10% off on trousers.,buy_x_get_y,1
+"Spend $50, take 30% off phone cases",buy_x_get_y,1
+Include referral program options in promotions.,unsupported,3
+"Spend INR 3,000 to save ₹500, INR 10,000 to save ₹2,000",tiered_discount,2
+Get 20% off watches when purchasing 3 necklaces,buy_x_get_y,1
+"Buy three pizzas, cheapest one free.",free_gift,0
+Spend $180 and get a free picnic basket!,free_gift,0
+"Purchase 10 products, receive a free plant pot",free_gift,0
+Logged-in users in Australia spending AUD 200 get free pens,free_gift,0
+Spend -$5 to unlock free items.,unsupported,3
+"Hi, what are current promo trends?",unsupported,3
+Provide exclusive discounts for customers buying subscriptions.,unsupported,3
+Spend a lot to unlock a surprise gift.,clarification,4
+"VIPs spend £150, get 25% off premium shoes",buy_x_get_y,1
+Collection-wide promo: Spend £100 for £15 off.,buy_x_get_y,1
+Get ₹200 off cookware when purchasing items under premium kitchenware section,buy_x_get_y,1
+"Buy 4 from the collection and save 5%, or buy 8 to save 20%.",tiered_discount,2
+Purchase $175 worth of coffee and get a free thermos.,free_gift,0
+"Shop £300 in dresses, receive free heels",free_gift,0
+"Buy collection A, receive $15 off collection B items",buy_x_get_y,1
+"Purchase 3+ items, 10% off your total.",unsupported,3
+"Buy 3 products, save $5; buy 5, save $20",tiered_discount,2
+Spend something and get something free.,clarification,4
+Spend GBP £150 in kids' toys for a free puzzle.,free_gift,0
+"VIP shoppers: spend $75, save $20 off your cart.",tiered_discount,2
+Enable coupon codes for checkout.,unsupported,3
+"VIP tier: Spend $75 for 10%, $150 for 30%",tiered_discount,2
+"Save $10 on 3+, save $25 on 7+",tiered_discount,2
+Buy 3 scarves save $10; buy 7 save $25,tiered_discount,2
+"Spend INR ₹3000 for ₹100 off, ₹10,000 for ₹1000 off.",tiered_discount,2
+"Spend ₹2000, get a free movie ticket.",free_gift,0
+Start a free shipping campaign for international orders.,unsupported,3
+"Buy any product, get another free one.",free_gift,0
+Run 1-hour flash sales every morning,unsupported,3
+Generate detailed analytics on last month's sales.,unsupported,3
+Launch an offer campaign.,unsupported,3
+"Purchase 3 products, get the cheapest free",free_gift,0
+Buy 6 items save ₹300; buy 12 save ₹600,tiered_discount,2
+"Spend €100, unlock €20 off sunglasses",buy_x_get_y,1
+Spend $250 in the travel section to take home a free duffel bag.,free_gift,0
+Offer buyers random items when they shop,unsupported,3
+Free tote bag on ₹7500 spend,free_gift,0
+"Buy 3 dresses, and one of them will be free!",buy_x_get_y,1
+Gold-tier customers spending €300 will unlock a free gift.,unsupported,3
+Purchase shoes and unlock 20% off socks,buy_x_get_y,1
+UK members: Spend £90 to unlock a free picnic blanket.,free_gift,0
+"Buy a water filter, get 10% off replacement cartridges",buy_x_get_y,1
+Purchase 5 mugs and get a free coffee grinder.,free_gift,0
+Spend €140 and get a free journal.,free_gift,0
+"BOGO: Purchase one hardcover book, get the second free!",free_gift,0
+Offer free items to buyers.,clarification,4
+"Buy 3 backpacks, get a lunchbox for $10",buy_x_get_y,1
+Spend AUD 300 for 7% off,tiered_discount,2
+Buy 4 scarves get 30% off gloves.,buy_x_get_y,1
+"Cart total INR ₹10,000 rewards you with free branded sunglasses",free_gift,0
+"Grab any three items, and the lowest-priced one is free.",buy_x_get_y,1
+"Spend $50, unlock 30% off any T-shirt.",buy_x_get_y,1
+Customer 'Gold': ₹5000 unlocks ₹200 off; ₹15k unlocks ₹700 off.,tiered_discount,2
+Spend $90 in the US to get a free hat,free_gift,0
+Flash sale 24/7 for all categories,unsupported,3
+Order any product and get something vague free.,unsupported,3
+Exclusive sale: Spend $75 get 10% off; Spend $150 get 25% off.,tiered_discount,2
+"Gold membership: ₹500 gets 15%, ₹1000 gets 30%",tiered_discount,2
+Spend USD 80 and receive a free garden kit,free_gift,0
+"Save big: Buy 3 items for 10% off, buy 8 items for 25%.",tiered_discount,2
+Logged-in US users spending $130 unlock a free water bottle,free_gift,0
+Cart exceeding €150 gets a reward.,clarification,4
+"Spend INR 5,000 and claim a free padfolio.",free_gift,0
+Spend £100 get £15 off the holiday collection.,buy_x_get_y,1
+What are your top-selling items this year?,unsupported,3
+Send discounts to everyone who signed up,unsupported,3
+"Buy N of this lamp model, get a free bulb pack",free_gift,0
+"Buy 10 items, discount unclear, need clarification.",clarification,4
+"Buy N hats, get cheapest free.",free_gift,0
+Gold customer perks: spend €200 for max savings of 25%.,unsupported,3
+"Purchase products from home, get discounts on garden items.",buy_x_get_y,1
+$45 spend earns a free travel tumbler,free_gift,0
+"Spend $90 in the wellness category, get a free lunchbox.",free_gift,0
+Spend £100 and get 20% off gift sets.,buy_x_get_y,1
+Can you implement a midnight sale idea?,unsupported,3
+"Spend $800, save $120. Spend $1000, save $200.",tiered_discount,2
+Buy 0 products and still get a reward.,unsupported,3
+"Purchase 3 mugs, receive another mug free of charge.",free_gift,0
+Save 10% on collections for orders over €75.,tiered_discount,2
+Buy 7+ items from footwear for 10% off cart!,tiered_discount,2
+"Spend AUD 150 in Outdoor collection, get a free picnic blanket",free_gift,0
+"Buy 10 mugs, pay £2 for coasters each.",buy_x_get_y,1
+"Spend AUD 100, save AUD 15.",tiered_discount,2
+Spend €100 save 10%; spend €250 save 25%,tiered_discount,2
+Buy 8 products and take home a free scarf.,free_gift,0
+"Buy 8 products, save $15 on cart total",tiered_discount,2
+"Spend $150, get $30 off backpacks.",buy_x_get_y,1
+Spend £200 in men's fashion and get freebies,free_gift,0
+"Buy one coffee mug, get one free",free_gift,0
+Spend AUD 100 get 25% off ties.,buy_x_get_y,1
+"Gold-tier customers: Spend ₹8,000 to claim a free appliance",free_gift,0
+Spend ₹10000—get ₹1000 off; spend ₹20000—save ₹2500.,tiered_discount,2
+"Spend 500 AUD for 15%, 1,000 AUD for 30%",tiered_discount,2
+"Spend INR 4,000 on kids' wear, get free toys",free_gift,0
+"Spend £75 for 10% off, £150 for 20% off",tiered_discount,2
+"Spend GBP £25, save 5%; Spend GBP £75, save 15%.",tiered_discount,2
+"Spend AUD 300, save AUD 60 on bags",buy_x_get_y,1
+Spend £80 and save £5 instantly,tiered_discount,2
+"Spend $200, save $25 on duffles",buy_x_get_y,1
+Spend less than $0 to unlock deals.,unsupported,3
+Logged-in shoppers spending €60 receive free socks,free_gift,0
+Introduce a member-exclusive tier point system.,unsupported,3
+Purchase 5 products from the sale category and unlock a free blender.,free_gift,0
+"Set thresholds for discounts, unclear details.",clarification,4
+"Spend AUD 500, unlock 25% off camping gear",buy_x_get_y,1
+"Buy 2 shirts, receive a free cap",buy_x_get_y,1
+Buy things to unlock potential rewards.,unsupported,3
+VIP members get 20% off on orders above $200.,buy_x_get_y,1
+"Spend INR 2,000 = INR 100 off, INR 6,000 = INR 400 off.",tiered_discount,2
+Host timed flash sales for the evening hours.,unsupported,3
+"Gold members: Spend €800, get 50% off bag.",buy_x_get_y,1
+"Add 5 items, and your 6th item is discounted 50%",buy_x_get_y,1
+Buy and unlock an item for free.,clarification,4
+"Purchase any 4 items, and we'll take 20% off the 5th item automatically.",buy_x_get_y,1
+Spend 7000 INR and enjoy 15% off on luxury bedding.,buy_x_get_y,1
+Buy 5 sweaters save $25; buy 10 sweaters save $70,buy_x_get_y,1
+"Shop £500+, gain £75 off your total cart.",unsupported,3
+Add advanced analytics for store revenue.,unsupported,3
+"Buy speakers, get a free HDMI cable",free_gift,0
+Spend -10 INR and unlock free gifts.,unsupported,3
+7% cart discount when buying electronics worth ₹5000,tiered_discount,2
+Buy 5 tops from the fashion collection and get a free clutch bag,free_gift,0
+Buy at least 4 items to enjoy percentage-based discounts.,unsupported,3
+"Spend £150, get 25% off wallet.",buy_x_get_y,1
+"Spend AUD $50 for AUD $5 off, AUD $150 for AUD $30 off.",tiered_discount,2
+"Spend INR ₹7000 for 5% off; spend ₹15,000 for 15% off.",tiered_discount,2
+Spend £500 in the furniture collection for a free floor lamp,free_gift,0
+"Spend ₹8000, get a stunning free photo frame",free_gift,0
+Offer free shipping to all locations globally permanently.,unsupported,3
+"Purchase 3 T-shirts, get shorts for $7",buy_x_get_y,1
+Gold members: spend ₹2000 save ₹200; spend ₹5000 save ₹750.,tiered_discount,2
+"Spend $50, grab a free tumbler",free_gift,0
+"Buy any 3 toys, and get the lowest-priced toy absolutely free.",free_gift,0
+"Spend €600, unlock 40% off car accessories",buy_x_get_y,1
+Start referring discounts for customer acquisition.,unsupported,3
+"Buy 7 products from our home decor section, get a free picnic basket.",free_gift,0
+Spend ₹8000 to claim a free coffee grinder.,free_gift,0
+Buy 2 items save 5%,tiered_discount,2
+Give customers a free gift this season.,clarification,4
+"Spend ₹3000, get 10% off on sports items",buy_x_get_y,1
+Logged-in UK users spending £150 get a free leather wallet,free_gift,0
+"BOGO: Purchase any sneakers, and the second pair is free.",free_gift,0
+"Buy kitchenware, get 20% off home decor.",buy_x_get_y,1
+"Spend $400, unlock 40% off specific bedding sets",buy_x_get_y,1
+"Buy two pairs, cheapest free!",unsupported,3
+Get a free umbrella for $100 spend in electronics.,free_gift,0
+Get the cheapest free on orders of 5 items.,free_gift,0
+Buy 3 products and get something.,clarification,4
+Get a free gym bag for spending over $120 on any women's sportswear collection items during this promotional period,free_gift,0
+"Spend GBP 150 for GBP 15 off, GBP 500 for GBP 50 off",tiered_discount,2
+Buy 3 to save ₹200; buy 8 to save ₹800,tiered_discount,2
+"Special: €25 saves 10%, €100 saves 20%, €200 saves 30%!",tiered_discount,2
+"Buy 2 sports shoes, get socks for ₹99",buy_x_get_y,1
+Spend $150 for 10%. $300 earns you 25% off.,tiered_discount,2
+Calculate inventory costs for the last year.,unsupported,3
+"Ministry-tier customers spending INR ₹6,000 get a free home accessory set.",free_gift,0
+Free sunglasses when you buy 6 products.,free_gift,0
+Give away coupon codes!,unsupported,3
+VIP discounts: Earn a 20% discount on tiered purchases above $200.,unsupported,3
+"Spend €100, claim a free tote bag!",free_gift,0
+"Shop coats, get 15% off gloves",buy_x_get_y,1
+"Buy a pack of markers, get a sketchpad free!",free_gift,0
+"Buy headphones, save 30% on ear pads",buy_x_get_y,1
+Run an exclusive flash sale for app users,unsupported,3
+"Shop toys, receive discounts on board games.",unsupported,3
+"Buy 3 shirts, get $15 off any jacket.",buy_x_get_y,1
+Spend AUD 300 to get AUD 75 off collection-wide purchases.,buy_x_get_y,1
+"Buy 4 dresses, get $15 off shoes",buy_x_get_y,1
+"Buy 8 items, get a free tote.",buy_x_get_y,1
+What are common trends in customer preferences currently?,unsupported,3
+"Buy 5 jackets, get £20 off scarves.",buy_x_get_y,1
+Buy 4 of product X to get a free product Y,free_gift,0
+"In Australia: Buy raincoat, free umbrella.",free_gift,0
+"VIP members: Buy a sofa, get cushions free.",free_gift,0
+"VIP tier: 10%, 15%, 20% off depending on spend.",tiered_discount,2
+"Spend €75 get €10 savings, spend €200 get €25 savings",tiered_discount,2
+Offer free delivery for orders over $50.,unsupported,3
+Buy 9 products and get a free backpack.,free_gift,0
+Get a free journal with 3 purchases from the summer collection.,free_gift,0
+Offer something special to first-time buyers.,unsupported,3
+Free water bottle for customers.,clarification,4
+"Shop 3 clothing items get 10%, shop 6 get 25% off",tiered_discount,2
+Spend $200 on clothing for 7% discount,tiered_discount,2
+Offer a free tote bag to buyers.,clarification,4
+"Spend INR 5,500 and earn a free umbrella!",free_gift,0
+Spend £100 in our 'Fitness' collection: Free yoga mat included!,free_gift,0
+Buy 3 travel bags get 15% off luggage tags.,buy_x_get_y,1
+Gold members get 20% off with a bag purchase,buy_x_get_y,1
+"Shop and save more: 3+ items saves 10%, 6+ saves 25%!",tiered_discount,2
+"Gold members: Spend ₹5000, 40% off jeans.",buy_x_get_y,1
+Why not reward frequent buyers?,unsupported,3
+Spend $75 for a free reusable bag,free_gift,0
+"Buy 2 shirts, get 50% off pants.",buy_x_get_y,1
+"Buy 3 in our Shoes Collection for 10% off, buy 6 for 20%.",tiered_discount,2
+"Spend INR 15,000 and claim a free duffel bag.",free_gift,0
+"Spend €80 on jackets, get 50% off scarves",buy_x_get_y,1
+"Buy 4 shirts, get jeans for £25 fixed price",buy_x_get_y,1
+Spend more and receive something extra for free.,clarification,4
+"VIP exclusive deals: Spend €75 unlock 10%, spend €200 unlock 25%",tiered_discount,2
+Get socks free when buying 7 pairs of shoes.,free_gift,0
+"Order cookware, get 10% off bakeware.",buy_x_get_y,1
+Have a special sale event.,unsupported,3
+"Spend €40 on accessories get 10%, spend €100 get 25%",tiered_discount,2
+"Spend INR 5,000 in electronics and get free earbuds",free_gift,0
+"Prime members save €10 at €50 subtotal, save €25 at €100",tiered_discount,2
+"Buy 3 from this collection, save 5%; buy 8, save up to 20%.",tiered_discount,2
+Spend ₹500 and get ₹50 off total,tiered_discount,2
+"Buy one T-shirt, get another T-shirt free.",free_gift,0
+"Spend £500+, receive a £100 discount.",buy_x_get_y,1
+Buy 3 hoodies get them at $40 each.,buy_x_get_y,1
+"Offer rewards on purchases, but specify details.",clarification,4
+"Spend $100 in the electronics category, get a free charger.",free_gift,0
+Get the least expensive item free with 5 purchases.,free_gift,0
+$50 in men's collection unlocks a free wallet,free_gift,0
+"Hi, can you create an unlimited rewards system?",unsupported,3
+Summer collection tier: £20 off £100 spends; £50 off £200.,tiered_discount,2
+"Buy books, get 30% off bookmarks!",buy_x_get_y,1
+Buy 6 towels get a 10% discount on bathrobes.,buy_x_get_y,1
+"Quantity tiers: 2 pairs = 10% off, 5 pairs = 20%.",tiered_discount,2
+Buy 8 items and get the 9th item complimentary.,free_gift,0
+Logged-in members: Spend $150 to receive a free scarf.,free_gift,0
+VIP customers buying 4 items receive a bonus gift.,buy_x_get_y,1
+Cart subtotal €100 qualifies for 10% off; €250 qualifies for 25%,tiered_discount,2
+Discount €15 for first-time subscribers.,unsupported,3
+"Buy shampoo, get conditioner free.",free_gift,0
+"Buy 5 wine glasses, get bottle stoppers for €2",buy_x_get_y,1
+Get 10% off when you purchase 2+ products from our accessories collection.,unsupported,3
+"Buy a smartwatch, and get 20% off on earbuds.",buy_x_get_y,1
+Discount all products equally with a simple code.,unsupported,3
+"Purchase $50 in skincare, receive free beauty blenders",free_gift,0
+Offer 300% cashback on purchases of €100.,unsupported,3
+Free diary with a $75 spend,free_gift,0
+UK buyers spend £200+ save 15% instantly,tiered_discount,2
+Spend ₹2000 or more to unlock 8% off,tiered_discount,2
+"Save £10 when you spend £50, £25 on £100.",tiered_discount,2
+"Shop the kids' section, save £8 on baby toys",buy_x_get_y,1
+"Purchase 4 pens, and the lowest-priced is free",free_gift,0
+"5% off when quantity hits 2, 15% off when buying 8 items",tiered_discount,2
+Make everything free for 24 hours,unsupported,3
+Cart with 5 items: Extra 20% off on belt.,buy_x_get_y,1
+"Buy 2 jackets, get pants for €15",buy_x_get_y,1
+"Spend ₹5000, tote free",free_gift,0
+"Spend £100, unlock 15% off on watches",buy_x_get_y,1
+Add 4 items to your cart and earn a free umbrella.,free_gift,0
+Give flat 30% discount to all customers.,unsupported,3
+Discounts larger than 200%.,unsupported,3
+Run a weekend flash sale on all categories.,unsupported,3
+"Buy 2 lamps, get a free lightbulb set.",free_gift,0
+Reward buyers for making no purchases,unsupported,3
+Buy a pair of boots and get a free leather belt.,buy_x_get_y,1
+Buy 2 get AUD 5 off; buy 5 get AUD 20 off,tiered_discount,2
+"Spend INR 2000, unlock 25% off any clutch bag.",buy_x_get_y,1
+"Accessory collection: Spend €250, gain 15% off instantly.",buy_x_get_y,1
+"VIP customers: $100 unlocks 15%, $200 unlocks 30%",tiered_discount,2
+"Purchase a laptop, get a free mouse.",free_gift,0
+Buy 4 shirts and get something on sale.,clarification,4
+"Buy 5 items, get one free.",free_gift,0
+Spend less than nothing for good rewards,unsupported,3
+"Deals: £50 spent gets you 5% off, £100 unlocks 10%, £150 gets 20% off.",tiered_discount,2
+UK residents logged in: Spend £200 for a free backpack.,free_gift,0
+"Buy 4 items, unlock €5 off collection B",buy_x_get_y,1
+"Spend INR 1500 save INR 200, Spend INR 3000 save INR 500.",tiered_discount,2
+Buy 4 beauty products from cosmetics line and receive complimentary makeup brush,free_gift,0
+"Collection deal: buy 3+, save 12%; buy 6+, save 30%",tiered_discount,2
+Show me the sales figures for last month.,unsupported,3
+Host spur-of-the-moment flash sales randomly.,unsupported,3
+"VIP exclusive: Buy skincare, get beauty tools free.",free_gift,0
+Get free sunglasses with purchase of any 4 items,free_gift,0
+Spend INR 0 and get INR 100 in rewards,unsupported,3
+"Spend $50, get 25% off headphones",buy_x_get_y,1
+"Shop collection A, save $10 on collection B",buy_x_get_y,1
+"Gold customers save 5% on £100, save 10% on £250",tiered_discount,2
+Spend $150 to receive a free coffee set.,free_gift,0
+Create a special discount for subscribers.,unsupported,3
+Buy 6 shirts for a flat €40 off your bill.,buy_x_get_y,1
+"Buy five shirts, get a free laundry bag.",free_gift,0
+Spend AUD 150 and take home a free duffel bag.,free_gift,0
+"Buy 1 coat, get scarf free.",free_gift,0
+$15 off AUD $150 tier; $50 off AUD $300 tier.,tiered_discount,2
+What are Shopify's pricing tiers?,unsupported,3
+Spend INR 8000 for a free yoga mat,free_gift,0
+"Buy 5 hats, pay $10 for scarves.",buy_x_get_y,1
+Purchase 10+ items for ₹500 flat discount.,buy_x_get_y,1
+"Spend £75 unlock 15%, spend £150 unlock 30%",tiered_discount,2
+"Buy 4 items for $10 off, buy 10 items for $25 off.",tiered_discount,2
+Run an insane 200% discount sale.,unsupported,3
+VIP members get 15% off belts with shirt purchase,buy_x_get_y,1
+Get a free tote bag.,clarification,4
+Cart subtotal EUR 70 gets 15% off; EUR 200 gets 30% off,tiered_discount,2
+Run ads for coupons on social media.,unsupported,3
+"Buy a smartwatch, get a free band",free_gift,0
+"Spend INR 2,000 = INR 150 off, spend INR 8,000 = INR 800 off.",tiered_discount,2
+"Spend $250 on outdoor gear, get a free water bottle",free_gift,0
+Host a flash sale during non-business hours,unsupported,3
+Enable traffic monitoring for promotional campaigns.,unsupported,3
+VIP customers get 10% off skincare with fragrance purchase,buy_x_get_y,1
+"Cart worth AUD $50, receive a free organizer",free_gift,0
+"Buy 2 books, get €10 off puzzles",buy_x_get_y,1
+"Spend €75 for 15% off, €150 for 30% off",tiered_discount,2
+Wholesale buyers spending AUD $300 get a free toolbox,free_gift,0
+I want a campaign for discounts.,clarification,4
+Buy 5 shirts from casual wear for a free t-shirt,free_gift,0
+Logged-in users spending £40 get a free keychain,free_gift,0
+"Buy 2 pillows, free blanket!",free_gift,0
+"Spend €75, unlock 15% off from collection Y.",buy_x_get_y,1
+Unlock a free travel pouch when you spend $200.,free_gift,0
+"Collection sale: buy 2, get 10%; buy 5, get 25%",tiered_discount,2
+Buy -1 items and get a bonus discount.,unsupported,3
+"Gold-tier customers spending INR 5,000 will earn a free gift.",free_gift,0
+Give people mystery rewards with no conditions,unsupported,3
+"Buy 2 books, unspecified savings on a pen.",clarification,4
+"Buy 3 notebooks, get the least expensive free",free_gift,0
+Spend €50 across Accessories and €150 to get increasing discounts,unsupported,3
+VIP customers get 10% off above $50 spend.,tiered_discount,2
+Spend USD 200 and receive a chef knife set,free_gift,0
+Buy 3 items get something free.,clarification,4
+"Collection-wide sale: Spend €50 for 10% off, €150 for 25% off.",tiered_discount,2
+"Wholesale customers: buy 20 items, get a free shirt",free_gift,0
+Wholesale-tier customers who spend $300 get a free gift set.,free_gift,0
+"Cart subtotal tier: Spend $150 save $20, $300 save $50.",tiered_discount,2
+Platinum members spending €250 receive premium free purse,free_gift,0
+Logged-in shoppers: Earn a free picnic basket after spending $200.,free_gift,0
+Spend 175 AUD and qualify for 25% off on a gym mat.,buy_x_get_y,1
+"Cart total over INR ₹5000: save ₹1000, over ₹10000: save ₹2500.",tiered_discount,2
+"Enjoy tiered cart savings: 2 items = 10% off, 3 items = 15%, 5+ items = 25%.",tiered_discount,2
+Spend AUD 500 to unlock a 25% discount.,buy_x_get_y,1
+"Cart perks: Buy 4 items for 10%, buy 8 items for 25%.",tiered_discount,2
+Buy 3 pairs of sandals save AUD 25; buy 7 save AUD 75,tiered_discount,2
+Spend AUD 120 and receive a free cookbook.,free_gift,0
+Cart value £120 grants a free perfume pack,free_gift,0
+"Tiered customer discount: Spend £50 = 5% off, £150 = 20% off.",tiered_discount,2
+Run a promotion for subscribers only,unsupported,3
+Logged-in users spending AUD 400 will receive a free gym bag.,free_gift,0
+Discount for quantity vague.,clarification,4
+Save 20% above £500 shopping total.,tiered_discount,2
 Add new categories to the store.,unsupported,3
 Spend $100 in the clearance section to receive a free water bottle.,free_gift,0
-"Buy one game console, get 15% off a controller",buy_x_get_y,1
-Buy any 6 products from the seasonal sale to receive a free mug.,buy_x_get_y,1
-What reward system works best for sales?,unsupported,3
+"Spend £50, get 30% off shoes.",buy_x_get_y,1
+Offer a flash discount starting at midnight.,unsupported,3
+Buy any 6 products from the seasonal sale to receive a free mug.,free_gift,0
+Buy 8 items and receive a free special gift,free_gift,0
 "Hello, can you set up a sale?",unsupported,3
+$60 subtotal unlocks free tea towels,free_gift,0
 Buy from the travel gear range and enjoy 15% off carry-on luggage.,buy_x_get_y,1
-"Spend INR 4,000 to claim your free gift.",free_gift,0
-"Buy 3 shoes for $10 savings, buy 6 shoes for $30 savings",tiered_discount,2
-Purchase a laptop and receive a wireless mouse complimentary.,buy_x_get_y,1
+"Spend INR 4,000 to claim your free gift.",unsupported,3
+"Spend $70, fancy ties at 50% off.",buy_x_get_y,1
+"Hi, can you make my website faster?",unsupported,3
+Logged-in Australian buyers spending $80 receive a free koala plush.,free_gift,0
+"Spend $50 for 10% off, $100 for 20% off",tiered_discount,2
+Purchase a laptop and receive a wireless mouse complimentary.,free_gift,0
 "Spend $50 on accessories, get a free necklace.",free_gift,0
 Logged-in shoppers: Earn a free tote bag for $120 spend.,free_gift,0
-"£50 cart gets 5% off, £100 gets 10%.",tiered_discount,2
-Buy 0 products and still get a reward.,unsupported,3
-"Unlock savings: Spend £100 for 10%, £250 for 25% off!",tiered_discount,2
-UK shoppers get a free scarf with jacket purchase,buy_x_get_y,1
-Purchase 3 products to earn a free journal.,buy_x_get_y,1
-"Buy any perfume, get the cheapest free",buy_x_get_y,1
-Build a report on customer buying trends.,unsupported,3
-"Buy 5 items, get one free.",buy_x_get_y,1
-"Buy from winter collection, get 15% off summer collection.",buy_x_get_y,1
-Offer discounts to new subscription customers.,unsupported,3
-Buy 3 scarves save $10; buy 7 save $25,tiered_discount,2
-"Buy 3 from our newest arrivals, save 10%; buy 6, save 25%.",tiered_discount,2
-"Hello, how can we improve promotions?",unsupported,3
-Introduce a referral program for frequent buyers.,unsupported,3
-"Buy from sportswear, get 15% off formal wear.",buy_x_get_y,1
-"Buy a TV, get a soundbar free.",buy_x_get_y,1
-Buy unspecified goods and earn rewards conditionally.,unsupported,3
-"Spend INR 10,000 on electronics and get a free power bank.",free_gift,0
-Spend €150 and unlock 25% off on designer sunglasses.,buy_x_get_y,1
-"Spend €100, get a free backpack.",free_gift,0
-"Shop toys, receive discounts on board games.",unsupported,3
-Add advanced analytics for store revenue.,unsupported,3
-Gold members spending $150 get a free travel pouch,free_gift,0
-Logged-in customers spending €150 will receive a free dining set.,free_gift,0
-"Buy 1 coat, get scarf free.",buy_x_get_y,1
-Get rewards when buying things.,unsupported,3
-VIP customers unlock $50 tier (5% off); $500 tier (20% off).,tiered_discount,2
-"Buy 2 pairs of boots, get 30% off socks.",buy_x_get_y,1
-"Spend €150, receive a free eco-friendly bottle.",free_gift,0
-"Quantity tier promo: Buy 2 items for 5% off, buy 4 for 10%.",tiered_discount,2
-"Buy a printer, get paper 20% off.",buy_x_get_y,1
-"Buy 5 jackets to unlock 20% off, 10 jackets unlock 30% discount.",tiered_discount,2
-"Buy 10 boxes of cookies, get 2 free (₹)",buy_x_get_y,1
-Add 10 items to cart for $35 off.,buy_x_get_y,1
-"Buy 4 items for $10 off, buy 10 items for $25 off.",tiered_discount,2
-Grab 3 hats and earn a free tote bag.,buy_x_get_y,1
-Logged-in users spending $300 will earn a free weekender bag.,free_gift,0
-"Gold-tier: Buy perfume, get a travel pouch free.",buy_x_get_y,1
-Spend €60 to claim your free stationery kit,free_gift,0
-Get 10% off 3 products in the Shirts Collection; 25% off 6 items.,tiered_discount,2
-"Get 5% off 2+ shoes, get 20% off 5+ shoes!",tiered_discount,2
-Flash sale 24/7 for all categories,unsupported,3
-Discount items by 300% — impossible!,unsupported,3
-"Hello, can you recommend some promo strategies?",unsupported,3
-"Buy 2 packs of socks, get 1 pair free",buy_x_get_y,1
-Logged-in shoppers spending €60 receive free socks,free_gift,0
-"Buy 2 belts, get a free wallet.",buy_x_get_y,1
-Can I schedule a flash sale?,unsupported,3
-Provide minus one discounts.,unsupported,3
-"Gold users: Buy 1 suit, 20% off tie.",buy_x_get_y,1
-"Buy one drink, get another free",buy_x_get_y,1
-Spend $150 VIP gets $25 savings; spend $400 gets $75 savings,tiered_discount,2
-$15 off AUD $150 tier; $50 off AUD $300 tier.,tiered_discount,2
-Get 30% off a case with phone purchase,buy_x_get_y,1
-"Spend $45, get free organizers",free_gift,0
-"Buy 3 from 'Summer Deals' save 10%, buy 6 save 20%",tiered_discount,2
-Spend INR ₹5000: ₹200 save; spend ₹10k: ₹500 saved.,tiered_discount,2
-"Buy a dress, get matching earrings free.",buy_x_get_y,1
-Can you implement a midnight sale idea?,unsupported,3
-"Spend $100 on shoes for 10% off, $200 for 25% off",tiered_discount,2
-"Spend INR 12,000, get free designer cushion covers",free_gift,0
-"Gold members: Spend ₹5000, 40% off jeans.",buy_x_get_y,1
-Spend €90 and claim your gift!,unsupported,3
-"Buy 2 shirts, get 30% off on ties",buy_x_get_y,1
-Grab 3 dresses and claim a free journal.,free_gift,0
-Shop freely and unlock uncertain benefits.,unsupported,3
-"Buy 2 sports shoes, get a free pair of socks",buy_x_get_y,1
-"Hi there, how do I create a new product listing?",unsupported,3
-"VIP tier: Buy shoes, get 15% off accessories",buy_x_get_y,1
-Discount everything by 40%.,unsupported,3
-Offer one-time discounts for first purchases on subscriptions.,unsupported,3
-Host unlimited flash sales with tiered pricing,unsupported,3
-"Spend INR 2,500 in our decor category, receive a free candle.",free_gift,0
-"Spend $70, fancy ties at 50% off.",buy_x_get_y,1
-Spend AUD 600 on tech and receive a free laptop stand.,free_gift,0
-"Purchase 5 skincare products, get a free serum",buy_x_get_y,1
-"Buy 2 bottles of wine, get a free corkscrew.",buy_x_get_y,1
-Run a sale next Wednesday.,unsupported,3
-"Buy 3 products to save $20, buy 6 products to save $50!",tiered_discount,2
-"Add 10 items to cart, get free sneakers.",free_gift,0
-Logged-in US buyers: Spend $90 and get free earbuds.,free_gift,0
-"Buy one toy car, get another toy car free.",buy_x_get_y,1
-"Spend INR ₹5000, receive a complimentary dinnerware set",free_gift,0
-Buy 3 books and get a free bookmark.,buy_x_get_y,1
-"Buy 1 shirt, get 1 free!",buy_x_get_y,1
-"Buy 3 beauty products, earn a free brush cleaner",buy_x_get_y,1
-Get a first-purchase cashback triggered automatically.,unsupported,3
-Spend $150 on skincare and receive a free makeup pouch.,free_gift,0
-"Spend £100, unlock 15% off on watches",buy_x_get_y,1
-Cart with 4 items: Free wallet.,free_gift,0
-Cart total $200? Get free headphones,free_gift,0
-"Spend £75 for 10% off, £150 for 20% off",tiered_discount,2
-"Buy a leather wallet, and receive a keychain for free.",buy_x_get_y,1
-Optimize the store for higher mobile performance metrics.,unsupported,3
-Buy 7 of product A and receive free product C,buy_x_get_y,1
-"Spend $300, unlock 20% off air fryer",buy_x_get_y,1
-Can you add user reviews to product pages?,unsupported,3
-Logged-in users spending $80 get a free candle holder,free_gift,0
-"Shop £300 in dresses, receive free heels",free_gift,0
-Introduce a referral discount system.,unsupported,3
-"Buy a smartwatch, and enjoy 25% off on fitness bands.",buy_x_get_y,1
-Track customer retention rates thoroughly.,unsupported,3
-$120 cart rewards customers with a free power bank,free_gift,0
-"Subtotal tiers: $50 = 5% off, $150 = 15%, $300 = 25% off!",tiered_discount,2
-Create custom coupon codes for every visitor,unsupported,3
-Send discounts to everyone who signed up,unsupported,3
-"Buy 3 candles, earn a free wick trimmer",buy_x_get_y,1
-Spend $500 on multiple products get $100 flat discount reward,unsupported,3
-"VIP members: Spend INR ₹4,000 and enjoy a free gift box.",free_gift,0
-"Purchase 4 pens, and the lowest-priced is free",buy_x_get_y,1
-Cart total over £500? Save up to 25% instantly!,unsupported,3
-"Purchase 3 items for 10% off, grab 6 for 20% off storewide!",tiered_discount,2
-Purchase 5 products and enjoy 10% off.,unsupported,3
-Give everyone something on their birthday.,unsupported,3
-Can you help set up my payment gateway?,unsupported,3
-Spend €200 and receive a free item,free_gift,0
-Offer 15% off after signing up as a subscriber.,unsupported,3
-VIPs spending AUD 250 receive a free picnic set,free_gift,0
-"Buy 2 mugs, get a free coaster set.",buy_x_get_y,1
-Offer something special to first-time buyers.,unsupported,3
-Buy things to unlock potential rewards.,unsupported,3
-"Spend ₹2000, get 10% off on handbags",buy_x_get_y,1
-Reward buyers for making no purchases,unsupported,3
-Buy 4 from Electronics to save $15; buy 8 to save $40,tiered_discount,2
-"Spend £140 on accessories, get a free hat.",free_gift,0
-"Add 5 items, receive a free wine opener.",buy_x_get_y,1
-"Shoes: buy 3+, get $12 off; buy 8+, get $35 off",tiered_discount,2
-"UK exclusive: Buy coffee sets, get mugs free.",buy_x_get_y,1
-"Buy N of this lamp model, get a free bulb pack",buy_x_get_y,1
-"Hello, can you create discounts based on cart value?",unsupported,3
-Spend AUD 120 and receive a free cookbook.,free_gift,0
-How do I view my sales analytics?,unsupported,3
-€80 subtotal triggers a free snack bundle,free_gift,0
-Buy from our summer footwear collection and get 30% off on handbags.,buy_x_get_y,1
-Discount customers who subscribe before the weekend.,unsupported,3
-Start referring discounts for customer acquisition.,unsupported,3
-Offer exclusive discounts to social media followers,unsupported,3
-Logged-in users spending €90 earn free yoga mats,free_gift,0
-"Spend INR 10,000 and get a complimentary backpack!",free_gift,0
-Add 5 items for GBP 25 off the total cart.,buy_x_get_y,1
-"VIPs: Spend €300, free luggage set.",free_gift,0
-"Buy any wallet, get the cheapest free",buy_x_get_y,1
-Buy 6 items save ₹300; buy 12 save ₹600,tiered_discount,2
-Buy 3 shoes from men's footwear collection for a free pair of socks,buy_x_get_y,1
-Spend $50 for 5% off and $100 for 10% off your cart!,tiered_discount,2
-Buy some items and unlock something cool.,unsupported,3
-"Spend £125 on sports gear, receive a free water bottle.",free_gift,0
-Logged-in Australian users spending $150 unlock a free wireless mouse.,free_gift,0
-"Spend INR 10,000 and get a free limited-edition wristwatch",free_gift,0
-"Buy 5 gadgets get USD 15 off, buy 10 get USD 40 off",tiered_discount,2
-Spend 175 AUD and qualify for 25% off on a gym mat.,buy_x_get_y,1
-"Give everyone a discount, no purchase required.",unsupported,3
-Get socks free when buying 7 pairs of shoes.,buy_x_get_y,1
-Provide 15% off to first-time buyers across all categories.,unsupported,3
-VIP discounts: spend €200 save €40; spend €700 save €150,tiered_discount,2
-Spend ₹8000 to claim a free coffee grinder.,free_gift,0
-Analyze competitor alternative tools via simpler Shopify backups.,unsupported,3
-"Spend $50 for 10% off, $100 for 20% off",tiered_discount,2
-"Buy 5 from the winter collection, get free gloves",buy_x_get_y,1
-"Spend INR 1,000 for 10%, INR 2,000 for 20%",tiered_discount,2
-"Spend €300, receive a free designer tote bag",free_gift,0
-T-shirts: buy 3 get 10% off; buy 6 get 20%,tiered_discount,2
-"Spend INR 2,000 = INR 150 off, spend INR 8,000 = INR 800 off.",tiered_discount,2
-Spend INR 6000 for a free branded travel mug,free_gift,0
-"Spend $100 in the tech collection, get a free phone stand",free_gift,0
-Gold-tier customers spending €300 will unlock a free gift.,unsupported,3
-Buy at least 4 items to enjoy percentage-based discounts.,unsupported,3
-"Buy 6 units of product Z, get free unit Y",buy_x_get_y,1
-Get a bonus after subscribing to newsletters.,unsupported,3
-Track my monthly store revenue.,unsupported,3
-Let subscriptions trigger bonuses in GBP.,unsupported,3
-"Buy 6 items from the skincare collection, earn a free face mask",buy_x_get_y,1
-"Buy 3 kids' items, receive a free toy",buy_x_get_y,1
-Set up a referral program for our products.,unsupported,3
-Spend $100 to unlock a free candle.,free_gift,0
-"Spend more on shoes: €50 saves €10, €100 saves €25",tiered_discount,2
-"Buy any product, get another free one.",buy_x_get_y,1
-"AU shoppers: Buy 2 shirts, get another free.",buy_x_get_y,1
-VIP customers buying 4 items receive a bonus gift.,buy_x_get_y,1
-Spend $100 save $20; spend $400 save $100,tiered_discount,2
-"Shoes: buy 2+, save £10; buy 5+, save £30",tiered_discount,2
-"In Australia: Buy raincoat, free umbrella.",free_gift,0
-"Cart perks: Buy 4 items for 10%, buy 8 items for 25%.",tiered_discount,2
-"Purchase 4 items, free tote bag included!",free_gift,0
-"Hi, what are current promo trends?",unsupported,3
-Shop from our pet accessory section and unlock discounts on bedding.,unsupported,3
-Cart subtotal of £50 gets £5 off; £150 gets £20 off,tiered_discount,2
-Buy 1+ item: $5 off; Buy 6+ items: $20 off.,tiered_discount,2
-"Hi, what are the latest trends in retail?",unsupported,3
-Give everyone 50% off this Friday night.,unsupported,3
-"Buy a ring, get free earrings.",buy_x_get_y,1
-Spend ₹5000 and get 10% off headphones,buy_x_get_y,1
-"Spend AUD $50 for 5% off, AUD $200 for 20% off!",tiered_discount,2
-Generate detailed analytics on last month's sales.,unsupported,3
-Offer free shipping to all locations globally permanently.,unsupported,3
-Cart 5 items: Free camera case!,free_gift,0
-"Limited-time savings: €25 spent yields 5% off, €75 gets 15%.",tiered_discount,2
-"Buy 3 notebooks, get the least expensive free",buy_x_get_y,1
-"Spend $400, 50% off watch.",buy_x_get_y,1
-"Buy three pairs of shoes, get one free.",buy_x_get_y,1
-"Spend ₹5000, receive 30% off watches.",buy_x_get_y,1
-"Shop more scarves: 2 = 8% off, 5 = 20% off!",tiered_discount,2
-"Spend INR 5,000 in electronics and get free earbuds",free_gift,0
-Purchase 6 water bottles and earn a free wine opener.,free_gift,0
-Spend AUD $300—get $25 off; spend AUD $500—save $75.,tiered_discount,2
-"Spend INR 1000, free notebook.",free_gift,0
-Can you set up abandoned cart automations?,unsupported,3
-"Buy 3 travel bags, receive a free luggage tag",buy_x_get_y,1
-Start a 24-hour flash sale.,unsupported,3
-"Buy 3 umbrellas for $5 off, buy 6 umbrellas for $20 off.",tiered_discount,2
-Free sunglasses when you buy 6 products.,buy_x_get_y,1
-What’s your favorite promotion?,unsupported,3
-Spend AU $75 to get 10%; spend AU $150 for 25%.,tiered_discount,2
-Spend AUD 250 to receive travel accessory kit,free_gift,0
-Logged-in UK users spending £150 get a free leather wallet,free_gift,0
-"BOGO sale: Buy any jeans, get one free.",buy_x_get_y,1
-Spend $-5 and get a bonus deal.,unsupported,3
-Get a free journal when you spend $75.,free_gift,0
-"Buy winter wear, get 15% off summer styles.",buy_x_get_y,1
-Receive a free backpack for buying 4 t-shirts.,free_gift,0
-Buy 6 items: free tumbler included!,buy_x_get_y,1
-Spend 100 GBP and get 20% off on skincare products.,buy_x_get_y,1
-Host a flash weekend sale for Christmas.,unsupported,3
-"Purchase 7 items, and one of them will be complimentary.",buy_x_get_y,1
-US shoppers: Earn a free water bottle for $75 spend.,free_gift,0
-Can I sync this with my email marketing?,unsupported,3
-Spend AUD $0 and unlock benefits,unsupported,3
-"Cart subtotal tiers: €50 = 10% off, €150 = 25% off.",tiered_discount,2
-Spend AUD $200 in our electronics section to get a free charger.,free_gift,0
-Spend €0 and enjoy products on the house.,unsupported,3
-"Buy a pack of markers, get a sketchpad free!",buy_x_get_y,1
-"Buy kitchenware, get 20% off home decor.",buy_x_get_y,1
-Spend 3000 INR: 5%; Spend 8000 INR: 20%.,tiered_discount,2
-Spend €50 across Accessories and €150 to get increasing discounts,unsupported,3
-Spend more to save more: 10% discount at £100 or 25% at £300.,tiered_discount,2
-Purchase 2 of product X and unlock free gift Y,buy_x_get_y,1
-"Cart subtotal INR 500 gets 5%, INR 2000 gets 15%",tiered_discount,2
-Purchase $175 worth of coffee and get a free thermos.,free_gift,0
-VIP members spending $250 get a free leather wallet,free_gift,0
-Discount first-time customers by 15%.,unsupported,3
-Gold-tier shoppers spending $250 will earn a luxury gift.,free_gift,0
-Give me a report of cart abandons.,unsupported,3
-"VIP promo: Spend ₹2000, receive ₹500 off your total.",buy_x_get_y,1
-VIPs spending €100 earn a free gift bundle,free_gift,0
-"Quantity tiers: 2 pairs = 10% off, 5 pairs = 20%.",tiered_discount,2
-Save AUD $15 on $100; save AUD $50 on $300.,tiered_discount,2
-"Buy one cake, get another free",buy_x_get_y,1
-Get free sunglasses with purchase of any 4 items,buy_x_get_y,1
-"Spend £150 in the gardening collection, get a free trowel.",free_gift,0
-"Order cookware, get 10% off bakeware.",buy_x_get_y,1
-"Buy 6 pants for $25 off, and 12 pants for $60 off.",tiered_discount,2
-VIP customers: Buy any 3 products and get the cheapest one free.,buy_x_get_y,1
-"Cart tiers: 3 shirts = 10% off, 7 shirts = 25% off.",tiered_discount,2
-"Spend $50, get 25% off headphones",buy_x_get_y,1
-Offer free delivery for orders over $50.,unsupported,3
-Spend €100 and receive free skincare samples,free_gift,0
-Loyalty members: Spend $100 and get 25% off select shoes.,buy_x_get_y,1
-"Buy one pair of running shoes, get another pair at no cost!",buy_x_get_y,1
-"VIP exclusive deals: Spend €75 unlock 10%, spend €200 unlock 25%",tiered_discount,2
-Offer first-time buyers a flat 20% discount.,unsupported,3
-Just reward buyers accordingly.,unsupported,3
-Spend £120 in tech accessories to get a free charger,free_gift,0
-Purchase 5 pairs of socks to unlock a free lunchbox.,free_gift,0
-"Spend £100, get a free robe",free_gift,0
-"Spend $150 on home decor, get a free planter.",free_gift,0
-Receive a free blender for spending $200 in appliances.,free_gift,0
-Give automatic perks to new subscription sign-ups.,unsupported,3
-Spend AUD $100 for 10%; AUD $300 for 20% off (VIP customers only).,tiered_discount,2
-Spend €100 save 10%; spend €250 save 25%,tiered_discount,2
-Buy 4 items from the gift shop and receive a free wine opener.,free_gift,0
-"Get $5 off when you buy 2 items, $15 off for buying 5 items!",tiered_discount,2
-"Shop kitchen appliances, get 20% off cookware",buy_x_get_y,1
-"Get 10% off $75, 25% off $200 or more",tiered_discount,2
-Spend ₹50 to unlock a shipping reward.,unsupported,3
-"Buy 4 from the collection and save 5%, or buy 8 to save 20%.",tiered_discount,2
-What time does the store open?,unsupported,3
-Spend AUD 250 for AUD 50 off your order.,unsupported,3
-"Buy 3 items, get one free from our special collection",buy_x_get_y,1
-Buy a smartphone and get 25% off on the wireless charger.,buy_x_get_y,1
-Host a flash sale for 12 hours on Friday.,unsupported,3
-Get 20% off camping gear when you buy a backpack.,buy_x_get_y,1
-Spend $120 in our pet supplies section for a free chew toy.,free_gift,0
-"Buy N hats, get cheapest free.",buy_x_get_y,1
-Discount all products by 15%.,unsupported,3
-Give customers something free after buying things.,unsupported,3
-Can you recommend popular marketing strategies?,unsupported,3
-"Cart subtotal tier: Spend $150 save $20, $300 save $50.",tiered_discount,2
-Get a free journal with 3 purchases from the summer collection.,buy_x_get_y,1
-Offer free shipping on all orders.,unsupported,3
-"Buy 6 stationery items, and one of them will be free!",buy_x_get_y,1
-"Buy 2+ items, 5% discount.",unsupported,3
-"Spend £80, get a free fitness kit",free_gift,0
-Spend INR -50 and unlock exciting deals,unsupported,3
-Run ads for coupons on social media.,unsupported,3
-"Buy 2 items and get 10% off, buy 4 items for 20% off your entire cart!",tiered_discount,2
-Spend $0 and unlock surprises.,unsupported,3
+Gold members get €10 off jackets with 3 pants,buy_x_get_y,1
 "Customer exclusive: Spend $80 for 8% off, $300 for 25%.",tiered_discount,2
-On jackets: spend £100 to unlock 5%; spend £250 to unlock 15%.,tiered_discount,2
-Buy -1 items and unlock a discount,unsupported,3
-VIP customers: spend USD 50 save 10%; spend USD 150 save 25%,tiered_discount,2
-What discounts apply to my subscription customers?,unsupported,3
-"Save €10 when you reach 3 items, save €50 at 10 items",tiered_discount,2
-Shop €90 in UK gates to receive a free wallet,free_gift,0
-Spend AUD 90 to unlock a free beach towel,free_gift,0
-Logged-in US customers spending $300 receive free branded backpack,free_gift,0
-Include referral program options in promotions.,unsupported,3
-Plan a holiday discount campaign.,unsupported,3
-"Spend $400, unlock 40% off specific bedding sets",buy_x_get_y,1
-"Add 2, add 4; unlock 10% then 25%.",tiered_discount,2
-Apply discounts automatically without spending anything.,unsupported,3
-"Get $10 off for purchasing 3 items, $30 off if you buy 6 items!",tiered_discount,2
-"Spend INR ₹3000 for ₹100 off, ₹10,000 for ₹1000 off.",tiered_discount,2
-"Spend $250 on outdoor gear, get a free water bottle",free_gift,0
-Get the cheapest free on orders of 5 items.,buy_x_get_y,1
-Cart total $75 rewards you with a free backpack,free_gift,0
-"Spend ₹2000, get a free movie ticket.",free_gift,0
-For student members: Spend $40 and get 20% off on backpacks.,buy_x_get_y,1
-Can you add gift-wrapping options?,unsupported,3
-"Take 10% off 2+ jackets, 20% off 4+ jackets.",tiered_discount,2
-"Purchase a laptop, get a free mouse.",buy_x_get_y,1
-"Buy 3 shirts to save 10%, buy 6 to save even more!",tiered_discount,2
-"Cart perks: ₹300 off ₹1200, ₹600 off ₹2500.",tiered_discount,2
-Spend $200 but give unlimited free items.,unsupported,3
-"VIP exclusive: Buy 5, get cheapest free.",buy_x_get_y,1
-"Spend more to save: €50 saves €10, €100 saves €30",tiered_discount,2
-"Buy 8 items, get a free tote.",buy_x_get_y,1
-Tiered discounts: Spend €150 save €25; Spend €400 save €100.,tiered_discount,2
-"Buy $50 in collection items for 5% off, $125 for 20%.",tiered_discount,2
-"Spend 500 AUD for 15%, 1,000 AUD for 30%",tiered_discount,2
-Exclusive gated: Cart subtotal €100 gets 20% reward on cart,unsupported,3
-"VIP exclusive: Buy skincare, get beauty tools free.",buy_x_get_y,1
-Can you recommend a quick e-commerce tip?,unsupported,3
-Discount people who sign up during the event.,unsupported,3
-"Exclusive tier: Spend €700, earn tiered €150 discount.",buy_x_get_y,1
-"Spend GBP £25, save 5%; Spend GBP £75, save 15%.",tiered_discount,2
-$20 off $100+ orders; $50 off $200+.,tiered_discount,2
-Gift with $100 purchase,free_gift,0
-Spend €80 and enjoy a free tote bag,free_gift,0
-"Spend £500, get a free 5-piece gift bundle!",free_gift,0
-Reward customers if their cart involves referrals.,unsupported,3
-"Shop 5 items unlock $20 discount, shop 10 unlock $50",tiered_discount,2
-"Receive free coasters by spending INR 4,000!",free_gift,0
-Spend AUD 300 and receive a free desk organizer.,free_gift,0
-"Shop and save more: 3+ items saves 10%, 6+ saves 25%!",tiered_discount,2
-Limited Sale: save $5 for every 5 items you buy!,unsupported,3
-"BOGO: Buy a coffee mug, get the second mug at no extra cost.",buy_x_get_y,1
-Get free sunglasses with ₹5000 spend.,free_gift,0
-"Spend $300, get 20% off gift sets.",buy_x_get_y,1
-Spend $225 in stationery and claim a free organizer.,free_gift,0
-Buy 2 sunglasses and earn a free travel pouch,buy_x_get_y,1
-"Purchase 10 products, receive a free plant pot",buy_x_get_y,1
-"Buy 2 lamps, get a free lightbulb set.",buy_x_get_y,1
-Send free items on customer anniversaries,unsupported,3
-Gold members earn free accessories with a $100 spend,free_gift,0
-"Collection-wide sale: Spend €50 for 10% off, €150 for 25% off.",tiered_discount,2
-Spend 500 GBP get 50 GBP off; spend 1000 GBP get 125 GBP off,tiered_discount,2
-Spend USD 80 and receive a free garden kit,free_gift,0
-Reward shoppers for purchases in a general way.,unsupported,3
-Run a flash sale for 24 hours starting tomorrow.,unsupported,3
-"Buy shampoo, get conditioner free.",buy_x_get_y,1
-Spend USD -10 and get USD 50 in rewards,unsupported,3
-UK members: Spend £90 to unlock a free picnic blanket.,free_gift,0
-"Step up your savings: Spend $50 for $5 off, spend $150 to save $25.",tiered_discount,2
-"Purchase 2 headphones, get a stand free",buy_x_get_y,1
-Free cutting board when you spend $80.,free_gift,0
-"Exclusive: spend $80 for 10%, $150 for 25%",tiered_discount,2
-Spend $0 and get free stuff!,unsupported,3
-Run a promotion for subscribers only,unsupported,3
-"Buy 5 belts, earn a free wallet",buy_x_get_y,1
-Buy 5 tops from the fashion collection and get a free clutch bag,buy_x_get_y,1
-"Spend ₹6000, free premium pen!",free_gift,0
-Give away coupon codes!,unsupported,3
-Generate a sales report for yesterday.,unsupported,3
-"Spend £200 on handbags and save £20, spend £400 and save £50.",tiered_discount,2
-Spend AUD 300 to get AUD 75 off collection-wide purchases.,unsupported,3
-Buy things and unlock some kind of bonus.,unsupported,3
-"Hi, can you create an unlimited rewards system?",unsupported,3
-Gold members: spend ₹2000 save ₹200; spend ₹5000 save ₹750.,tiered_discount,2
-Buy -1 items and get free gifts.,unsupported,3
-Spend over $200 for 20% off; $400 for 40% off.,tiered_discount,2
-"Gold clients: Buy watch, get chain free!",buy_x_get_y,1
-"Gold membership: ₹500 gets 15%, ₹1000 gets 30%",tiered_discount,2
-"Buy 5 items, get a free tote bag.",buy_x_get_y,1
-Offer discounts for initial subscription signups.,unsupported,3
-Host spur-of-the-moment flash sales randomly.,unsupported,3
-VIP customers spending €400 get a marketing exclusive gift box.,free_gift,0
-Platinum members spending €250 receive premium free purse,free_gift,0
-Buy -1 items and get a bonus discount.,unsupported,3
-"Spend INR 5,500 and earn a free umbrella!",free_gift,0
-"Buy necklace, get matching bracelet free.",buy_x_get_y,1
-"Spend AUD $150 = AUD $15 off, spend AUD $450 = AUD $50 off.",tiered_discount,2
-"Spend INR 10,000 and receive a free blanket.",free_gift,0
-"VIPs only: Spend AUD 700, 50% off jackets.",buy_x_get_y,1
-Qualify with negative quantities of products.,unsupported,3
-"Buy 3 products, save $5; buy 5, save $20",tiered_discount,2
-Spend £150 and get 20% off a premium watch,buy_x_get_y,1
-"Buy 2 belts for $5 off, get $25 off for buying 8 belts!",tiered_discount,2
-"Buy two pairs, cheapest free!",buy_x_get_y,1
-"Cart total INR ₹10,000 rewards you with free branded sunglasses",free_gift,0
-Give 200% off for all items!,unsupported,3
-Spend AUD 250 to unlock 15% off a lamp,buy_x_get_y,1
-"VIP members: Buy a sofa, get cushions free.",buy_x_get_y,1
-"Spend $150, get 30% off tote.",buy_x_get_y,1
-Buy items randomly and receive surprise bonuses.,unsupported,3
-"Cart value ₹15,000 unlocks free premium shoes",free_gift,0
-Gold members spending $200 earn a free luxury blanket,free_gift,0
-"Buy a phone, get second device 50% off.",buy_x_get_y,1
-VIPs spending $75 get a free tote bag,free_gift,0
-"Buy a sofa, get a free throw pillow",buy_x_get_y,1
-"VIP customers: Spend €200, get 30% off bag.",buy_x_get_y,1
-"Spend €100, claim a free tote bag!",free_gift,0
-Buy stuff and get some reward.,unsupported,3
-"Ministry-tier customers spending INR ₹6,000 get a free home accessory set.",free_gift,0
-"Spend $800 on watches, get $125 off the subtotal.",buy_x_get_y,1
-Purchase shoes and get another pair free.,buy_x_get_y,1
-Gold tier members: Buy 3 shirts and get a free accessory.,buy_x_get_y,1
-Enable unlimited loyalty points accumulation.,unsupported,3
-"BOGO: Purchase one hardcover book, get the second free!",buy_x_get_y,1
-Summer collection tier: £20 off £100 spends; £50 off £200.,tiered_discount,2
-"Gold-tier customers spending INR 5,000 will earn a free gift.",free_gift,0
-Buy 4 items: save $10; buy 10 items: save $30.,tiered_discount,2
-"Purchase 3 products, get the cheapest free",buy_x_get_y,1
-Spend £100 in our 'Fitness' collection: Free yoga mat included!,free_gift,0
-"Hi, can we motivate buyers with perks?",unsupported,3
-"Buy 3 shirts, get a free mug.",buy_x_get_y,1
-Shop from the home decor section and get 20% off on kitchen accessories.,buy_x_get_y,1
-Spend AUD $150 for $15 off; spend $300 for $50 off.,tiered_discount,2
-"Buy any 2 sweaters, get 1 free.",buy_x_get_y,1
-Buy 12 items to receive ₹300 off your bill.,unsupported,3
-"Spend £150, get 25% off wallet.",buy_x_get_y,1
-Spend $100 for 10% off; spend $300 for 25% off,tiered_discount,2
-Offer referral discounts for brand ambassadors.,unsupported,3
-Offer 300% cashback on purchases of €100.,unsupported,3
-VIPs spending €300 get free premium cookware,free_gift,0
+"Buy shoes, get free cleaning kit worth €20",free_gift,0
+"Buy 2 of this phone model, get a free charger",free_gift,0
+Spend £100 to get £25 off your purchase.,unsupported,3
+"Unlock savings: Spend £100 for 10%, £250 for 25% off!",tiered_discount,2
 Free umbrella when you buy 4 backpacks.,free_gift,0
-Complimentary water bottle for spends $90+,free_gift,0
-Buy 3 items get 5% off.,unsupported,3
-Please create a referral discount scheme.,unsupported,3
-Spend ₹5000 and receive a complimentary water bottle!,free_gift,0
-Buy items and receive a special prize.,unsupported,3
-"Pick 6 products, get a free lunchbox.",buy_x_get_y,1
-"Gold-tier members: Buy jewelry, get free case.",free_gift,0
-Get free socks with 3 clothing purchases,buy_x_get_y,1
-"Spend £50, get 30% off shoes.",buy_x_get_y,1
-"Market-exclusive offer: Buy 1 jacket, get 1 scarf free in Australia.",buy_x_get_y,1
-Buy goods and get rewarded.,unsupported,3
-Shop around and gain unclear rewards.,unsupported,3
-"Buy 2 of this phone model, get a free charger",buy_x_get_y,1
-"Spend more, save more: save $10 at $100 spent, save $50 at $500 spent.",tiered_discount,2
-"Get 10% off 3 coats, 20% off 6 coats.",tiered_discount,2
-Cheapest product is free with 6-item purchase.,buy_x_get_y,1
-"Buy 7 mugs, get a free tray!",buy_x_get_y,1
-Indian shoppers: ₹3000 spend saves ₹100; ₹10k saves ₹700.,tiered_discount,2
-Exclusive sale: Spend $75 get 10% off; Spend $150 get 25% off.,tiered_discount,2
-"Buy 10 items, get a free reusable bottle",buy_x_get_y,1
-Cart with 5 items: Extra 20% off on belt.,buy_x_get_y,1
+Spend $75 in our jewelry collection to unlock a free bracelet.,free_gift,0
+Purchase 3 products to earn a free journal.,free_gift,0
+"Gold tier shoppers: 10% with 2 items, 20% with 5.",tiered_discount,2
+"Spend $800 on watches, get $125 off the subtotal.",buy_x_get_y,1
+Australian customers spending $300 get 8% off,tiered_discount,2
+Get the lowest-priced item free when you buy 4.,free_gift,0
+"Buy 5 cosmetics, receive a free makeup pouch.",free_gift,0
+Build a report on customer buying trends.,unsupported,3
+Spend in Home Goods $100 unlock 10%; $300 unlock 30%,tiered_discount,2
+"Hello, what are the store hours?",unsupported,3
+"Buy 5 from the winter collection, get free gloves",free_gift,0
+Offer discounts to new subscription customers.,unsupported,3
+"Get £5 off 3 products, £20 off 8 products",tiered_discount,2
 Spend €300 to gain €75 discount on everything.,buy_x_get_y,1
-"Spend €120, unlock your free item",free_gift,0
-Logged-in members: Spend $150 to receive a free scarf.,free_gift,0
-Save $10 when spending $60 or $30 when you hit $150.,tiered_discount,2
-"Buy 1 get 5%, Buy 3 get 10%, Buy 5 get 15%",tiered_discount,2
-"Buy speakers, get a free HDMI cable",buy_x_get_y,1
-VIP members spending $200 will get a free luxury scarf.,free_gift,0
+Set up tiered discounts with negative tiers,unsupported,3
+"Buy 2 backpacks, get a free pencil case",free_gift,0
+Buy 5 for 10%; buy 10 for 25%!,tiered_discount,2
+"Hello, how can we improve promotions?",unsupported,3
+"Shop houseware collection, unlock 10% off the kitchen collection",buy_x_get_y,1
+"AU shoppers: Buy electronics, get computer accessories free.",free_gift,0
+"Buy 2 caps, get 20% off jeans.",buy_x_get_y,1
+Receive a free backpack for buying 4 t-shirts.,free_gift,0
+Give automatic perks to new subscription sign-ups.,unsupported,3
+VIP tiered offer: spend £200 and get 20% off cart.,tiered_discount,2
+"Purchase items, unknown discount applied.",clarification,4
+Spend €150 and unlock 25% off on designer sunglasses.,buy_x_get_y,1
+"Buy 3 from our newest arrivals, save 10%; buy 6, save 25%.",tiered_discount,2
+"Spend €100, get a free backpack.",free_gift,0
+"Buy 3 items, get one discounted on towels",unsupported,3
+"Buy collection A, save £4 on collection B items",buy_x_get_y,1
+"VIP members: £10 off £250, £30 off £600.",tiered_discount,2
+Logged-in customers spending €150 will receive a free dining set.,free_gift,0
+"Spend AUD 350, get free luxury pen.",free_gift,0
+Give all customers free shipping this weekend!,unsupported,3
+Analyze customer engagement metrics for the website.,unsupported,3
+"Gold Plan: INR 750 unlocks 20%, INR 1500 unlocks 40%",tiered_discount,2
+Spend $100 for free premium gift,unsupported,3
+Buy 12 items to receive ₹300 off your bill.,unsupported,3
+"Buy 6 stationery items, and one of them will be free!",free_gift,0
+"Add 5 items, receive a free wine opener.",free_gift,0
+Buy 2 perfumes get body wash for INR 150.,buy_x_get_y,1
+Shoes collection: spend $100 get 10% off; $300 get 25% off.,tiered_discount,2
+Logged-in Australian users spending $150 unlock a free wireless mouse.,free_gift,0
+"Buy 5 gadgets, get a discount on power adapters",buy_x_get_y,1
+"Spend $300, get 20% off gift sets.",buy_x_get_y,1
+"Spend £500, get a free 5-piece gift bundle!",free_gift,0
+Make a refer-an-item reward campaign sustainable.,unsupported,3
+"Buy 10 boxes of cookies, get 2 free (₹)",buy_x_get_y,1
+"Buy 2 pairs of boots, get 30% off socks.",buy_x_get_y,1
+Host flash sales without any planning,unsupported,3
+Give newcomers £10 off their first purchase.,unsupported,3
+"AU shoppers: Buy 2 shirts, get another free.",free_gift,0
+"Buy two of product X, receive a free product Y",buy_x_get_y,1
+Grab 3 hats and earn a free tote bag.,free_gift,0
+Logged-in users spending $300 will earn a free weekender bag.,free_gift,0
+Get 15% off jackets when you buy sweaters.,buy_x_get_y,1
+"Buy 7 items, 10% off one product.",buy_x_get_y,1
+"Shop more scarves: 2 = 8% off, 5 = 20% off!",tiered_discount,2
+3+ units save 10%; 5+ units save 20%,tiered_discount,2
+Orders over €100...,clarification,4
+Buy 5 cups for 15% off saucers.,buy_x_get_y,1
+"Buy 4 socks, get a 40% discount on shoes.",buy_x_get_y,1
+10% off when quantity hits 4 products,tiered_discount,2
+Free tote bag giveaway without any defined purchase limits.,clarification,4
+"Toys: 5+ items save £20, 10+ items save £40",tiered_discount,2
+How could discounts get personalization greater returns?,unsupported,3
+"Buy 2 packs of socks, get 1 pair free",buy_x_get_y,1
+Spend €300 to get €50 off your basket.,tiered_discount,2
+"Buy 6 water bottles, pay AUD 5 for cleaning kit",buy_x_get_y,1
+"Gold members: Spend $100 to earn $15 off, $200 saves $40!",tiered_discount,2
+"Buy caps, save 18% off sunglasses",buy_x_get_y,1
+Provide minus one discounts.,unsupported,3
+Gold members spending $200 earn a free luxury blanket,free_gift,0
+"T-shirts: buy 3+, save $15; buy 6+, save $40",tiered_discount,2
+"Purchase 3 pairs of jeans, get a free belt.",buy_x_get_y,1
+Loyalty members: Spend $100 and get 25% off select shoes.,buy_x_get_y,1
+"Buy from accessories, 15% off gadgets.",buy_x_get_y,1
+Grant discounts for referrals,unsupported,3
+Save 5% on cart when buying 4 items.,tiered_discount,2
+"Spend $45, get free organizers",free_gift,0
+"Purchases over AUD $200 should trigger a reward, details pending.",clarification,4
+"VIP shoppers: Buy laptop, get 25% off backpack.",buy_x_get_y,1
+Logged-in UK users spending £30 get free compact mirrors,free_gift,0
+"Spend £300, save £40 on your basket.",tiered_discount,2
+What discounts apply to my subscription customers?,unsupported,3
+Buy 2 dresses save £15; buy 4 save £35,tiered_discount,2
+Cart with 4 items: Free wallet.,free_gift,0
+Add 5 items for GBP 25 off the total cart.,buy_x_get_y,1
+"Spend INR 12,000, get free designer cushion covers",free_gift,0
+Set up automated email discounts for repeat customers.,unsupported,3
+Generate a sales report for yesterday.,unsupported,3
+Spend €90 and claim your gift!,unsupported,3
+"Spend INR 1000, free notebook.",free_gift,0
+"Purchase clothing, get discounts on shoes.",buy_x_get_y,1
+Cheapest product is free with 6-item purchase.,free_gift,0
+Spend $0 and get free stuff!,unsupported,3
+Grab 3 dresses and claim a free journal.,free_gift,0
+Can I get analytics on customer visits?,unsupported,3
+Cart over £60 saves £5; cart over £150 saves £25,tiered_discount,2
+Spend INR 5000 to save INR 1000.,tiered_discount,2
+"UK shoppers: spend £70, get 15% off scarves",buy_x_get_y,1
+"Buy 2 sports shoes, get a free pair of socks",free_gift,0
+Cart subtotal €150 rewards customers with a free makeup kit,free_gift,0
+"Shop books, get 10% off bookmarks",buy_x_get_y,1
+"Step up your savings: Spend $50 for $5 off, spend $150 to save $25.",tiered_discount,2
+Spend $100 in accessories unlock 10%; spend $250 unlock 30%,tiered_discount,2
+"Spend $50, save 10%; spend $100, save 20%",tiered_discount,2
+Add 4 accessories to unlock a free bracelet,free_gift,0
+"Spend INR 2,500 in our decor category, receive a free candle.",free_gift,0
+"Spend AUD $150 = AUD $15 off, spend AUD $450 = AUD $50 off.",tiered_discount,2
+Spend AUD 600 on tech and receive a free laptop stand.,free_gift,0
+Spend €200 on select items for €20 discount.,buy_x_get_y,1
+"Spend ₹2500, free premium notebook.",free_gift,0
+Get 10% off 3 products in the Shirts Collection; 25% off 6 items.,tiered_discount,2
+Run a sale next Wednesday.,unsupported,3
+Spend AUD 180 and get a cosmetic pouch free,free_gift,0
+Give something extra for spending.,clarification,4
+What’s your favorite promotion?,unsupported,3
+"Buy two books, get the third free.",free_gift,0
+"Buy one drink, get another free",free_gift,0
+T-shirts: buy 3 get 10% off; buy 6 get 20%,tiered_discount,2
+"Buy one toy car, get another toy car free.",free_gift,0
+Spend $200 for $25 off; spend $500 for $75 off.,tiered_discount,2
+"Spend INR 10,000, get INR 1500 discount.",tiered_discount,2
+"Buy 3 cups, get teapots for €30 fixed price",buy_x_get_y,1
+Give people free items after they join,unsupported,3
+Spend €200 for a 20% discount on total purchase!,unsupported,3
+"Spend ₹1000, earn ₹100 savings; spend ₹3000, earn ₹500",tiered_discount,2
+How do I view my sales analytics?,unsupported,3
+Provide free shipping for all orders,unsupported,3
+"Spend AUD $50 for 5% off, AUD $200 for 20% off!",tiered_discount,2
+"BOGO: Buy a coffee mug, get the second mug at no extra cost.",buy_x_get_y,1
+Spend $150 on skincare and receive a free makeup pouch.,free_gift,0
+"Buy 3 products to save $20, buy 6 products to save $50!",tiered_discount,2
+"Spend AUD 250, receive 35% off the shoe collection.",buy_x_get_y,1
+Cart total $200? Get free headphones,free_gift,0
+$300 cart earns free premium crystal glassware,free_gift,0
+"Buy a leather wallet, and receive a keychain for free.",free_gift,0
+"Cart perks: ₹300 off ₹1200, ₹600 off ₹2500.",tiered_discount,2
+"Buy 3 gadgets for 10% off, buy 5 gadgets for 25%",tiered_discount,2
+Run a promotion for new customers,unsupported,3
+Buy 7 of product A and receive free product C,free_gift,0
+Logged-in users: Spend £50 in any collection to grab a free accessory.,free_gift,0
+Buying 3 t-shirts gets you 15% off cart total.,tiered_discount,2
+"Buy 5 items, get a free tote bag.",free_gift,0
+VIP-only deals: spend €50 to get 5%; spend €150 to get 20%,tiered_discount,2
+Logged-in users spending $80 get a free candle holder,free_gift,0
+Buy 4 products and take a free candle,free_gift,0
+"Spend ₹6000, free premium pen!",free_gift,0
+Exclusive VIP promo: 10% off carts over $150,tiered_discount,2
+Introduce a referral discount system.,unsupported,3
+"Buy a smart TV, get a free cleaning kit",free_gift,0
+"Buy a smartwatch, and enjoy 25% off on fitness bands.",buy_x_get_y,1
+Can you recommend social media automation tools?,unsupported,3
+Buy items and get something,unsupported,3
+$20 off $100+ orders; $50 off $200+.,tiered_discount,2
+"Spend more to save: €50 saves €10, €100 saves €30",tiered_discount,2
+"Buy 3 jackets, save ₹500 on boots.",buy_x_get_y,1
+"Spend £125 on sports gear, receive a free water bottle.",free_gift,0
+Spend AUD $200 in our electronics section to get a free charger.,free_gift,0
+Give every customer 50% off,unsupported,3
+"Spend ₹5000, receive 30% off watches.",buy_x_get_y,1
+Gold members save: $10 on $50; $20 on $100.,tiered_discount,2
+"Hi, can we motivate buyers with perks?",unsupported,3
+Buy unspecified goods and earn rewards conditionally.,unsupported,3
 "Purchase 100 pens, get 25 free (AUD)",buy_x_get_y,1
-Gold members get 20% off with a bag purchase,buy_x_get_y,1
-Earn bonus points from subscribing to updates daily.,unsupported,3
-Logged-in users spending £40 get a free keychain,free_gift,0
-Spend USD 125 and unlock free lunch box,free_gift,0
-Start a free shipping campaign for international orders.,unsupported,3
-Export customer data to a CSV file.,unsupported,3
-Spend £75 to get a free scarf.,free_gift,0
-Gold customers spending £250 receive free skincare products,free_gift,0
-What is the best-selling product this week?,unsupported,3
-Reward everyone equally without any purchase limits.,unsupported,3
-Get a free case with laptop purchase,buy_x_get_y,1
-Free shipping for all orders above 500 INR.,unsupported,3
-"VIP tier: Spend $75 for 10%, $150 for 30%",tiered_discount,2
-Provide free delivery for customers spending over $100 AUD.,unsupported,3
-"Buy sunglasses, get a cleaning kit free.",buy_x_get_y,1
-"Buy 3 from the outdoor gear collection, get a thermos free",buy_x_get_y,1
-"Cart discount: ₹100 off ₹700, ₹200 off ₹1500.",tiered_discount,2
-Buy 5 items and claim your free gift!,unsupported,3
-"Spend $100 unlock 10%, $250 unlock 20%",tiered_discount,2
-Provide free delivery globally on heavy items.,unsupported,3
-"Buy 3 pieces = 10% off, buy 9 pieces = 30% off.",tiered_discount,2
-Run a weekend flash sale on all categories.,unsupported,3
-How do I add loyalty points?,unsupported,3
-Buy 4 gifts and receive a free picnic blanket.,buy_x_get_y,1
+Set up a flash promo for a specific date range.,unsupported,3
+"Buy 6 items, free cap!",free_gift,0
+"Buy 2 save 7%, buy 5 save 12% cart-wide",tiered_discount,2
+Get a free journal when you spend $75.,free_gift,0
+"VIP customers: Spend €200, get 30% off bag.",buy_x_get_y,1
+"Buy 3 umbrellas for $5 off, buy 6 umbrellas for $20 off.",buy_x_get_y,1
+Spend $200+ to claim your free collectible coaster pack.,free_gift,0
+"Spend $100 on clothing, get 7% off; spend $300 for 15%",tiered_discount,2
+"Buy any 3 items, get 10% off cart",tiered_discount,2
+Gold tier members: Buy 3 shirts and get a free accessory.,free_gift,0
+Buy something and unlock deal benefits.,unsupported,3
+Purchase 5 pairs of socks to unlock a free lunchbox.,free_gift,0
+"The more you buy, the bigger the discount you unlock!",unsupported,3
+Spend AUD $150 for $15 off; spend $300 for $50 off.,tiered_discount,2
+"Buy 3+ items, get 15% off; buy 6+, get 25%",tiered_discount,2
+Can we implement referral bonuses?,unsupported,3
+Spend £75 in our 'Office Supplies' category to unlock a free stapler.,free_gift,0
+Discount items by 300% — impossible!,unsupported,3
+"Bulk buy savings: 2 items saves 7%, 5 items saves 20%.",tiered_discount,2
+Purchase 8 items to qualify for a freebie!,unsupported,3
+"Buy 7 notebooks, receive a free pen set.",free_gift,0
+"Buy 3 mugs, get 25% off coasters",buy_x_get_y,1
+"Wholesale: spend $500 or buy 10 units, get a gift",unsupported,3
+Save €30 when spending €150 or more.,unsupported,3
+"Buy collection A items, save $5 on hats",buy_x_get_y,1
+Can you recommend a quick e-commerce tip?,unsupported,3
+"Buy 6 pants for $25 off, and 12 pants for $60 off.",tiered_discount,2
+Buy things and gain undefined rewards.,unsupported,3
+Run a flash sale for 24 hours starting tomorrow.,unsupported,3
+What’s your favorite type of discount?,unsupported,3
+"Buy 6 items from the skincare collection, earn a free face mask",buy_x_get_y,1
+Flash sales should happen during the evenings.,unsupported,3
+Collection 'Jeans': 10% off €100; 25% off €300.,tiered_discount,2
+VIPs spending $75 get a free tote bag,free_gift,0
+"Pick 6 products, get a free lunchbox.",free_gift,0
+Platinum members: Buy 3 sneakers get 25% off socks.,buy_x_get_y,1
+"Save $10 when you spend $75, save $25 when you spend $150!",tiered_discount,2
+"Save $10 on 3 items, $20 on 6 items!",tiered_discount,2
+"Buy 3 kids' items, receive a free toy",free_gift,0
+Add 5 jackets to save €50.,buy_x_get_y,1
+"Buy rain boots, get umbrella free.",free_gift,0
+Get $7 off cart if total exceeds $100.,tiered_discount,2
+"Buy 3 shoes for $10 savings, buy 6 shoes for $30 savings",buy_x_get_y,1
+"Buy sportswear, 20% off accessories!",buy_x_get_y,1
+"Spend ₹10,000 and get 20% off any furniture piece",buy_x_get_y,1
+"Spend INR 1,000 for 10%, INR 2,000 for 20%",tiered_discount,2
+Collection spend of EUR €100 enables gift redemption,free_gift,0
+"Initiate buy X get Y free discount, no Y selected.",clarification,4
+Spend AUD $300—get $25 off; spend AUD $500—save $75.,tiered_discount,2
+"Buy 3 phones, get 50% off tempered glass for the next",buy_x_get_y,1
+"Cart tiers: 3 shirts = 10% off, 7 shirts = 25% off.",tiered_discount,2
+"Spend £90, free cardholder.",free_gift,0
+Buy 2 bottles of wine and unlock free wine opener,free_gift,0
+"Buy 12+ units, save 25% on total cart.",tiered_discount,2
+Get rewards when buying things.,unsupported,3
+"Spend INR 500, receive unspecified freebies.",clarification,4
+"Buy 5 shirts, receive $20 off cart total!",tiered_discount,2
+What time does the store open?,unsupported,3
+Spend €150 for a free candle set,free_gift,0
+Spend ₹5000 for a ₹500 discount.,tiered_discount,2
+Track customer behavior using analytics,unsupported,3
+"Spend $100 saves you 8%, spend $300 saves you 20%.",tiered_discount,2
+Introduce a coupon code for discounts,unsupported,3
+"Buy 2 of our signature candles, get a free wick trimmer.",free_gift,0
+Purchasing any 4 rings gets earrings discounted to €40 fixed price,buy_x_get_y,1
+Spend €225 and receive a free gift basket.,free_gift,0
+"Buy 1 of collection X, get $5 off collection Z.",buy_x_get_y,1
+"VIP cart discount: €10 off €50, €20 off €100.",tiered_discount,2
+Spend at least $50 for 5% discount on entire cart,tiered_discount,2
+Spend £120 in tech accessories to get a free charger,free_gift,0
+Spend £300 and unlock a free suitcase.,free_gift,0
+Receive a free blender for spending $200 in appliances.,free_gift,0
+Spend INR 5500 for a free lamp,free_gift,0
+"Buy one pencil box, get another free",free_gift,0
+"Only today—buy 5 items for 10%, buy 10 for 25%.",tiered_discount,2
+Provide buyers cash for visiting the store,unsupported,3
+Free sunglasses for spending $100.,free_gift,0
+Set up discounts for subscription renewals.,unsupported,3
+"For first-time buyers: Buy one accessory, get one free.",free_gift,0
+Buy items and receive a special prize.,unsupported,3
+"Spend $50, get a free candle",free_gift,0
+Offer 500% off for spending $10.,unsupported,3
+Purchase a planner and get 10% off pens.,buy_x_get_y,1
+"Buy 3 products in Men’s Accessories, earn free cufflinks",buy_x_get_y,1
+10% off carts over €150,tiered_discount,2
+"Buy 2 bottles of wine, get a free corkscrew.",free_gift,0
+Save $10 when spending $60 or $30 when you hit $150.,tiered_discount,2
+"Market-exclusive offer: Buy 1 jacket, get 1 scarf free in Australia.",free_gift,0
+"Buy 2 plates, save ₹100 on bowls",buy_x_get_y,1
+"Spend £80, get 40% off shoes.",buy_x_get_y,1
+Spend AUD 250 to receive travel accessory kit,free_gift,0
+"Buy any 2 notebooks, save £2 on pens",buy_x_get_y,1
+"Spend ₹2000, get 10% off on handbags",buy_x_get_y,1
+"Gold members: Spend €100 for 10%, €200 for 20% off",tiered_discount,2
+"Cart subtotal ₹500 gets ₹50 off, ₹1500 gets ₹200 off",tiered_discount,2
+VIP customers spending €500 will unlock an exclusive gift.,free_gift,0
+"Spend $400, 50% off watch.",buy_x_get_y,1
+"Buy 2 T-shirts for $10 off, buy 8 for $35 off the cart!",buy_x_get_y,1
+Offer rewards for buying items.,unsupported,3
+"Buy 11 products, and the 12th one comes with a discount.",unsupported,3
+Provide free items to first-time customers,unsupported,3
+Qualify with negative quantities of products.,unsupported,3
+Create a flash sale for next week’s holiday.,unsupported,3
+Purchase any item from the electronics section to unlock 25% off fitness gadgets.,buy_x_get_y,1
+Exclusive for Silver tier: Buy any 5 products and get the cheapest one free.,free_gift,0
+"Buy five dishes, the cheapest one is on us",buy_x_get_y,1
+"Buy 2 bags, get 20% off caps.",buy_x_get_y,1
+Buy one camera and get the camera bag for free.,free_gift,0
+"Tiered collection deal: Buy 2 hats, save 5%; buy 4 hats, save 20%!",tiered_discount,2
+"Buy 3 items, get one free from our special collection",free_gift,0
+"Buy 5 candles from our bestseller range, get one free",free_gift,0
+Buy a smartphone and get 25% off on the wireless charger.,buy_x_get_y,1
+Gift with $100 purchase,free_gift,0
+"Buy 4 pairs of shoes, save £50 instantly.",buy_x_get_y,1
+Offer a deal for buying.,clarification,4
+Spend ₹5000 and get 10% off headphones,buy_x_get_y,1
+"UK spend £450, get 10% off exclusive skincare",buy_x_get_y,1
+Purchase 2 of product X and unlock free gift Y,free_gift,0
+Gold loyalty: 15% off subtotal for €500 shoppers.,unsupported,3
+Buy at least 5 products and save $10,tiered_discount,2
+Buy 2 products for 5% discount; buy 4 for 15% discount,tiered_discount,2
+"Buy items, receive an unspecified reward.",clarification,4
+"Purchase 10 items, enjoy a free hamper package",free_gift,0
+"Cart subtotal perks: £10 off £200, £25 off £500.",tiered_discount,2
+"Buy 5 items, and get 10% off on the 6th item in your cart.",buy_x_get_y,1
+I want a promotion.,clarification,4
+"Buy 4 widgets, get a free gadget!",free_gift,0
+"Get £3 off a £50 spend, get £20 off a £150 spend!",tiered_discount,2
+Host a flash sale for 12 hours on Friday.,unsupported,3
+Free picnic basket for spending AUD 200.,free_gift,0
+"Buy 8 products from the Eco Goods collection, get a free bamboo tray",buy_x_get_y,1
+"Spend €500, save €100 on your basket.",tiered_discount,2
+"Buy one bag, get 50% off the wallet.",buy_x_get_y,1
+"Spend £140 on accessories, get a free hat.",free_gift,0
+"Spend €120, unlock your free item",unsupported,3
+"AUD 100 for 10%, AUD 250 for 15%, AUD 500 for 20%, AUD 1000 for 30%",tiered_discount,2
+"Shoes promo: 3 pairs = 10% off, 6 pairs = 25%.",tiered_discount,2
+Get free socks with 3 clothing purchases,free_gift,0
+Buy 2 save ₹150; Buy 6 save ₹700,tiered_discount,2
+"Spend £100 in the electronics collection, get free wireless headphones",free_gift,0
+"Buy from our premium line, save 20% on basics",buy_x_get_y,1
+"Buy 3 shirts, get a free mug.",free_gift,0
 Spend $0 and get 20% off.,unsupported,3
+Free backpack for customers.,clarification,4
+"Get 5% off with 2 items, 10% off with 4 items.",tiered_discount,2
+"Get 5% off 2+ shoes, get 20% off 5+ shoes!",tiered_discount,2
+Save $20 if subtotal exceeds $250,tiered_discount,2
+"Spend AUD 50 save 5%, AUD 100 save 10%, AUD 200 save 20%, AUD 300 save 25%",tiered_discount,2
+"£50 cart gets 5% off, £100 gets 10%.",tiered_discount,2
+Buy 3 books and get a free bookmark.,buy_x_get_y,1
+Cart total £75 triggers a free pair of gloves,free_gift,0
+Offer 300% off if they cancel their cart,unsupported,3
+"Buy 3, get one free gift!",free_gift,0
+Buy random items to trigger some discount percentage.,clarification,4
+Greetings! How are you today?,unsupported,3
+Flash sale starting tomorrow ending at midnight.,unsupported,3
+"Spend AUD 200, save AUD 30 on shoes",buy_x_get_y,1
+"Gold clients: Buy watch, get chain free!",free_gift,0
+Gold members spending €120 unlock a free perfume,free_gift,0
+Add referral rewards for customers,unsupported,3
+"Spend INR ₹1000 on makeup, get a free brush set",free_gift,0
+£30 spend: £5 off; £100 spend: £25 off.,tiered_discount,2
+Create custom coupon codes for every visitor,unsupported,3
+"Buy 12 items, get exclusive free perks!",unsupported,3
+"Buy 4 dresses, receive a free belt",buy_x_get_y,1
+"Spend £70 for 5% off fashion, £150 for 10% off",tiered_discount,2
+Gold-tier shoppers spending $250 will earn a luxury gift.,free_gift,0
+VIP members spending $250 get a free leather wallet,free_gift,0
+"Exclusive member offer: Spend $50 for 10% off, $100 for 20%.",tiered_discount,2
+Buy 7 items and claim a free travel pouch.,free_gift,0
+"Buy one cake, get another free",free_gift,0
+Spend AUD 250 to unlock 15% off a lamp,buy_x_get_y,1
+"Shop from winter collection, get 15% off summer apparel",buy_x_get_y,1
+"Buy 2 items, get a free mug",buy_x_get_y,1
+"Buy $50 in collection items for 5% off, $125 for 20%.",tiered_discount,2
+USD $150 spend rewards you with a free duffel bag,free_gift,0
+Export customer data to a CSV file.,unsupported,3
+"Purchase 5 skincare products, get a free serum",buy_x_get_y,1
+Shopping over ₹2500 gets a ₹300 discount.,tiered_discount,2
+"Wholesale: Buy 300 shirts, get 30 ties free",buy_x_get_y,1
+VIP customers: spend USD 50 save 10%; spend USD 150 save 25%,tiered_discount,2
+Receive a free wine opener for €120 spend.,free_gift,0
+Buy 3 or more from accessories to unlock 10% cart discount,tiered_discount,2
+Buy 6 items: free tumbler included!,free_gift,0
+Gold members spending $150 get a free travel pouch,free_gift,0
+"Spend INR 10,000 and get a complimentary backpack!",free_gift,0
+"Purchase 2 headphones, get a stand free",free_gift,0
+Logged-in users spending £60 earn free cup sleeves,free_gift,0
+Buy 5 items from the jewelry collection and receive a free charm.,free_gift,0
+"Buy one phone case, get another free",free_gift,0
+A free gift plan but missing the customer trigger.,clarification,4
+"Buy 10 items, receive a complimentary mini gift box.",unsupported,3
+Get 200% off on purchases,unsupported,3
+Get a free journal when spending $200 in home decor.,free_gift,0
+Discount all products by 15%.,unsupported,3
+Offer first-time buyers a flat 20% discount.,unsupported,3
+Spend $100 on any collection to unlock 15% discount.,unsupported,3
+"Buy 4 t-shirts, get a hoodie for $20 AU.",buy_x_get_y,1
+Analyze my profit and loss statement,unsupported,3
+"UK customers buy one suit, get 50% off a tie",buy_x_get_y,1
+Generate reports for how sales do over time.,unsupported,3
+"Buy 3 shoes, discount on a shirt.",clarification,4
+Buy 2 sunglasses and earn a free travel pouch,free_gift,0
+Logged-in UK shoppers: Spend £300 in cosmetics for a free vanity mirror.,free_gift,0
+Spend £200 in the electronics section to get a free smart plug,free_gift,0
+Buy multiple shoes: Spend GBP 300 save GBP 50.,buy_x_get_y,1
+Spend £0 and claim exclusive rewards.,unsupported,3
 "Spend $100 for 10%, $200 for 25%.",tiered_discount,2
+"Shop dresses, get 30% off jewelry",buy_x_get_y,1
+"Spend €120 in the Winter Sale collection, get free gloves",free_gift,0
+Spend $100 for a free gift,clarification,4
+"Spend €250 unlock 10% off, €500 unlock 30% off",tiered_discount,2
+Buy 0 items and get rewards,unsupported,3
+"Spend INR 3000, free tote bag.",free_gift,0
+"VIP discounts: spend AUD 500, save AUD 50.",tiered_discount,2
+"Buy a sofa, get a free throw pillow",free_gift,0
+"Buy 2 lamps, save $20 on bedside tables",buy_x_get_y,1
+"VIP exclusive: Buy 5, get cheapest free.",unsupported,3
+"Cart subtotal tiers: €50 = 10% off, €150 = 25% off.",tiered_discount,2
+"Spend a bit, get extra gifts.",clarification,4
+"Cart subtotal $75 gets 10% off, $150 gets 25%",tiered_discount,2
+Receive a free diary for spending €50.,free_gift,0
+Purchase 3 bags and receive a free purse organizer,free_gift,0
+"Buy 3 beauty products, earn a free brush cleaner",free_gift,0
+"Buy 2 from the t-shirt collection, save 15%.",tiered_discount,2
+"Purchase from the Bags collection, receive 25% off Sunglasses.",buy_x_get_y,1
+"Hi there, how do I create a new product listing?",unsupported,3
+Spend $100 save $20; spend $400 save $100,tiered_discount,2
+"Spend €200 on cookware, get a free apron",free_gift,0
+"Gold members: Buy 4 items, get a free travel pouch.",free_gift,0
+Spend AU $75 to get 10%; spend AU $150 for 25%.,tiered_discount,2
+Gold members: Spend $100 get 10% off scarves.,buy_x_get_y,1
+Tiered discounts: Spend €150 save €25; Spend €400 save €100.,tiered_discount,2
+Spend €60 to claim your free stationery kit,free_gift,0
+"Subtotal tiers: $50 = 5% off, $150 = 15%, $300 = 25% off!",tiered_discount,2
+"GOLD tier: Spend £50, get £10 off ties.",buy_x_get_y,1
+Enable reward points redemption for all returning buyers.,unsupported,3
+"Buy one pair of running shoes, get another pair at no cost!",free_gift,0
+VIP members spending $200 will get a free luxury scarf.,free_gift,0
+"UK exclusive: Buy coffee sets, get mugs free.",free_gift,0
+"Buy necklace, get matching bracelet free.",free_gift,0
+Include worldwide free shipping for all customers during holidays.,unsupported,3
+"Spend $250 on electronics, unlock $25 off a gadget.",buy_x_get_y,1
+Buy 4 items from the gift shop and receive a free wine opener.,free_gift,0
+Buy 4 from Electronics to save $15; buy 8 to save $40,tiered_discount,2
+Run a sale for everyone.,unsupported,3
+"VIP members: Spend INR ₹4,000 and enjoy a free gift box.",free_gift,0
+Free shipping for all orders above 500 INR.,unsupported,3
+Shoes category: 5% saved on £100; 30% on £500.,tiered_discount,2
+"Spend $200 for 20%, $400 for 30% collection-wide.",tiered_discount,2
+"Unlock cart discounts: ₹700 saves ₹100, ₹1500 saves ₹250.",tiered_discount,2
+Provide free delivery for customers spending over $100 AUD.,unsupported,3
+"Buy sunglasses, get a cleaning kit free.",free_gift,0
+"Buy 3 from the outdoor gear collection, get a thermos free",free_gift,0
+Reward shoppers who spend negative amounts,unsupported,3
+Buy 5 items and claim your free gift!,unsupported,3
+Announce deals that apply to all products.,unsupported,3
+"Buy 5 candles, pay £3 for a holder",buy_x_get_y,1
+Offer free shipping with no minimum purchase,unsupported,3
+"Buy 3 pieces = 10% off, buy 9 pieces = 30% off.",tiered_discount,2
+"Gold customers: Spend £50 get £10 off, spend £150 get £30 off",tiered_discount,2
+Discount everything by 40%.,unsupported,3
+"Buy any N of product Y, claim a free product Z",unsupported,3
+Buy 4 gifts and receive a free picnic blanket.,free_gift,0
+Purchase 4 sweaters for €20 off boots.,buy_x_get_y,1
+Discounts for all who comment on social media,unsupported,3
 Spend $80 in the kids collection and receive a free picnic basket.,free_gift,0
 VIP customers: Spend $250 to receive a free duffel bag.,free_gift,0
-Cart value £120 grants a free perfume pack,free_gift,0
+"Spend INR 8000, save INR 1200.",tiered_discount,2
 Buy 5 dresses from our premium collection and get a complimentary hat.,buy_x_get_y,1
-"Unlock cart discounts: ₹700 saves ₹100, ₹1500 saves ₹250.",tiered_discount,2
+"Spend -5 AUD, get instant attractive cashback free!",unsupported,3
 "Purchase one skincare product, and get 10% off on any face cleanser.",buy_x_get_y,1
-Need help with incoming products' analytics.,unsupported,3
-VIP exclusive: $100 on carts save $20 instantly.,unsupported,3
-Buy 200% more and pay nothing.,unsupported,3
+Spend €90 to unlock €20 off on collection C.,buy_x_get_y,1
+Save €5 if cart exceeds €50 subtotal.,tiered_discount,2
+Staged promotional referrals currently impossible multi-offerings customization struggles.,unsupported,3
+"Spend $100 unlock 10%, $250 unlock 20%",tiered_discount,2
 "Spend AUD 200, claim a free limited-edition bag",free_gift,0
 "Spend INR 4000, free designer wallet.",free_gift,0
-"Spend €120 in the Winter Sale collection, get free gloves",free_gift,0
-"Get £5 off 3 products, £20 off 8 products",tiered_discount,2
+"Buy 10 chocolates, get $20 off a gift box.",buy_x_get_y,1
+Make referral rewards points available for sharing.,unsupported,3
 "Spend ₹2,500 on skincare, receive a free face mask",free_gift,0
 Spend $60 and get a free hat.,free_gift,0
-First-time buyers get $50 off.,unsupported,3
-Run a flash sale now.,unsupported,3
-"Purchase 3 jackets, get a free pair of gloves.",buy_x_get_y,1
-Buy 6 shirts for a flat €40 off your bill.,buy_x_get_y,1
-"Buy 3 backpacks from the travel series, get a free pouch",buy_x_get_y,1
-Set discounts for no-spend thresholds,unsupported,3
+"Buy 5 tees, get 40% off hoodies",buy_x_get_y,1
+"Buy 8 products tagged 'office', get chairs for €100 each.",buy_x_get_y,1
+"Purchase 3 jackets, get a free pair of gloves.",free_gift,0
+Purchase 10+ units: 25% discount applied automatically,tiered_discount,2
+"Buy 3 backpacks from the travel series, get a free pouch",free_gift,0
+Spend -$100 and get a prize,unsupported,3
 Create a detailed inventory tracking system.,unsupported,3
 "Spend €250, unlock 25% off bike helmets",buy_x_get_y,1
 How many users visited our store last week?,unsupported,3
-"Buy 5 of product Z, earn a free complimentary product X",buy_x_get_y,1
+"Buy 3 vases, pay $8 for flowers",buy_x_get_y,1
 Select any furniture piece and unlock 20% off lighting products.,buy_x_get_y,1
-"Spend INR 1,500 get INR 200 off; INR 5,000 get INR 800 off",tiered_discount,2
+"Buy 2, save $10; buy 5, save $25",tiered_discount,2
+Limited Sale: save $5 for every 5 items you buy!,unsupported,3
+"Spend $200 for $30 off, $400 for $75 off subtotal.",tiered_discount,2
 Earn 15% off gadgets when purchasing laptops.,buy_x_get_y,1
 "Add 4 products from the kitchen collection, get a free diary.",free_gift,0
-"VIP tier unlock: spend $100, get 25%; spend $500, get 50%.",tiered_discount,2
+"$30 off $500 purchases, $60 off spends above $1000",tiered_discount,2
+Spend 3000 INR: 5%; Spend 8000 INR: 20%.,tiered_discount,2
+"Buy 5 items from Collection A, get 30% off handbags.",buy_x_get_y,1
 "Buy headphones, get 30% off earphone cases",buy_x_get_y,1
-Can I get analytics on customer visits?,unsupported,3
+"Collection discounts: spend €150, save €20.",tiered_discount,2
 "Buy any from collection A, get 20% off collection B.",buy_x_get_y,1
 Spend €50 in accessories and receive a free wallet,free_gift,0
 "Buy collection A, get rewards on collection B.",unsupported,3
 Spend $150 in the fashion category and claim a free tote bag.,free_gift,0
-What is your favorite product?,unsupported,3
-"AU shoppers: Buy 3 coats, get 1 free.",buy_x_get_y,1
-"Purchase 2 pairs of shoes, get free socks",buy_x_get_y,1
-Launch a big discount offer.,unsupported,3
-"Buy any smartphone, get a free wireless earbuds",buy_x_get_y,1
-Provide free shipping for all orders,unsupported,3
-Flash sale starting tomorrow ending at midnight.,unsupported,3
+"Premium plan: Buy 2 art frames, get paint kits $20 off",buy_x_get_y,1
+"AU shoppers: Buy 3 coats, get 1 free.",free_gift,0
+"Purchase 2 pairs of shoes, get free socks",free_gift,0
+"Gold tier: spend €100, save 40% on belts",buy_x_get_y,1
+"Buy any smartphone, get a free wireless earbuds",free_gift,0
+Buy 2 jackets to get them for £60 each.,buy_x_get_y,1
+"Buy 5 jackets to unlock 20% off, 10 jackets unlock 30% discount.",tiered_discount,2
+Cart total over £500? Save up to 25% instantly!,unsupported,3
+Set up a promotion for all levels.,unsupported,3
+"Cart subtotal £50 gets 10%, £100 gets 20% off",tiered_discount,2
 "Spend INR 5000, unlock free gift wrap.",unsupported,3
-Generate reports for how sales do over time.,unsupported,3
+Cart subtotal above $100 gets $15 off.,tiered_discount,2
 "Gold-tier customers spending INR 15,000 get a free premium handbag",free_gift,0
 Spend $60 to get a free scarf.,free_gift,0
-Track inventory accuracy during high-volume seasons.,unsupported,3
-"Buy 4, lowest-price free.",buy_x_get_y,1
-Unlock a free diary by buying 5 products.,buy_x_get_y,1
+"Buy 3, save £5 on product Y.",buy_x_get_y,1
+"Buy 4, lowest-price free.",free_gift,0
+"Add 3 items, save £5 instantly.",unsupported,3
+Unlock a free diary by buying 5 products.,free_gift,0
+Spend AUD 60 across cart for AUD 10 savings; spend 180 for AUD 50,tiered_discount,2
 "Buy 9 items, get free reusable bag.",free_gift,0
 "Spend €80, get cheapest free!",unsupported,3
 Gold-tier customers buying 3 items receive a pampering gift.,unsupported,3
-Grab 4 novels and the cheapest one is free!,buy_x_get_y,1
+Grab 4 novels and the cheapest one is free!,free_gift,0
 "Buy any gadget, get 20% off accessories set.",buy_x_get_y,1
 "Gold members buy premium bags, get 10% off matching wallets",buy_x_get_y,1
+Exclusive VIP deal: Spend $100 for 10%; $300 for 25%.,tiered_discount,2
 Logged-in US buyers spending $80 get a free measuring tape.,free_gift,0
-"Buy 1 dress, get 1 free!",buy_x_get_y,1
-"Gold members: Buy 3 jeans, get 1 free.",buy_x_get_y,1
-Give automatic rewards for subscribers only,unsupported,3
-Track shopper trends across demographics,unsupported,3
+"Buy 1 dress, get 1 free!",free_gift,0
+"Gold members: Buy 3 jeans, get 1 free.",free_gift,0
+"Buy 3 yoga mats, receive €10 off water bottles.",buy_x_get_y,1
+Buy 10 products tagged 'essentials' to receive 30% off accessories.,buy_x_get_y,1
 Reward new customers with exclusive discounts.,unsupported,3
 "Add 8 items to cart, get free water bottle.",free_gift,0
 "Purchase $125 worth of accessories, get a free bracelet.",free_gift,0
 Analyze performance by region.,unsupported,3
-Analyze which products are the best-sellers.,unsupported,3
+"Spend AUD 120, enjoy AUD 30 off accessories",buy_x_get_y,1
 Buy a gaming chair and enjoy 15% off on a gaming desk.,buy_x_get_y,1
+"Buy 2 products and save $5, buy 4 products and save $15.",tiered_discount,2
 Gold-tier spenders of $250 unlock a free collectible ornament.,free_gift,0
 "Spend $75, get a free cap!",free_gift,0
 Spend INR 3500 to claim your free backpack,free_gift,0
 Spend $60 on cosmetics and earn a free lip balm.,free_gift,0
 Spend $60 for a free water bottle,free_gift,0
-"Buy 3 items, and the cheapest one is on the house.",buy_x_get_y,1
+"Buy 3 items, and the cheapest one is on the house.",free_gift,0
 "Buy makeup, 15% off hair care.",buy_x_get_y,1
 Wholesale customers spending £100 get a free toolkit,free_gift,0
 Logged-in users spending AUD 500 unlock a free smartwatch.,free_gift,0
+Buy 4 items: save $10; buy 10 items: save $30.,tiered_discount,2
 Buy 6 items and get free earphones,free_gift,0
 "Spend AUD 200 for AUD 30 off, AUD 500 for AUD 80 off",tiered_discount,2
 INR 7000 spend unlocks free tote bag,free_gift,0
+"Hello, can you recommend some promo strategies?",unsupported,3
 "Spend INR 7,000, claim a free gift basket",free_gift,0
 "Spend AUD 100, claim a free sunglasses case",free_gift,0
 "Buy 4 products, get a discount on the next pair of socks",buy_x_get_y,1
-Get a free power bank with phone purchase,buy_x_get_y,1
+Get a free power bank with phone purchase,free_gift,0
 Can we enable referral links for product discounts?,unsupported,3
-"Buy a camera, get a free tripod",buy_x_get_y,1
-"Spend ₹500 for a 5% discount, ₹1000 for 15%.",tiered_discount,2
+"Buy a camera, get a free tripod",free_gift,0
+Create a program where buyers earn cashback,unsupported,3
 "UK VIP: Buy bag, 30% off wallet.",buy_x_get_y,1
 "Buy 2 pairs, save $20; buy 5 pairs, save $50",tiered_discount,2
+Spend €30 to save 10%; €75 saves 25%!,tiered_discount,2
 "Buy a phone, get 20% off a tablet",buy_x_get_y,1
-"Buy 6 items, enjoy a free surprise gift!",buy_x_get_y,1
-Can you recommend social media automation tools?,unsupported,3
-Buy 4 hoodies for a 15% discount on cart.,buy_x_get_y,1
+"Buy 6 items, enjoy a free surprise gift!",unsupported,3
+"Exclusive tier: Spend €700, earn tiered €150 discount.",buy_x_get_y,1
+Cart subtotal $100 saves you $10; Cart $500 saves $50.,tiered_discount,2
+"Buy 2 t-shirts get 5% discount, buy 5 get 15%",buy_x_get_y,1
+When you spend $50...,clarification,4
+"Buy 5 items, get 10%. Buy 10, save 20%.",tiered_discount,2
 What discounts should we give to first-time buyers?,unsupported,3
 "Buy headphones, get 10% off a power bank",buy_x_get_y,1
 "Save 10% buying 3 jackets, save 25% when buying 6.",tiered_discount,2
 Cart amounts over €120 get free running shoes,free_gift,0
-Introduce a member-exclusive tier point system.,unsupported,3
+Spend £75 to unlock a 10% discount; spend £200 for 25% discount.,tiered_discount,2
+Cart subtotal ₹750 gets ₹100 off; ₹3000 gets ₹600 off,tiered_discount,2
 "Buy skirts, get 25% off blouses",buy_x_get_y,1
 Spend €300 save 10%; spend €600 save 20%,tiered_discount,2
 Reward customers who join our subscription program.,unsupported,3
-"Buy 2 sweaters, receive a free tote bag.",buy_x_get_y,1
-"Buy 6 packs, 1 free!",buy_x_get_y,1
-"Get $2 off for 2+ books, 15% off 10+ books.",tiered_discount,2
+"Buy 2 sweaters, receive a free tote bag.",free_gift,0
+"Buy 6 packs, 1 free!",free_gift,0
+"Get $2 off for 2+ books, 15% off 10+ books.",buy_x_get_y,1
 Earn a free tote bag for $100 spend.,free_gift,0
+Include free gift items for customers.,clarification,4
+Shop around and gain unclear rewards.,unsupported,3
 Host a flash sale tomorrow.,unsupported,3
 "Spend AUD 150 on shoes, get free socks",free_gift,0
-Add 5 jackets to save €50.,buy_x_get_y,1
+"VIP tier: buy 5 bags, unlock 20% off luggage",buy_x_get_y,1
 "Buy 2 socks, get 50% off the 3rd pair",buy_x_get_y,1
-"AU promotion: Buy snacks, get free soft drink.",buy_x_get_y,1
+"AU promotion: Buy snacks, get free soft drink.",free_gift,0
 "₹1000 unlocks 5%, ₹2500 unlocks 10%, ₹4000 unlocks 15%, ₹7000 unlocks 20%",tiered_discount,2
+"Spend ₹500 for a 5% discount, ₹1000 for 15%.",tiered_discount,2
+"Spend €500 to unlock 20%, spend €1000 to unlock 40%.",tiered_discount,2
 "Spend €300, free designer bag.",free_gift,0
-"Buy 4 drinks, get the cheapest free",buy_x_get_y,1
+"Buy 4 drinks, get the cheapest free",free_gift,0
 Spend 8000 INR and enjoy 30% off on a luxury watch.,buy_x_get_y,1
-Let INR 500 buying guarantee free shipping.,unsupported,3
-"Buy two of product X, receive a free product Y",buy_x_get_y,1
+Add 1 item: no discount; 3 items: 10% off; 5 items: 15%.,tiered_discount,2
+Get $10 off when buying 5 or more products.,tiered_discount,2
+"Buy 3 get 8%, buy 10 get 20% off all cart items",tiered_discount,2
 "Purchase one lipstick, and we'll throw in a second one for free!",buy_x_get_y,1
-Spend €30 to save 10%; €75 saves 25%!,tiered_discount,2
+Buy goods and get rewarded.,unsupported,3
 How about referral bonuses for customers?,unsupported,3
-Get something cool for shopping.,unsupported,3
-Provide buyers cash for visiting the store,unsupported,3
+"Buy 6 from this collection, save AUD 20.",tiered_discount,2
+"Spend ₹3000, get a 15% discount on beauty kits.",buy_x_get_y,1
 Logged-in UK shoppers: Spend £50 and snag a free scarf.,free_gift,0
-"Hello, how do I add SEO tags to my store?",unsupported,3
-Introduce a coupon code for discounts,unsupported,3
+Buy items randomly and receive surprise bonuses.,unsupported,3
+"Shop 5 items unlock $20 discount, shop 10 unlock $50",tiered_discount,2
+"Buy 4 ties, get watches for fixed $50 price",buy_x_get_y,1
 Bulk commercial spenders of $200 receive a free-off-list promo series gift!,free_gift,0
+VIP subscribers: Spend ₹700 get ₹70 off; spend ₹1400 get ₹200 off,tiered_discount,2
+Indian shoppers: ₹3000 spend saves ₹100; ₹10k saves ₹700.,tiered_discount,2
+Can you reset my cart settings?,unsupported,3
 "Gold members: spend INR 750 save 20%, INR 2,000 save 40%",tiered_discount,2
 Spend £300 in home goods for a free cookware set,free_gift,0
-Add 9 items to your cart and receive the 10th item at no cost.,buy_x_get_y,1
+Add 9 items to your cart and receive the 10th item at no cost.,free_gift,0
+"When customers reach INR 5000, what should they get?",clarification,4
 Buy products and get rewarded somehow.,unsupported,3
-"Grab a drink bottle, get a second free",buy_x_get_y,1
+"Grab a drink bottle, get a second free",free_gift,0
 "Spend €250 to save €50, €500 to save €150",tiered_discount,2
-Launch a loyalty points program,unsupported,3
-"Buy any jeans, get the cheapest free",buy_x_get_y,1
-VIP tags: £200 unlocks 20%; £500 unlocks 35%.,tiered_discount,2
-"Buy 2 workout items, get 20% off yoga mats",buy_x_get_y,1
+Get 25% off belts when buying 4 shirts,buy_x_get_y,1
+Can you add user reviews to product pages?,unsupported,3
+"Buy any jeans, get the cheapest free",free_gift,0
+Just reward buyers accordingly.,unsupported,3
+Gift items for paying customers.,clarification,4
 VIP customers spending AUD $400 get an exclusive merchandise gift.,free_gift,0
-Enable bonus points accumulation for referred users.,unsupported,3
-"Australian shoppers: Spend AUD $50 to save 10%; spend AUD $150, save 30%.",tiered_discount,2
-Spend €50 and get a free gift,free_gift,0
+Offer one-time discounts for first purchases on subscriptions.,unsupported,3
+Spend $100 to save 15%.,tiered_discount,2
+Buy 4 hoodies for a 15% discount on cart.,buy_x_get_y,1
+Can I sync this with my email marketing?,unsupported,3
+Reward buyers with points.,unsupported,3
+Spend €50 and get a free gift,clarification,4
 Spend £180 in electronics to get a free power bank,free_gift,0
 "Spend $50, get a free mug.",free_gift,0
-Spend on 5 products in the Sports Collection for 10% off.,unsupported,3
-"Spend INR 2500, free sports bottle.",free_gift,0
-"Buy 9 items, and enjoy free merchandise!",free_gift,0
-"VIP shoppers: Spend €200, save €50. Spend €300, save €100.",tiered_discount,2
-Export customer segmentation data.,unsupported,3
-Buy items and get something,unsupported,3
-"Spend $500, get 30% off on sunglasses.",buy_x_get_y,1
-Grant discounts for referrals,unsupported,3
-"Spend INR 5,000 saves INR 500, spend INR 15,000 saves INR 1,500.",tiered_discount,2
-Run something like an offer.,unsupported,3
-"Add 3 items to cart, get free cap!",free_gift,0
-Set up tiered discounts with negative tiers,unsupported,3
-"Spend INR ₹2,500 for a free tea mix sampler.",free_gift,0
-"Buy 3 glasses, free holder!",free_gift,0
-"Purchase 3 items from the 'Summer Sale' category, receive a free towel.",buy_x_get_y,1
-"VIP customers: €100 unlocks 20%, €300 unlocks 40%",tiered_discount,2
-Spend $110 for a lovely free bonus,free_gift,0
-"Cart worth AUD $50, receive a free organizer",free_gift,0
-"Cart discounts for bulk: Spend $100 to save $15, $200 to save $40.",tiered_discount,2
-Create a program where buyers earn cashback,unsupported,3
-Get 20% off your 5th item when purchasing 4 or more products.,buy_x_get_y,1
-Any 4 items: Pay for 3 only!,buy_x_get_y,1
-"Spend €50, get 30% off sunglasses.",buy_x_get_y,1
-"Purchase 3 from the summer collection, earn a free hat.",buy_x_get_y,1
-"Spend ₹5000 and get ₹500 off, spend ₹10000 and get ₹1200 off.",tiered_discount,2
-"VIP tier savings: $300 unlocks 20%, $700 unlocks 40%",tiered_discount,2
-Spend $200 and take home a free duffel bag.,free_gift,0
-Buy multiple shoes: Spend GBP 300 save GBP 50.,buy_x_get_y,1
-Give 100% off for subscribing to emails,unsupported,3

@@ -13,13 +13,31 @@ DEPLOYMENT_NAME = os.getenv("OPEN_API_4_ENGINE")
 
 
 @traceable(name="azure-openai-call", run_type="llm")
-def llm(system_prompt, message, response_format={"type": "json_object"}, temperature=0):
+def llm(system_prompt, message, history=None, response_format={"type": "json_object"}, temperature=0):
+    """Call the Azure OpenAI deployment.
+
+    Parameters
+    ----------
+    system_prompt : str
+        The system instruction prompt.
+    message : str
+        The current user message.
+    history : list[dict], optional
+        Prior conversation turns in ``[{"role": "user"|"system", "content": "..."}]``
+        format.  Injected between the system prompt and the current user turn so
+        the model has full context of the conversation so far.
+    """
+    messages = [{"role": "system", "content": system_prompt}]
+
+    # Inject history turns (prior user inputs + chatbot system messages) if present
+    if history:
+        messages.extend(history)
+
+    messages.append({"role": "user", "content": message})
+
     response = client.chat.completions.create(
         model=DEPLOYMENT_NAME,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": message},
-        ],
+        messages=messages,
         response_format=response_format,
         temperature=temperature,
     )

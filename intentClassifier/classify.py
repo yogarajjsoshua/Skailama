@@ -14,13 +14,14 @@ from rich import box
 # ── Config ────────────────────────────────────────────────────────────────────
 MODEL_DIR   = Path("model/best")
 MAX_LEN     = 128
-LABEL_NAMES = ["free_gift", "buy_x_get_y", "tiered_discount", "unsupported"]
+LABEL_NAMES = ["free_gift", "buy_x_get_y", "tiered_discount", "unsupported", "clarification"]
 
 LABEL_COLORS = {
     "free_gift":       "green",
     "buy_x_get_y":    "cyan",
     "tiered_discount": "yellow",
     "unsupported":     "red",
+    "clarification":   "magenta",
 }
 
 LABEL_DESCRIPTIONS = {
@@ -28,6 +29,7 @@ LABEL_DESCRIPTIONS = {
     "buy_x_get_y":    "Buy qualifying X items; Y items receive a discount or are free",
     "tiered_discount": "Multiple spend/quantity thresholds, each unlocking a bigger discount",
     "unsupported":     "Does not match any supported promotion family",
+    "clarification":   "Customer needs to specify missing triggers or reward details",
 }
 
 console = Console()
@@ -42,10 +44,23 @@ _device    = None
 def get_model():
     global _tokenizer, _model, _device
     if _model is None:
-        if not MODEL_DIR.exists():
+        possible_dirs = [Path("model/best"), Path("intentClassifier/model/best")]
+        selected_dir = None
+        for d in possible_dirs:
+            if d.exists() and ((d / "model.safetensors").exists() or (d / "pytorch_model.bin").exists()):
+                selected_dir = d
+                break
+                
+        if selected_dir is None:
+            # Fallback to the first existing directory or raise error
+            for d in possible_dirs:
+                if d.exists():
+                    selected_dir = d
+                    break
+
+        if selected_dir is None or not (selected_dir / "config.json").exists():
             console.print(
-                f"Model not found at '{MODEL_DIR}'.[/bold red]\n"
-                "   Run [bold]python 02_train.py[/bold] first."
+                f"Model weights not found. Run [bold]python intentClassifier/train.py[/bold] first."
             )
             raise SystemExit(1)
 
@@ -55,8 +70,8 @@ def get_model():
             _device = "mps"
         else:
             _device = "cpu"
-        _tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)
-        _model     = AutoModelForSequenceClassification.from_pretrained(MODEL_DIR)
+        _tokenizer = AutoTokenizer.from_pretrained(selected_dir)
+        _model     = AutoModelForSequenceClassification.from_pretrained(selected_dir)
         _model.to(_device)
         _model.eval()
 

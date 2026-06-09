@@ -21,7 +21,7 @@ client = AzureOpenAI(
 )
 DEPLOYMENT = os.getenv("OPEN_API_4_ENGINE")
 BATCH_SIZE = 50
-VALID_LABELS = {"free_gift", "buy_x_get_y", "tiered_discount", "unsupported"}
+VALID_LABELS = {"free_gift", "buy_x_get_y", "tiered_discount", "unsupported", "clarification"}
 
 
 def build_batches(examples, batch_size=BATCH_SIZE):

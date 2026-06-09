@@ -26,7 +26,7 @@ PATIENCE     = 3            #
 SAVE_DIR     = Path("model/best")
 DATA_DIR     = Path("data")
 
-ID2LABEL = {0: "free_gift", 1: "buy_x_get_y", 2: "tiered_discount", 3: "unsupported"}
+ID2LABEL = {0: "free_gift", 1: "buy_x_get_y", 2: "tiered_discount", 3: "unsupported", 4: "clarification"}
 LABEL2ID = {v: k for k, v in ID2LABEL.items()}
 
 # ── Dataset ───────────────────────────────────────────────────────────────────
@@ -136,7 +136,7 @@ def main():
     print(f"Loading model: {MODEL_NAME}")
     model = AutoModelForSequenceClassification.from_pretrained(
         MODEL_NAME,
-        num_labels=4,
+        num_labels=5,
         id2label=ID2LABEL,
         label2id=LABEL2ID,
         ignore_mismatched_sizes=True,

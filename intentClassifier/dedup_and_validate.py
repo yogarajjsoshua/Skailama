@@ -7,7 +7,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 MODEL = SentenceTransformer("all-MiniLM-L6-v2")
 THRESHOLD = 0.90
-MIN_PER_CLASS = 300
+MIN_PER_CLASS = 430
+MIN_PER_CLASS_CLARIFICATION = 430   # matches all other classes
 OUTPUT_VAR = "GENERATED_CLEAN"
 DATA_FILE = os.path.join(os.path.dirname(__file__), "classificationData.py")
 
@@ -35,19 +36,26 @@ def validate(examples: list) -> bool:
     print("\n=== Post-Dedup Balance Report ===")
     print(f"Total examples: {len(examples)}\n")
     all_ok = True
-    for label in ("free_gift", "buy_x_get_y", "tiered_discount", "unsupported"):
+    checks = [
+        ("free_gift",      MIN_PER_CLASS),
+        ("buy_x_get_y",    MIN_PER_CLASS),
+        ("tiered_discount", MIN_PER_CLASS),
+        ("unsupported",    MIN_PER_CLASS),
+        ("clarification",  MIN_PER_CLASS_CLARIFICATION),
+    ]
+    for label, min_count in checks:
         count = dist.get(label, 0)
-        status = "OK" if count >= MIN_PER_CLASS else f"BELOW TARGET (need {MIN_PER_CLASS})"
+        status = "OK" if count >= min_count else f"BELOW TARGET (need {min_count})"
         print(f"  {label:<22} {count:>4}  [{status}]")
-        if count < MIN_PER_CLASS:
+        if count < min_count:
             all_ok = False
     return all_ok
 
 
 def load_existing_texts() -> set:
     sys.path.insert(0, os.path.dirname(__file__))
-    from classificationData import FREE_GIFT, BUY_X_GET_Y, TIERED_DISCOUNT, UNSUPPORTED
-    return set(t.strip() for t, _ in FREE_GIFT + BUY_X_GET_Y + TIERED_DISCOUNT + UNSUPPORTED)
+    from classificationData import GENERATED_CLEAN
+    return set(t.strip() for t, _ in GENERATED_CLEAN)
 
 
 def append_to_classification_data(examples: list) -> None:

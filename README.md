@@ -7,6 +7,15 @@ The repo also contains a standalone **Intent Classifier** — a fine-tuned DeBER
 
 ---
 
+## 📐 System Architecture
+
+Detailed system layout and dataflow diagrams can be found in the [Architecture](file:///Users/yogarajkomati/Documents/Interview/Skailama/Architecture/) folder:
+* 🗺️ [High-Level Design (HLD)](file:///Users/yogarajkomati/Documents/Interview/Skailama/Architecture/HLD.md): High-level visual model of components, data flow, and third-party API bindings.
+* 📝 [Low-Level Design (LLD)](file:///Users/yogarajkomati/Documents/Interview/Skailama/Architecture/LLD.md): Structural details of classes, models, schemas, and MongoDB collection details.
+* 🔁 [LangGraph Flowchart](file:///Users/yogarajkomati/Documents/Interview/Skailama/Architecture/LangGraph_Flow.md): Detailed state diagram illustrating LangGraph nodes, conditional edges, loopbacks, and interrupts.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -19,6 +28,11 @@ Skailama/
 │   ├── llm.py                  # Azure OpenAI wrapper (LangSmith-traceable)
 │   ├── pormpts.py              # All system prompts used by the pipeline
 │   └── models.py               # Pydantic request/response models
+│
+├── Architecture/               # System architecture and workflow diagrams
+│   ├── HLD.md                  # High-Level Design document
+│   ├── LLD.md                  # Low-Level Design document
+│   └── LangGraph_Flow.md       # LangGraph state machine workflow details
 │
 ├── intentClassifier/           # Standalone ML intent classifier (research/baseline)
 │   ├── ModelTrain.ipynb        # Interactive training notebook
