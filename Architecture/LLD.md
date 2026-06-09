@@ -1,140 +1,157 @@
-# Low-Level Design (LLD)
+# Low-Level Design — Skailama Promotion Agent
 
-This document provides a low-level architectural specification of the modules, classes, and database schemas that make up the **Skailama Mini Promotion Agent**.
+![LLD Diagram](./LLD.png)
+
+## Column 1 — API Layer (`/app/main.py`)
+
+### FastAPI Application
+- **Lifespan startup hooks**: `check_azure_openai_connection()`, `check_langsmith_connection()`, `check_mongodb_connection()`
+- `AzureOpenAI` client instantiated at module load from `.env`
+
+### Request/Response Models
+| Model | Fields |
+|-------|--------|
+| `ChatRequest` | `message: str` |
+| `ClarifyRequest` | `thread_id: str`, `clarification: str` |
+
+### POST `/chat/mini-promotion-agent`
+1. Generate `thread_id = uuid4()` (server-owned)
+2. `db_client.create_chat_if_missing()` + save user message
+3. `graph.invoke(initial_state, config)`
+4. Poll up to 10 × 100ms for interrupt detection
+5. If interrupt → return `{status, blockers, question, thread_id}`
+6. Else → build `final_reply` dict, call `_save_graph_result_to_db()`
+
+### POST `/chat/mini-promotion-agent/clarify`
+1. Verify thread is paused (`state_snapshot.next` non-empty)
+2. `graph.invoke(Command(resume=clarification), config)`
+3. Same interrupt polling loop as above
+
+### GET `/{thread_id}/history`
+- Primary: `db_client.get_messages()` from MongoDB
+- Fallback: `graph.get_state(config).values["history"]`
 
 ---
 
-## 💻 Class & Module Structure
+## Column 2 — Graph & Nodes (`/app/graph.py`, `/app/nodes.py`)
 
-The interaction diagram below details the attributes, methods, and structural relationships of the key backend classes.
+### `build_graph()`
+```python
+StateGraph(PromotionState)
+MongoEngineCheckpointer.connect_db()
+graph.compile(checkpointer=MongoEngineCheckpointer())
+```
 
-```mermaid
-classDiagram
-    class FastAPI_App {
-        <<web>>
-        +main.py
-        +lifespan(app)
-        +parsePromotionRequest()
-        +intent_classifier()
-        +intent_triggers_classifier()
-        +mini_promotion_agent()
-        +mini_promotion_agent_clarify()
-        +get_conversation_history()
-    }
-    
-    class PromotionState {
-        <<Pydantic Model>>
-        +message: str
-        +history: List[Dict[str, str]]
-        +feature: Optional[str]
-        +tiers: List[Any]
-        +tier_behavior: Optional[str]
-        +customer_eligibility: List[Any]
-        +status: Optional[str]
-        +blockers: List[Any]
-        +missing_fields: List[Any]
-        +clarification_attempts: int
-        +thread_id: Optional[str]
-        +__getitem__(key)
-        +__setitem__(key, val)
-        +get(key, default)
-    }
+### Node Details
 
-    class MongoDBClient {
-        <<Database>>
-        +client: MongoClient
-        +db: Database
-        +chats: Collection
-        +messages: Collection
-        +create_chat_if_missing(user_id, chat_id)
-        +save_chat_context(user_id, chat_id, context)
-        +get_chat_context(user_id, chat_id)
-        +save_message(user_id, chat_id, message_id, role, content, timestamp, ui)
-        +get_messages(user_id, chat_id)
-    }
+| Node | Prompt Used | Key Output |
+|------|-------------|-----------|
+| `intent_classification_node` | `INTENT_CLASSIFICATION_PROMPT` | `state.feature` |
+| `trigger_detection_node` | `TRIGGER_ONLY_CLASSIFICATION_PROMPT` or `TIERED_DISCOUNT_TRIGGER_ONLY_CLASSIFICATION_PROMPT` | `state.tiers` |
+| `schema_validation_node` | *(Pydantic, no LLM)* | `status`, `blockers`, `missing_fields` |
+| `state_assembly_node` | *(No LLM)* | `tier_behavior`, `customer_eligibility`, `status='pending_validation'` |
+| `validation_node` | `VALIDATION_CLASSIFICATION_PROMPT` | `status='supported'` or `'unsupported'` |
+| `clarification_node` | *(interrupt)* | Pauses; resumes with `clarification_text` |
+| `unsupported_node` | *(No LLM)* | `status='unsupported'`, terminal |
 
-    class CheckpointDocument {
-        <<MongoEngine Document>>
-        +thread_id: StringField
-        +checkpoint_id: StringField
-        +parent_checkpoint_id: StringField
-        +checkpoint: DictField
-        +metadata: DictField
-        +pending_writes: ListField
-    }
-
-    class MongoEngineCheckpointer {
-        <<LangGraph BaseCheckpointSaver>>
-        +serde: JsonPlusSerializer
-        +connect_db(uri, db)
-        +get_tuple(config)
-        +list(config, filter, before, limit)
-        +put(config, checkpoint, metadata, new_versions)
-        +put_writes(config, writes, task_id)
-    }
-
-    class LLM_Interface {
-        <<Utility>>
-        +client: AzureOpenAI
-        +llm(system_prompt, message, history, response_format, temperature)
-    }
-
-    FastAPI_App --> MongoEngineCheckpointer : configures/runs
-    FastAPI_App --> MongoDBClient : writes history/context
-    MongoEngineCheckpointer --> CheckpointDocument : maps to collection
-    FastAPI_App ..> PromotionState : request state container
-    LLM_Interface <.. Nodes : used by
+### Routing Logic
+```
+intent_classification
+  ├─ clarification  → clarification_node → loops back
+  ├─ unsupported    → unsupported_node → END
+  └─ supported      → trigger_detection → schema_validation
+                            ├─ schema_error → END
+                            └─ valid        → state_assembly → validation → END
 ```
 
 ---
 
-## 🗄️ Database Schemas
+## Column 3 — Data Models (`/app/models.py`)
 
-MongoDB holds the state, messages, and state checkpoints of the system. It features two database drivers: `pymongo` (standard client for raw chats/messages collections) and `mongoengine` (Object-Document Mapper for the checkpointing system).
+### `PromotionState` (Pydantic BaseModel)
+| Field | Type | Description |
+|-------|------|-------------|
+| `message` | `str` | Current user input |
+| `history` | `List[Dict]` | Full conversation history |
+| `feature` | `Optional[str]` | Classified intent |
+| `tiers` | `List[Any]` | LLM-extracted tier objects |
+| `tier_behavior` | `Optional[str]` | `"best_tier_only"` |
+| `status` | `Optional[str]` | `supported/unsupported/schema_error/pending_validation/clarification` |
+| `blockers` | `List[Any]` | Validation errors |
+| `missing_fields` | `List[Any]` | Failed tier indices |
+| `clarification_attempts` | `int` | Safety valve counter (max 3) |
+| `thread_id` | `Optional[str]` | UUID owned by server |
 
-### 1. `chats` Collection (Managed by `MongoDBClient`)
-Maintains metadata regarding each distinct user-agent dialogue session.
+### `TierModel`
+```
+TierModel
+├── trigger: TriggerModel
+│     ├── type: TriggerType  {cart_quantity, cart_subtotal, collection_*, product_*}
+│     ├── operator: TriggerOperator  {>=, >, <=, <, =}
+│     ├── value: Union[int, float]  (> 0)
+│     ├── currency: Optional[str]   (required for *_subtotal)
+│     └── scope: Optional[TriggerScope]  (required for collection_* / product_*)
+└── reward: Optional[RewardModel]
+      ├── type: RewardType
+      ├── value: Optional[float]
+      ├── y_target: Optional[ProductTarget]   (for *_off_y)
+      ├── quantity: Optional[int]
+      └── gift_product: Optional[GiftProductTarget]  (for free_gift)
+```
 
-| Field Name | Type | Description |
-| :--- | :--- | :--- |
-| `_id` | ObjectId | MongoDB internal document identifier |
-| `user_id` | String | User ID reference (defaults to `"default_user"`) |
-| `chat_id` | String | Unique thread ID generated as a UUID4 |
-| `created_at` | String | ISO 8601 timestamp of creation |
-| `updated_at` | String | ISO 8601 timestamp of last context update |
-| `last_context`| Document | Nested dictionary matching the current `PromotionState` schema |
-
-### 2. `messages` Collection (Managed by `MongoDBClient`)
-Maintains individual dialogue lines (prompts, answers, system flags).
-
-| Field Name | Type | Description |
-| :--- | :--- | :--- |
-| `_id` | ObjectId | MongoDB internal document identifier |
-| `user_id` | String | User ID reference |
-| `chat_id` | String | Thread ID reference |
-| `message_id` | String | Unique UUID for the message |
-| `role` | String | `"user"` (human) or `"assistant"` (bot replies) |
-| `content` | String | Text body of the message (or text summary of bot answer) |
-| `timestamp` | String | ISO 8601 timestamp |
-| `ui` | Document | Optional nested fields (e.g. structured promotions, tiered discounts, or blockers) |
-
-### 3. `checkpoints` Collection (Managed by `MongoEngineCheckpointer`)
-Stores binary and typed serialized snapshots of LangGraph executions.
-
-| Field Name | Type | Description |
-| :--- | :--- | :--- |
-| `thread_id` | String | Thread ID reference (unique index component) |
-| `checkpoint_id`| String | LangGraph internal state step ID (unique index component) |
-| `parent_checkpoint_id`| String | Ancestor state step ID (for timeline/history branching) |
-| `checkpoint` | Document | Serialized state channel values & versions via `JsonPlusSerializer` |
-| `metadata` | Document | Serialized checkpoint metadata (source, step type, parents) |
-| `pending_writes`| Array | Serialization queue containing task IDs, channels, and pending write data |
+### `RewardType` Enum
+| Value | Category | Required Fields |
+|-------|----------|----------------|
+| `percentage_off` | Tiered | `value` |
+| `fixed_amount_off` | Tiered | `value` |
+| `percentage_off_y` | Buy X Get Y | `value`, `y_target`, `quantity` |
+| `fixed_amount_off_y` | Buy X Get Y | `value`, `y_target`, `quantity` |
+| `free_gift` | Free Gift | `gift_product`, `quantity` |
+| `free_gift_product` | Free Gift (legacy) | `value` |
 
 ---
 
-## 📝 Configuration and Secrets (.env)
+## Column 4 — Intent Classifier (`/intentClassifier/`)
 
-The server initializes its external client bindings from standard environment variables defined in the `.env` file:
-* **Azure OpenAI Service**: Key (`OPENAI_API_4_KEY`), Version (`OPENAI_API_4_VERSION`), Base Endpoint (`OPENAI_4_BASE_URL`), Deployment Name (`OPEN_API_4_ENGINE`).
-* **MongoDB**: Target URI (`MONGODB_URI`), database name (`MONGODB_DB_NAME`).
-* **LangSmith**: Enable flag (`LANGCHAIN_TRACING_V2`), Endpoint (`LANGCHAIN_ENDPOINT`), Trace Key (`LANGCHAIN_API_KEY`), Project Name (`LANGCHAIN_PROJECT`).
+### Model Architecture
+- **Backbone**: `microsoft/deberta-v3-small` (HuggingFace Transformers)
+- **Head**: `AutoModelForSequenceClassification` (5 classes)
+- **Labels**: `free_gift`, `buy_x_get_y`, `tiered_discount`, `unsupported`, `clarification`
+
+### Training (`train.py`)
+| Hyperparameter | Value |
+|---------------|-------|
+| MAX_LEN | 128 tokens |
+| BATCH_SIZE | 16 |
+| EPOCHS | 12 |
+| LR | 2e-5 |
+| Optimizer | AdamW + weight_decay=0.01 |
+| Loss | CrossEntropyLoss(class_weights) |
+| Early stopping | PATIENCE=3 |
+| Save dir | `model/best/` |
+
+### Inference (`classify.py`)
+- `get_model()` — lazy singleton load (CUDA > MPS > CPU)
+- `classify(text)` → `{label, confidence, scores, latency_ms}`
+- Supports CLI: `python classify.py "Buy 2 get 1 free" --verbose`
+
+### Data Pipeline
+| Script | Purpose |
+|--------|---------|
+| `classificationData.py` | Seed labeled samples |
+| `generate_data.py` / `generate_and_append.py` | LLM-based augmentation |
+| `dedup_and_validate.py` | Deduplication |
+| `relabel_generated_clean.py` | Label correction |
+| `label_and_validate_testset.py` | Test set labeling + LLM validation |
+| `evaluate_testset.py` | Final evaluation metrics |
+
+### `MongoEngineCheckpointer` (`/app/mongo_checkpointer.py`)
+Implements `BaseCheckpointSaver` interface required by LangGraph:
+| Method | Description |
+|--------|-------------|
+| `get_tuple(config)` | Fetch latest checkpoint for a thread |
+| `list(config)` | Iterate all checkpoints most-recent-first |
+| `put(config, checkpoint, metadata, ...)` | Upsert snapshot |
+| `put_writes(config, writes, task_id)` | Append pending writes |
+| Serializer | `JsonPlusSerializer` (same as MemorySaver) |
+| Collection | `checkpoints` (indexes on `thread_id + checkpoint_id`) |

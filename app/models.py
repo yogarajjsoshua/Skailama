@@ -1,82 +1,236 @@
-from typing import Dict, Any, Optional, List, Annotated
-from pydantic import BaseModel, Field, field_validator
+from typing import Dict, Any, Optional, List, Union, Literal
+from pydantic import BaseModel, Field, field_validator, model_validator
 from enum import Enum
 
-# --- Recruitment / Query Models from User reference ---
 
-class QueryResponse(BaseModel):
-    content: str
-    chat_id: str
-    message_id: str
-    role: str
-    timestamp: str
-    requires_input: bool = False
-    workflow_state: Optional[str] = None
-    ui: Optional[Dict[str, Any]] = None
+# ---------------------------------------------------------------------------
+# Trigger Schema Models
+# ---------------------------------------------------------------------------
 
-
-class RecruitmentState(BaseModel):
-    user_id: str
-    chat_id: str
-    message_id: str
-    query: str
-    intent: Optional[str] = None
-    workflow: Optional[str] = None
-    current_node: str = "intent_discovery"
-    context: Dict[str, Any] = Field(default_factory=dict)
-    response: str = ""
-    requires_input: bool = False
-    selected_customer_id: Optional[str] = None
-
-    class Config:
-        arbitrary_types_allowed = True
+class TriggerType(str, Enum):
+    cart_quantity = "cart_quantity"
+    cart_subtotal = "cart_subtotal"
+    collection_quantity = "collection_quantity"
+    collection_subtotal = "collection_subtotal"
+    product_quantity = "product_quantity"
+    product_subtotal = "product_subtotal"
 
 
-class CandidateType(int, Enum):
-    ALL = 0
-    ACTIVE = 1
-    INACTIVE = 2
+class TriggerOperator(str, Enum):
+    gte = ">="
+    gt = ">"
+    lte = "<="
+    lt = "<"
+    eq = "="
 
 
-class TalentPoolPayload(BaseModel):
-    skills: List[str] = Field(default_factory=list, description="List of required skills")
-    candidate_id: Optional[str] = Field(None, alias="candidateID", description="Specific candidate ID")
-    search_query: Optional[str] = Field(None, alias="searchQuery", description="Search query string")
-    count: int = Field(default=10, ge=1, le=100, description="Number of candidates to return")
-    page: int = Field(default=0, ge=0, description="Page number for pagination")
-    customer_id: Optional[str] = Field(None, alias="customerID", description="Customer ID filter")
-    job_id: Optional[str] = Field(None, alias="jobID", description="Job ID filter")
-    created_by: List[str] = Field(default_factory=list, alias="createdBy", description="List of creator IDs")
-    type: CandidateType = Field(default=CandidateType.ALL, description="Candidate type filter")
+class ScopeType(str, Enum):
+    collection = "collection"
+    product = "product"
 
-    @field_validator('skills', mode='before')
-    def parse_skills(cls, v):
-        if isinstance(v, str):
-            return [skill.strip() for skill in v.split(',') if skill.strip()]
-        return v or []
 
-    @field_validator('created_by', mode='before')
-    def parse_created_by(cls, v):
-        if isinstance(v, str):
-            return [v.strip() for v in v.split(',') if v.strip()]
-        return v or []
+class TriggerScope(BaseModel):
+    """Scope restricts the trigger to a specific collection or product set."""
 
-    def to_api_dict(self) -> dict:
-        """Convert to API format with correct field names"""
-        return {
-            "skills": self.skills,
-            "candidateID": self.candidate_id,
-            "searchQuery": self.search_query,
-            "count": self.count,
-            "page": self.page,
-            "customerID": self.customer_id,
-            "jobID": self.job_id,
-            "createdBy": self.created_by,
-            "type": self.type.value,
+    type: ScopeType = Field(..., description="Scope type: 'collection' or 'product'")
+    collectionTitles: Union[List[str], Literal["all"]] = Field(
+        ...,
+        description=(
+            "List of collection/product titles to include, "
+            "or the string 'all' to apply to every collection/product."
+        ),
+    )
+
+    @field_validator("collectionTitles", mode="before")
+    @classmethod
+    def validate_collection_titles(cls, v):
+        if v == "all":
+            return v
+        if isinstance(v, list):
+            if len(v) == 0:
+                raise ValueError("collectionTitles must be a non-empty list or the string 'all'")
+            return v
+        raise ValueError("collectionTitles must be a list of strings or the string 'all'")
+
+
+class TriggerModel(BaseModel):
+    """Validated trigger object inside a tier."""
+
+    type: TriggerType = Field(..., description="Trigger type (e.g. collection_quantity)")
+    operator: TriggerOperator = Field(..., description="Comparison operator (>=, >, <=, <, =)")
+    value: Union[int, float] = Field(..., gt=0, description="Threshold value (must be > 0)")
+    currency: Optional[str] = Field(
+        None,
+        description="ISO-4217 currency code (e.g. USD, EUR). Required for subtotal triggers.",
+    )
+    scope: Optional[TriggerScope] = Field(
+        None,
+        description=(
+            "Optional scope limiting the trigger to specific collections or products. "
+            "Required when type is collection_* or product_*."
+        ),
+    )
+
+    @model_validator(mode="after")
+    def check_currency_for_subtotal(self):
+        subtotal_types = {
+            TriggerType.cart_subtotal,
+            TriggerType.collection_subtotal,
+            TriggerType.product_subtotal,
         }
+        if self.type in subtotal_types and not self.currency:
+            raise ValueError(
+                f"'currency' is required when trigger type is '{self.type.value}'"
+            )
+        return self
+
+    @model_validator(mode="after")
+    def check_scope_for_scoped_triggers(self):
+        scoped_types = {
+            TriggerType.collection_quantity,
+            TriggerType.collection_subtotal,
+            TriggerType.product_quantity,
+            TriggerType.product_subtotal,
+        }
+        if self.type in scoped_types and self.scope is None:
+            raise ValueError(
+                f"'scope' is required when trigger type is '{self.type.value}'"
+            )
+        return self
 
 
-# --- Promotion State Model for current project ---
+# ---------------------------------------------------------------------------
+# Reward Schema Models
+# ---------------------------------------------------------------------------
+
+class RewardType(str, Enum):
+    # Tiered discount rewards
+    percentage_off = "percentage_off"
+    fixed_amount_off = "fixed_amount_off"
+    # Buy X Get Y rewards
+    percentage_off_y = "percentage_off_y"
+    fixed_amount_off_y = "fixed_amount_off_y"
+    # Free gift rewards
+    free_gift = "free_gift"
+    free_gift_product = "free_gift_product"
+
+
+class ResolutionStatus(str, Enum):
+    resolved = "resolved"
+    admin_selection_required = "admin_selection_required"
+    unresolved = "unresolved"
+
+
+class ProductTarget(BaseModel):
+    """Resolution metadata for a product that may or may not be resolved yet."""
+    type: Literal["product"] = "product"
+    status: ResolutionStatus = Field(..., description="Resolution status of the product")
+    query: str = Field(..., description="User-provided product search term")
+    resolved_id: Optional[str] = Field(
+        None,
+        description="Resolved product ID (null when admin_selection_required or unresolved)",
+    )
+
+
+class GiftProductTarget(BaseModel):
+    """Resolution metadata specifically for a free gift product."""
+    status: ResolutionStatus = Field(..., description="Resolution status of the gift product")
+    query: str = Field(..., description="User-provided gift description/search term")
+    resolved_id: Optional[str] = Field(
+        None,
+        description="Resolved product ID (null when admin_selection_required or unresolved)",
+    )
+
+
+class RewardModel(BaseModel):
+    """
+    Dynamic reward object whose shape depends on `type`.
+
+    Supported types
+    ---------------
+    percentage_off      – tiered: { type, value }
+    fixed_amount_off    – tiered: { type, value }
+    percentage_off_y    – buy-X-get-Y: { type, value, y_target, quantity }
+                          value=100 represents a completely free Y
+    fixed_amount_off_y  – buy-X-get-Y: { type, value, y_target, quantity }
+    free_gift           – free gift: { type, gift_product, quantity }
+    free_gift_product   – simple gift: { type, value } (legacy / simple form)
+    """
+
+    type: RewardType = Field(..., description="Reward type")
+
+    # ------ Shared numeric value (tiered / buy-x-get-y percentage) ------
+    value: Optional[Union[int, float]] = Field(
+        None,
+        description=(
+            "Discount magnitude. Required for percentage_off, fixed_amount_off, "
+            "percentage_off_y, fixed_amount_off_y, and free_gift_product. "
+            "For percentage_off_y with value=100 this represents a free Y item."
+        ),
+    )
+
+    # ------ Buy X Get Y fields ------
+    y_target: Optional[ProductTarget] = Field(
+        None,
+        description="Target product for Y in buy-X-get-Y rewards. Required for *_off_y types.",
+    )
+    quantity: Optional[int] = Field(
+        None,
+        ge=1,
+        description="Number of Y items the customer receives. Required for *_off_y and free_gift.",
+    )
+
+    # ------ Free Gift fields ------
+    gift_product: Optional[GiftProductTarget] = Field(
+        None,
+        description="Gift product resolution metadata. Required for free_gift type.",
+    )
+
+    @model_validator(mode="after")
+    def check_reward_fields(self):
+        """Enforce field requirements based on reward type."""
+        t = self.type
+
+        # --- Tiered simple rewards ---
+        if t in (RewardType.percentage_off, RewardType.fixed_amount_off, RewardType.free_gift_product):
+            if self.value is None:
+                raise ValueError(f"'value' is required for reward type '{t.value}'")
+
+        # --- Buy X Get Y rewards ---
+        elif t in (RewardType.percentage_off_y, RewardType.fixed_amount_off_y):
+            if self.value is None:
+                raise ValueError(f"'value' is required for reward type '{t.value}'")
+            if self.y_target is None:
+                raise ValueError(f"'y_target' is required for reward type '{t.value}'")
+            if self.quantity is None:
+                raise ValueError(f"'quantity' is required for reward type '{t.value}'")
+
+        # --- Free gift (with resolution metadata) ---
+        elif t == RewardType.free_gift:
+            if self.gift_product is None:
+                raise ValueError("'gift_product' is required for reward type 'free_gift'")
+            if self.quantity is None:
+                raise ValueError("'quantity' is required for reward type 'free_gift'")
+
+        return self
+
+
+# ---------------------------------------------------------------------------
+# Tier Model (trigger + typed reward)
+# ---------------------------------------------------------------------------
+
+class TierModel(BaseModel):
+    """A single tier object containing a trigger and optional reward."""
+
+    trigger: TriggerModel
+    reward: Optional[RewardModel] = Field(
+        None, description="Reward configuration. Optional during trigger-only schema check."
+    )
+
+
+# ---------------------------------------------------------------------------
+# Promotion State Model for current project
+# ---------------------------------------------------------------------------
 
 class PromotionState(BaseModel):
     message: str

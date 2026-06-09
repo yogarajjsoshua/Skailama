@@ -1,5 +1,5 @@
 id,requirement,label,validated_label,is_correct,reason,kept_after_dedup
-0,I need a buy X get Y free but I need to control what product gets the discount if people add more than those 2 products.,buy_x_get_y,clarification,False,"The reward product is unspecified, making it unclear what 'Y' is.",True
+0,I need a buy X get Y free but I need to control what product gets the discount if people add more than those 2 products.,buy_x_get_y,buy_x_get_y,False,"The reward product is unspecified, making it unclear what 'Y' is.",True
 1,Customer gets a free headband where they can choose the color when they reach $75 in the cart.,free_gift,free_gift,True,The reward is a free physical item (headband) auto-added to the cart.,True
 2,Buy 2 extra 15% OFF & Buy 3 extra 25% OFF from collections (all).,tiered_discount,tiered_discount,True,The promotion involves spend/quantity tiers with escalating percentage discounts.,True
 3,Get 15% off on one item.,free_gift,buy_x_get_y,False,"The reward is a percentage discount (15% off), not a free item.",True

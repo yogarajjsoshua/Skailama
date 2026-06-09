@@ -1,106 +1,145 @@
-# LangGraph Workflow Flowchart
+# LangGraph Flow — Skailama Promotion Agent
 
-This document details the state-transition graph and operational flow of the **LangGraph Mini Promotion Agent** (`mini_promotion_graph`).
+![LangGraph Flow Diagram](./LangGraph_Flow.png)
+
+## State Machine Overview
+
+The promotion agent is implemented as a **LangGraph `StateGraph`** with 7 nodes and 2 conditional routing points. All state is persisted in MongoDB via `MongoEngineCheckpointer`, enabling `interrupt()` / resume across separate HTTP calls.
 
 ---
 
-## 🔁 Graph Flow Diagram
+## Complete Flow
 
-The flowchart below traces the execution lifecycle from a merchant's input text to the final structured classification response. It highlights the conditional branching, terminal ends, and the human-in-the-loop interruption cycle.
+```
+START (new message)
+    │
+    ▼
+[intent_classification_node]
+  llm(INTENT_CLASSIFICATION_PROMPT, message, history)
+  → state.feature = intent
+  → init: tiers=[], status='', blockers=[]
+    │
+    ▼
+◇ _route_after_intent ◇
+  ├─ "clarification" ─────────────────────────────────────────────────────┐
+  │                                                                        │
+  │  [clarification_node]                                                  │
+  │    interrupt(question_payload) ← pauses graph here                    │
+  │    ← resumes via POST /clarify with Command(resume=text)              │
+  │    clarification_attempts += 1 (max 3)                                │
+  │    state.message = clarification_text                                  │
+  │    loops back to intent_classification ───────────────────────────────┘
+  │
+  ├─ "unsupported" ──────────────────────────────────────────────────────▶ END
+  │   [unsupported_node]
+  │     status = 'unsupported'
+  │     blockers = [intent reason]
+  │
+  └─ supported intent ──────────────────────────────────────────────────▼
 
-```mermaid
-graph TD
-    %% Styling
-    classDef startNode fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,rx:10px;
-    classDef stepNode fill:#E3F2FD,stroke:#1565C0,stroke-width:2px;
-    classDef condNode fill:#FFF8E1,stroke:#F57F17,stroke-width:2px;
-    classDef endNode fill:#FFEBEE,stroke:#C62828,stroke-width:2px,rx:10px;
-    classDef interruptNode fill:#EDE7F6,stroke:#651FFF,stroke-width:2px,stroke-dasharray: 5 5;
+[trigger_detection_node]
+  feature == 'tiered_discount'
+    → TIERED_DISCOUNT_TRIGGER_ONLY_CLASSIFICATION_PROMPT
+  else
+    → TRIGGER_ONLY_CLASSIFICATION_PROMPT
+  llm(prompt, message) → state.tiers
+    │
+    ▼
+[schema_validation_node]  ← no LLM, pure Pydantic
+  For each tier in state.tiers:
+    TierModel.model_validate(tier)          ← trigger check
+    RewardModel.model_validate(reward)      ← reward check
+  On any failure:
+    status = 'schema_error'
+    blockers = [{field, reason}, ...]
+    missing_fields = ['tiers[i]', ...]
+    │
+    ▼
+◇ _route_after_schema_validation ◇
+  ├─ "schema_error" ────────────────────────────────────────────────────▶ END (blockers returned)
+  │
+  └─ "state_assembly" ──────────────────────────────────────────────────▼
 
-    %% Nodes
-    START([START]):::startNode
-    IntentNode["intent_classification<br>(LLM Intent Classifier)"]:::stepNode
-    Router{"_route_after_intent<br>(Conditional Router)"}:::condNode
-    
-    ClarifyNode["clarification<br>(Clarification Node)"]:::stepNode
-    InterruptPoint[["interrupt(question_payload)<br>(Pause and Wait for Input)"]]:::interruptNode
-    
-    UnsupportedNode["unsupported<br>(Format Blocker & Reason)"]:::stepNode
-    
-    TriggerNode["trigger_detection<br>(LLM Trigger Parser)"]:::stepNode
-    AssemblyNode["state_assembly<br>(Default State Ingestion)"]:::stepNode
-    ValidationNode["validation<br>(LLM Strict Validation)"]:::stepNode
-    
-    END([END]):::endNode
-
-    %% Transitions
-    START --> IntentNode
-    IntentNode --> Router
-    
-    Router -->|clarification| ClarifyNode
-    Router -->|unsupported / invalid| UnsupportedNode
-    Router -->|free_gift / buy_x_get_y / tiered_discount| TriggerNode
-    
-    %% Clarification Loop with Interrupt
-    ClarifyNode --> InterruptPoint
-    InterruptPoint -->|Command(resume=clarification_text)| IntentNode
-    
-    %% Happy Path Pipeline
-    TriggerNode --> AssemblyNode
-    AssemblyNode --> ValidationNode
-    ValidationNode --> END
-    
-    %% Terminal Unsupported Flow
-    UnsupportedNode --> END
+[state_assembly_node]
+  tier_behavior = 'best_tier_only'
+  customer_eligibility = []
+  status = 'pending_validation'
+    │
+    ▼
+[validation_node]
+  payload = JSON([{id, text=message, label=feature}])
+  llm(VALIDATION_CLASSIFICATION_PROMPT, payload)
+  If is_correct == False:
+    status = 'unsupported'
+    blockers = [{field: 'intent', reason: ...}]
+  Else:
+    status = 'supported'
+    │
+    ▼
+  END  (final_reply returned to API caller)
 ```
 
 ---
 
-## ⚙️ Node-by-Node Explanation
+## Node Reference
 
-### 1. `intent_classification`
-* **Purpose**: Identifies the primary intent of the promotion message.
-* **Operation**:
-  * Appends the current user message to `history`.
-  * Invokes the LLM using the `INTENT_CLASSIFICATION_PROMPT` containing full historical turns.
-  * Expects a JSON response with the classified intent field (e.g. `tiered_discount`, `free_gift`, `buy_x_get_y`, `clarification`, or `unsupported`).
-  * Resets downstream state keys (`tiers`, `blockers`, etc.) to clear old values.
+| Node | File | LLM | Prompt |
+|------|------|-----|--------|
+| `intent_classification_node` | `nodes.py` | ✅ | `INTENT_CLASSIFICATION_PROMPT` |
+| `trigger_detection_node` | `nodes.py` | ✅ | `TRIGGER_ONLY_*` or `TIERED_DISCOUNT_*` |
+| `schema_validation_node` | `nodes.py` | ❌ | Pydantic TierModel/RewardModel |
+| `state_assembly_node` | `nodes.py` | ❌ | *(hardcoded values)* |
+| `validation_node` | `nodes.py` | ✅ | `VALIDATION_CLASSIFICATION_PROMPT` |
+| `clarification_node` | `nodes.py` | ❌ | `interrupt(question_payload)` |
+| `unsupported_node` | `nodes.py` | ❌ | *(hardcoded response)* |
 
-### 2. `_route_after_intent` (Conditional Router)
-* **Purpose**: Evaluates `state["feature"]` to select the next step.
-* **Edges**:
-  * Directs to **`clarification`** if the LLM needs more details.
-  * Directs to **`unsupported`** if the request falls outside of out-of-scope/unrecognized categories.
-  * Directs to **`trigger_detection`** for supported promotion types.
+---
 
-### 3. `clarification` (Human-In-The-Loop)
-* **Purpose**: Manages incomplete request prompt clarifications.
-* **Operation**:
-  * Asserts a maximum retry barrier (default: `3` attempts). If exceeded, changes state to `unsupported` and proceeds.
-  * Appends a bot clarification question to the conversation history.
-  * Triggers an `interrupt(question_payload)`, saving the state checkpoint to MongoDB and pausing thread execution.
-  * **Resume phase**: When the client posts a clarification response to `/chat/mini-promotion-agent/clarify`, the graph resumes, appends the user's text to history, overrides `state["message"]`, and loops back to `intent_classification`.
+## Interrupt / Resume Mechanism
 
-### 4. `unsupported` (Terminal Error)
-* **Purpose**: Constructs a standard rejection reply for unsupported promotion types.
-* **Operation**:
-  * Sets `state["status"]` to `"unsupported"`.
-  * Logs the error message to `state["blockers"]`.
-  * Updates `state["history"]` with the system rejection log and routes to `END`.
+```
+POST /chat/mini-promotion-agent
+    │
+    graph.invoke(initial_state, config={thread_id})
+    │
+    clarification_node calls interrupt(question_payload)
+    │   ← graph pauses HERE, state persisted to MongoDB
+    │
+    API returns {status: "clarification", question: "...", thread_id: "..."}
+    │
+POST /chat/mini-promotion-agent/clarify
+    │
+    graph.invoke(Command(resume=clarification_text), config={thread_id})
+    │   ← graph resumes from checkpoint, clarification_text flows back to node
+    │
+    clarification_node updates state.message = clarification_text
+    │
+    loops back to intent_classification_node
+```
 
-### 5. `trigger_detection`
-* **Purpose**: Parses conditional limits and promotion discount brackets.
-* **Operation**:
-  * Passes history and current message context to the LLM using the `TRIGGER_ONLY_CLASSIFICATION_PROMPT`.
-  * Extracts structured tiers (such as cart values, quantity operators, and value brackets) and loads them into `state["tiers"]`.
+---
 
-### 6. `state_assembly`
-* **Purpose**: Ingests defaults and metadata for state consistency.
-* **Operation**: Sets standard defaults like `tier_behavior = "best_tier_only"` and updates state status.
+## `PromotionState` Fields
 
-### 7. `validation` (Final Consistency Check)
-* **Purpose**: Runs a sanity validation on the classified intent against the final tier structure.
-* **Operation**:
-  * Packages the user's text and feature label, passing it to the validation model via `VALIDATION_CLASSIFICATION_PROMPT`.
-  * If the validator marks `is_correct: False`, the node overrides `state["status"] = "unsupported"` and registers the validation reason in `state["blockers"]`.
-  * Otherwise, sets `state["status"] = "supported"`.
+| Field | Type | Set By |
+|-------|------|--------|
+| `message` | `str` | API request / clarification_node |
+| `history` | `List[Dict]` | intent_classification_node, clarification_node |
+| `feature` | `Optional[str]` | intent_classification_node |
+| `tiers` | `List[Any]` | trigger_detection_node |
+| `tier_behavior` | `Optional[str]` | state_assembly_node |
+| `customer_eligibility` | `List[Any]` | state_assembly_node |
+| `status` | `Optional[str]` | multiple nodes |
+| `blockers` | `List[Any]` | schema_validation_node, validation_node, clarification_node |
+| `missing_fields` | `List[Any]` | schema_validation_node |
+| `clarification_attempts` | `int` | clarification_node |
+| `thread_id` | `Optional[str]` | API layer (server-owned) |
+
+---
+
+## MongoEngineCheckpointer
+
+Every node transition calls `put()` to snapshot the current state in the `checkpoints` MongoDB collection. This enables:
+- **`interrupt()` persistence** — graph can pause mid-node and resume in a later HTTP call
+- **Conversation replay** — `get_tuple()` restores exactly where the graph left off
+- **Audit trail** — `list()` provides ordered checkpoint history per thread

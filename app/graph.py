@@ -4,6 +4,7 @@ from app.state import PromotionState
 from app.nodes import (
     intent_classification_node,
     trigger_detection_node,
+    schema_validation_node,
     state_assembly_node,
     validation_node,
     unsupported_node,
@@ -23,6 +24,15 @@ def _route_after_intent(state: PromotionState) -> str:
     return "trigger_detection"
 
 
+def _route_after_schema_validation(state: PromotionState) -> str:
+    """Conditional router: if trigger OR reward schema is invalid, terminate early.
+    Otherwise continue to state_assembly on the happy path.
+    """
+    if state.get("status") == "schema_error":
+        return "schema_error"
+    return "state_assembly"
+
+
 def build_graph():
     graph = StateGraph(PromotionState)
 
@@ -31,10 +41,11 @@ def build_graph():
     graph.add_node("unsupported", unsupported_node)
     graph.add_node("clarification", clarification_node)
     graph.add_node("trigger_detection", trigger_detection_node)
+    graph.add_node("schema_validation", schema_validation_node)   # combined trigger + reward validation
     graph.add_node("state_assembly", state_assembly_node)
     graph.add_node("validation", validation_node)
 
-    # entry + conditional routing
+    # entry + conditional routing after intent classification
     graph.set_entry_point("intent_classification")
     graph.add_conditional_edges(
         "intent_classification",
@@ -53,8 +64,20 @@ def build_graph():
     # unsupported is truly terminal
     graph.add_edge("unsupported", END)
 
-    # happy-path pipeline
-    graph.add_edge("trigger_detection", "state_assembly")
+    # trigger detection -> combined schema validation
+    graph.add_edge("trigger_detection", "schema_validation")
+
+    # conditional routing after schema validation
+    graph.add_conditional_edges(
+        "schema_validation",
+        _route_after_schema_validation,
+        {
+            "schema_error": END,          # schema errors terminate early with blockers
+            "state_assembly": "state_assembly",
+        },
+    )
+
+    # happy-path pipeline continues
     graph.add_edge("state_assembly", "validation")
     graph.add_edge("validation", END)
 
@@ -65,3 +88,4 @@ def build_graph():
 
 
 mini_promotion_graph = build_graph()
+

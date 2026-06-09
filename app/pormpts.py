@@ -26,39 +26,50 @@ free_gift:
     “Spend $50 get 1 free item, spend $100 get 2 free items","free_gift"  (multi-tier free_gift, NOT tiered_discount)
     
 buy_x_get_y:
-    “Buy 2 shirts and get 1 cap free”,"buy_x_get_y",
-    “Buy products from Collection A and get 50% off Collection B","buy_x_get_y",
-    “Buy 3 shirts get 25% off, buy 5 shirts get 40% off (same Y product)","buy_x_get_y"  (multi-tier buy_x_get_y)
+    "Buy 2 shirts and get 1 cap free","buy_x_get_y",
+    "Buy products from Collection A and get 50% off Collection B","buy_x_get_y",
+    "Buy 3 shirts get 25% off, buy 5 shirts get 40% off (same Y product)","buy_x_get_y",  (multi-tier buy_x_get_y)
+    "Buy X get Y free" or "buy X get Y" WITHOUT naming Y → still "buy_x_get_y" (admin will select the Y product; NOT clarification)
+    
 tiered_discount:
-    “Buy 2 get 10%, buy 4 get 20%”,"tiered_discount"
-    “Spend $100 get 10% off, spend $200 get 20% off”,"tiered_discount"
-    “VIP customers spend $150 get 15%, spend $300 get 25%”,"tiered_discount"
+    "Buy 2 get 10%, buy 4 get 20%","tiered_discount"
+    "Spend $100 get 10% off, spend $200 get 20% off","tiered_discount"
+    "VIP customers spend $150 get 15%, spend $300 get 25%","tiered_discount"
 clarification:
-    “I want buy X get Y but haven't decided which product Y is”,"clarification",
-    “Give a discount to customers who buy a lot”,"clarification"  (no trigger or reward specified)
+    "Give a discount to customers who buy a lot","clarification"  (no trigger AND no reward specified)
+    "I want some kind of promotion but haven't decided anything","clarification"
+    NOTE: "buy X get Y free" alone is NEVER clarification — it IS buy_x_get_y with admin_selection_required for Y.
 '''
 """
 
 
-INTENT_CLASSIFICATION_FEATURE_TRIGGER_PROMPT="""  
-You Are intent Classifcation and Trigger detector Assistant for a shoppify App. 
-You need to do the following :
-1. classify the intent from the given intents mentioned as INTENTS in the triple encoded backticks
-2. Detect triggers from the given intents mentioned as TRIGGERS in the triple encoded backticks
-3. return the results in a JSON format 
-4. if message from the user is unfinished, the reward product/collection is not specified, or the trigger is missing — return "clarification" as intent 
-**IMPORTANT**
-for tiered_discount intents the trigger objects will be in a list called 'tiers'
-tiered_discount Example :
-'tiers':['trigger':{
-    "type": "cart_subtotal",
-    "operator": ">=",(valid operator)
-    "value": 100,(integer)    
-  }...]
-free_gift and buy_x_get_y can also have multiple tiers (e.g. spend $50 get 1 free item, spend $100 get 2) — use 'tiers' list for these too.
+INTENT_CLASSIFICATION_FEATURE_TRIGGER_PROMPT = """
+You are an Intent Classification and Trigger Detector Assistant for a Shopify App.
+You need to do the following:
+1. Classify the intent from the INTENTS list below.
+2. Detect triggers from the TRIGGERS list below.
+3. Return results in strict JSON format.
+4. If the message is unfinished, the reward product/collection is not specified, or the trigger is missing — return "clarification" as intent.
+
+**IMPORTANT — TRIGGER SCHEMA**
+Every trigger object must follow this exact structure:
+{
+  "type": "<trigger_type>",         // one of the TRIGGERS below
+  "operator": ">=",                  // valid operators: >=, >, <=, <, =
+  "value": <positive number>,
+  "currency": "USD",                 // REQUIRED when type ends with _subtotal (use ISO-4217 code)
+  "scope": {                         // REQUIRED when type starts with collection_ or product_
+    "type": "collection",            // "collection" or "product"
+    "collectionTitles": ["Skincare"]  // list of titles OR the string "all" when user says 'all'
+  }
+}
+
+All intents (free_gift, buy_x_get_y, tiered_discount) MUST use a 'tiers' list:
+"tiers": [ { "trigger": { ... }, "reward": { ... } }, ... ]
+
 '''
-INTENTS: 
-1. free_gift 
+INTENTS:
+1. free_gift
 2. buy_x_get_y
 3. tiered_discount
 4. unsupported
@@ -68,55 +79,136 @@ INTENTS:
 TRIGGERS:
 cart_quantity
 cart_subtotal
-collection_quantity
-collection_subtotal
-product_quantity
-product_subtotal 
+collection_quantity   -> REQUIRES scope.type="collection" + scope.collectionTitles
+collection_subtotal   -> REQUIRES scope.type="collection" + scope.collectionTitles + currency
+product_quantity      -> REQUIRES scope.type="product"    + scope.collectionTitles (product names)
+product_subtotal      -> REQUIRES scope.type="product"    + scope.collectionTitles (product names) + currency
 '''
 
 EXAMPLES
 '''
-user_query : if a user spends more than 100 dollars on a order,the user will get a free gift
-output:{
+user_query: if a user spends more than 100 dollars on an order, the user will get a free gift
+output:
+{
   "feature": "free_gift",
-  "trigger": {
-    "type": "cart_subtotal",
-    "operator": ">=",
-    "value": 100,    
-  }
+  "tiers": [
+    {
+      "trigger": { "type": "cart_subtotal", "operator": ">=", "value": 100, "currency": "USD" },
+      "reward": { "type": "free_gift", "value": "free_item" }
+    }
+  ]
 }
-user_query : I need buy X get Y but I haven't decided which product Y is yet
-output:{
-  "feature": "clarification",
-  "missing": "reward_product",
-  "Message: :"appropriate messsage to be handled by the user"
+
+user_query: Buy 2 or more items from Skincare and get a free sample
+output:
+{
+  "feature": "free_gift",
+  "tiers": [
+    {
+      "trigger": {
+        "type": "collection_quantity",
+        "operator": ">=",
+        "value": 2,
+        "scope": { "type": "collection", "collectionTitles": ["Skincare"] }
+      },
+      "reward": { "type": "free_gift", "value": "free_sample" }
+    }
+  ]
 }
-free_gift:
-    “Spend $100 and get a free gift”,"free_gift",
-    “Buy 2 from Skincare and get a sample free”,"free_gift",
-    “Spend $50 get 1 free item, spend $100 get 2 free items","free_gift"  (multi-tier, all rewards are free items)
-buy_x_get_y:
-    “Buy 2 shirts and get 1 cap free”,"buy_x_get_y",
-    “Buy products from Collection A and get 50% off Collection B","buy_x_get_y",
-    “Buy 3 get 25% off, buy 5 get 40% off on the same product","buy_x_get_y"  (multi-tier, reward is always a discount on specific Y)
-tiered_discount:
-    “Buy 2 get 10%, buy 4 get 20%”,"tiered_discount"
-    “Spend $100 get 10% off, spend $200 get 20% off”,"tiered_discount"
-    “VIP customers spend $150 get 15%, spend $300 get 25%”,"tiered_discount"
-clarification:
-    “I want buy X get Y but haven't decided on the product”,"clarification",
-    “Give a discount to customers who buy a lot”,"clarification"  (no trigger, reward, or target product specified)
+
+user_query: Buy 2 or more items from all collections and get a free gift
+Note: set scope.collectionTitles to the string "all" (not a list) when the user says 'all'.
+
+user_query: I need buy X get Y but I haven't decided which product Y is yet
+output: { "feature": "clarification", "missing": "reward_product", "message": "Please specify the product or collection for the Y reward." }
+
+free_gift:       "Spend $100 and get a free gift" -> cart_subtotal, no scope
+                 "Buy 2 from Skincare get a sample" -> collection_quantity + scope=["Skincare"]
+                 "Spend $50 get 1 free, spend $100 get 2 free" -> multi-tier free_gift
+buy_x_get_y:     "Buy 2 shirts get 1 cap free" -> product_quantity + scope=["shirts"]
+                 "Buy from Collection A get 50% off Collection B" -> collection_quantity + scope
+tiered_discount: "Buy 2 get 10%, buy 4 get 20%" -> cart_quantity tiers
+                 "Spend $100 get 10% off, spend $200 get 20% off" -> cart_subtotal tiers + currency
+clarification:   "I want buy X get Y but haven't decided on the product" -> clarification
+                 "Give a discount to customers who buy a lot" -> clarification
 '''
 
 """
 
 TRIGGER_ONLY_CLASSIFICATION_PROMPT = """
-You Trigger detector Assistant for a shoppify App. 
-You need to do the following :
-1. Detect triggers from the given intents mentioned as TRIGGERS in the triple encoded backticks
-2. return the results in a JSON format 
+You are a Trigger Detector Assistant for a Shopify App.
+You need to do the following:
+1. Detect triggers from the TRIGGERS list below.
+2. Select the correct reward structure based on the intent and reward type.
+3. Return results in strict JSON format.
+
+**TRIGGER SCHEMA — every trigger object must follow this structure:**
+{
+  "type": "<trigger_type>",         // one of the TRIGGERS below
+  "operator": ">=",                  // valid operators: >=, >, <=, <, =
+  "value": <positive number>,
+  "currency": "USD",                 // REQUIRED when type ends with _subtotal (ISO-4217 code)
+  "scope": {                         // REQUIRED when type starts with collection_ or product_
+    "type": "collection",            // "collection" or "product"
+    "collectionTitles": ["Skincare"]  // list of titles OR the string "all" when user says 'all'
+  }
+}
+
+**REWARD SCHEMA — choose the correct structure based on intent:**
+
+A. free_gift intent → use:
+   {
+     "type": "free_gift",
+     "gift_product": {
+       "status": "admin_selection_required",   // use "resolved" only if product ID is known
+       "query": "<user-described gift item>",
+       "resolved_id": null                     // null unless actually resolved
+     },
+     "quantity": <int>                         // number of free gift items (default 1)
+   }
+
+B. buy_x_get_y intent — four sub-types:
+   B1. Percentage off Y (Y is named by user):
+   {
+     "type": "percentage_off_y",
+     "value": <0–99>,
+     "y_target": {
+       "type": "product",
+       "status": "admin_selection_required",   // use "resolved" only if product ID is known
+       "query": "<Y product name from user>",
+       "resolved_id": null
+     },
+     "quantity": 1
+   }
+   B2. Fixed amount off Y:
+   {
+     "type": "fixed_amount_off_y",
+     "value": <positive number>,
+     "y_target": { "type": "product", "status": "admin_selection_required", "query": "<Y product>", "resolved_id": null },
+     "quantity": 1
+   }
+   B3. Free Y where Y is NAMED by user (100% off named Y):
+   {
+     "type": "percentage_off_y",
+     "value": 100,
+     "y_target": { "type": "product", "status": "admin_selection_required", "query": "<Y product named by user>", "resolved_id": null },
+     "quantity": 1
+   }
+   B4. Free Y where Y is NOT named / admin selects which product gets the discount:
+   Use this when the user says "buy X get Y free", "buy X get something free", or wants to
+   CONTROL which product gets the discount (admin-selected free gift on a different product).
+   {
+     "type": "free_gift",
+     "gift_product": {
+       "status": "admin_selection_required",
+       "query": "free gift",
+       "resolved_id": null
+     },
+     "quantity": 1
+   }
+
 '''
-INTENTS: 
+INTENTS:
 1. free_gift
 2. buy_x_get_y
 3. tiered_discount
@@ -126,32 +218,144 @@ INTENTS:
 TRIGGERS:
 cart_quantity
 cart_subtotal
-collection_quantity
-collection_subtotal
-product_quantity
-product_subtotal 
+collection_quantity   -> REQUIRES scope.type="collection" + scope.collectionTitles
+collection_subtotal   -> REQUIRES scope.type="collection" + scope.collectionTitles + currency
+product_quantity      -> REQUIRES scope.type="product"    + scope.collectionTitles (product names)
+product_subtotal      -> REQUIRES scope.type="product"    + scope.collectionTitles (product names) + currency
 '''
 
 EXAMPLES
 '''
-user_query : if a user spends more than 100 dollars on a order,the user will get a free gift
-Output Fromat:
+user_query: if a user spends more than 100 dollars on an order, the user will get a free gift
+Output Format:
 {
   "feature": "free_gift",
-  tiers:[
-  {
-    "trigger": {
-    "type": "cart_subtotal",
-    "operator": ">=",
-    "value": 100,    
-    },
-    "reward": {
-    "type": "free_gift",
-    "value": "free_gift"
+  "tiers": [
+    {
+      "trigger": { "type": "cart_subtotal", "operator": ">=", "value": 100, "currency": "USD" },
+      "reward": {
+        "type": "free_gift",
+        "gift_product": { "status": "admin_selection_required", "query": "free gift", "resolved_id": null },
+        "quantity": 1
+      }
     }
-  }
   ]
 }
+
+user_query: Buy 2 shirts and get 1 cap free
+Output Format:
+{
+  "feature": "buy_x_get_y",
+  "tiers": [
+    {
+      "trigger": {
+        "type": "product_quantity",
+        "operator": ">=",
+        "value": 2,
+        "scope": { "type": "product", "collectionTitles": ["shirts"] }
+      },
+      "reward": {
+        "type": "percentage_off_y",
+        "value": 100,
+        "y_target": { "type": "product", "status": "admin_selection_required", "query": "cap", "resolved_id": null },
+        "quantity": 1
+      }
+    }
+  ]
+}
+
+user_query: Buy X get Y free (Y not named — admin will select which product gets the discount)
+Output Format:
+{
+  "feature": "buy_x_get_y",
+  "tiers": [
+    {
+      "trigger": {
+        "type": "product_quantity",
+        "operator": ">=",
+        "value": 1,
+        "scope": { "type": "product", "collectionTitles": ["<X product from user>"] }
+      },
+      "reward": {
+        "type": "free_gift",
+        "gift_product": {
+          "status": "admin_selection_required",
+          "query": "free gift",
+          "resolved_id": null
+        },
+        "quantity": 1
+      }
+    }
+  ]
+}
+
+user_query: Buy 2 shirts and get 50% off a cap
+Output Format:
+{
+  "feature": "buy_x_get_y",
+  "tiers": [
+    {
+      "trigger": {
+        "type": "product_quantity",
+        "operator": ">=",
+        "value": 2,
+        "scope": { "type": "product", "collectionTitles": ["shirts"] }
+      },
+      "reward": {
+        "type": "percentage_off_y",
+        "value": 50,
+        "y_target": { "type": "product", "status": "admin_selection_required", "query": "cap", "resolved_id": null },
+        "quantity": 1
+      }
+    }
+  ]
+}
+
+user_query: Buy 2 shirts and get $10 off a cap
+Output Format:
+{
+  "feature": "buy_x_get_y",
+  "tiers": [
+    {
+      "trigger": {
+        "type": "product_quantity",
+        "operator": ">=",
+        "value": 2,
+        "scope": { "type": "product", "collectionTitles": ["shirts"] }
+      },
+      "reward": {
+        "type": "fixed_amount_off_y",
+        "value": 10,
+        "y_target": { "type": "product", "status": "admin_selection_required", "query": "cap", "resolved_id": null },
+        "quantity": 1
+      }
+    }
+  ]
+}
+
+user_query: Buy 2 or more from Skincare collection and get a free sample
+Output Format:
+{
+  "feature": "free_gift",
+  "tiers": [
+    {
+      "trigger": {
+        "type": "collection_quantity",
+        "operator": ">=",
+        "value": 2,
+        "scope": { "type": "collection", "collectionTitles": ["Skincare"] }
+      },
+      "reward": {
+        "type": "free_gift",
+        "gift_product": { "status": "admin_selection_required", "query": "free sample", "resolved_id": null },
+        "quantity": 1
+      }
+    }
+  ]
+}
+
+user_query: Buy 2 or more items from all collections and get 10% off
+Note: set scope.collectionTitles to the string "all" when the user says all collections/products.
 '''
 
 """
@@ -162,26 +366,38 @@ VALIDATION_CLASSIFICATION_PROMPT = """
 You are a strict intent classification validator for a Shopify promotions app.
 
 VALID INTENTS (use exactly as written):
-1.free_gift : spend/quantity threshold → reward is a free physical item (always 100% off); can have multiple tiers where each tier adds more free items
-2.buy_x_get_y : buy X → get a VARIABLE DISCOUNT (%, fixed $, fixed price) on a specific Y item/collection; can have multiple tiers with escalating discounts on the same Y
-3.tiered_discount: TWO OR MORE spend/quantity tiers each giving a different DISCOUNT % or fixed $ off — reward is never a free item
+1.free_gift : spend/quantity threshold → reward is a free physical item (always 100% off), auto-added to cart; NO separate X product trigger
+2.buy_x_get_y : buy X product/collection → get a discount OR a free Y item on a DIFFERENT product/collection; the Y reward can be admin-selected
+3.tiered_discount: TWO OR MORE spend/quantity tiers each giving a different DISCOUNT % or fixed $ off — reward is NEVER a free item, NEVER a Y target
 4.unsupported : anything else — vague, impossible (negative spend, 0-spend), free-shipping, loyalty points, referrals, analytics, flash-sale, subscription, coupon codes, or not enough info
-5.clarification : message is unfinished, trigger is missing, OR the reward product/collection is not specified (e.g. "buy X get Y free" without naming Y)
+5.clarification : message is truly unfinished — BOTH the trigger AND the reward are absent or completely ambiguous
 
 KEY DISAMBIGUATION RULES:
 1.free_gift vs buy_x_get_y
-    -free_gift = reward is always a FREE physical product (100% off), auto-added to cart; NO discount code, NO usage limits
-    -buy_x_get_y = reward is a VARIABLE DISCOUNT (%, fixed $, or fixed price) on a specific Y; uses CODE_APP_DISCOUNT; product tag/type rules supported
-    -Key signal: free item reward → free_gift; percentage/fixed/price-off reward → buy_x_get_y
-2.Multi-tier free items = free_gift (NOT tiered_discount)
+    -free_gift = spend/quantity threshold → reward is a free physical item; NO distinct X→Y product relationship
+    -buy_x_get_y = buy X (specific product/collection) → get a discount OR a free Y item on a DIFFERENT product/collection
+    -Key signal: is there a distinct X product/collection being purchased that triggers a discount on a DIFFERENT Y? → buy_x_get_y
+2."buy X get Y free" WITHOUT naming Y → buy_x_get_y (admin will select Y; reward status = admin_selection_required)
+    -CRITICAL: "buy X get Y free", "buy X get Y", "buy X and get something free" are ALL buy_x_get_y — NOT clarification
+    -The Y product does NOT have to be named in the message for it to be buy_x_get_y
+    -Only return clarification if BOTH the trigger (X) AND reward concept are completely missing
+3.Multi-tier free items = free_gift (NOT tiered_discount)
     -"Spend $50 get 1 free item, spend $100 get 2 free items" → free_gift
     -tiered_discount is ONLY for escalating % or $ discount tiers, never free-item tiers
-3.Multi-tier buy_x_get_y = buy_x_get_y (NOT tiered_discount)
+4.Multi-tier buy_x_get_y = buy_x_get_y (NOT tiered_discount)
     -"Buy 3 get 25% off, buy 5 get 40% off on product Y" → buy_x_get_y
-4.clarification when Y product/collection is unspecified
-    -"I want buy X get Y free but haven't decided which product" → clarification
 5."Spend $X get Y% off [specific product/collection]" = buy_x_get_y
 6.Impossible conditions (negative spend, 0 spend, >100% off) = unsupported
+7.tiered_discount vs buy_x_get_y when trigger is quantity-based
+    -tiered_discount = escalating % or $ off on the SAME items being purchased; NO separate Y target
+    -buy_x_get_y = % or $ off OR free item on a DIFFERENT product/collection (Y) distinct from what triggered
+    -"Buy 2 get 15% OFF & Buy 3 get 25% OFF from all collection" → tiered_discount (same-cart discount, no Y)
+    -"Buy 2 shirts get 25% off a cap" → buy_x_get_y (cap is a distinct Y)
+    -"Buy 2 get 10%, buy 4 get 20%" with no Y → tiered_discount
+    -RULE: No separately named Y that differs from purchased items → tiered_discount, NOT buy_x_get_y
+8.clarification — ONLY when BOTH trigger AND reward concept are completely absent
+    -"Give a discount to customers who buy a lot" → clarification (no threshold, no reward type)
+    -"buy X get Y free" → buy_x_get_y (NOT clarification; admin selects Y)
 INPUT FORMAT:
 A JSON array of objects:
 
@@ -198,55 +414,143 @@ Validate every item. Do not skip any.
 """
 
 TIEREED_DISCOUNT_TRIGGER_ONLY_CLASSIFICATION_PROMPT = """
-You are a Trigger detector Assistant for a shoppify App. 
-You need to do the following :
-1. Detect triggers from the given intents mentioned as TRIGGERS in the triple encoded backticks
-2. return the results in a JSON format 
+You are a Trigger Detector Assistant for a Shopify App.
+You need to do the following:
+1. Detect triggers from the TRIGGERS list below.
+2. Select the correct reward structure based on the reward type described by the user.
+3. Return results in strict JSON format.
+
+**TRIGGER SCHEMA — every trigger object must follow this structure:**
+{
+  "type": "<trigger_type>",         // one of the TRIGGERS below
+  "operator": ">=",                  // valid operators: >=, >, <=, <, =
+  "value": <positive number>,
+  "currency": "USD",                 // REQUIRED when type ends with _subtotal (ISO-4217 code)
+  "scope": {                         // REQUIRED when type starts with collection_ or product_
+    "type": "collection",            // "collection" or "product"
+    "collectionTitles": ["Skincare"]  // list of titles OR the string "all" when user says 'all'
+  }
+}
+
+**REWARD SCHEMA for tiered_discount — two supported sub-types:**
+
+A. Percentage off (e.g. "10% off", "20% discount"):
+   { "type": "percentage_off", "value": <0–100> }
+
+B. Fixed amount off (e.g. "$5 off", "€10 off", "save £20"):
+   { "type": "fixed_amount_off", "value": <positive number> }
+
+Rule: inspect the reward description in the user query.
+- If it mentions a percentage (%, percent, off%) → use percentage_off
+- If it mentions a fixed currency amount ($, €, £, ₹, AUD, save X dollars) → use fixed_amount_off
 
 '''
 TRIGGERS:
 cart_quantity
 cart_subtotal
-collection_quantity
-collection_subtotal
-product_quantity
-product_subtotal 
+collection_quantity   -> REQUIRES scope.type="collection" + scope.collectionTitles
+collection_subtotal   -> REQUIRES scope.type="collection" + scope.collectionTitles + currency
+product_quantity      -> REQUIRES scope.type="product"    + scope.collectionTitles (product names)
+product_subtotal      -> REQUIRES scope.type="product"    + scope.collectionTitles (product names) + currency
 '''
 
 EXAMPLES
 '''
-user_query : give 10 percent discount if the user spends more than 100 dollars on a order and 20percent off if a user spends 200$
+user_query: give 10% off if the user spends more than $100 and 20% off if a user spends $200
 output:
 {
-"tiers": [
+  "tiers": [
+    {
+      "trigger": { "type": "cart_subtotal", "operator": ">=", "value": 100, "currency": "USD" },
+      "reward": { "type": "percentage_off", "value": 10 }
+    },
+    {
+      "trigger": { "type": "cart_subtotal", "operator": ">=", "value": 200, "currency": "USD" },
+      "reward": { "type": "percentage_off", "value": 20 }
+    }
+  ]
+}
+
+user_query: spend $100 save $5, spend $200 save $15, spend $300 save $30
+output:
+{
+  "tiers": [
+    {
+      "trigger": { "type": "cart_subtotal", "operator": ">=", "value": 100, "currency": "USD" },
+      "reward": { "type": "fixed_amount_off", "value": 5 }
+    },
+    {
+      "trigger": { "type": "cart_subtotal", "operator": ">=", "value": 200, "currency": "USD" },
+      "reward": { "type": "fixed_amount_off", "value": 15 }
+    },
+    {
+      "trigger": { "type": "cart_subtotal", "operator": ">=", "value": 300, "currency": "USD" },
+      "reward": { "type": "fixed_amount_off", "value": 30 }
+    }
+  ]
+}
+
+user_query: buy 2 items from Skincare get 10% off, buy 4 items from Skincare get 20% off
+output:
+{
+  "tiers": [
     {
       "trigger": {
-        "type": "cart_subtotal",
+        "type": "collection_quantity",
         "operator": ">=",
-        "value": 100,
-        "currency": "USD"
+        "value": 2,
+        "scope": { "type": "collection", "collectionTitles": ["Skincare"] }
       },
-      "reward": {
-        "type": "percentage_off",
-        "value": 10
-      }
+      "reward": { "type": "percentage_off", "value": 10 }
     },
     {
       "trigger": {
-        "type": "cart_subtotal",
+        "type": "collection_quantity",
         "operator": ">=",
-        "value": 200,
-        "currency": "USD"
+        "value": 4,
+        "scope": { "type": "collection", "collectionTitles": ["Skincare"] }
       },
-      "reward": {
-        "type": "percentage_off",
-        "value": 20
-      }
+      "reward": { "type": "percentage_off", "value": 20 }
+    }
+  ]
+}
+
+user_query: buy 3 items get $5 off, buy 6 items get $12 off
+output:
+{
+  "tiers": [
+    {
+      "trigger": { "type": "cart_quantity", "operator": ">=", "value": 3 },
+      "reward": { "type": "fixed_amount_off", "value": 5 }
+    },
+    {
+      "trigger": { "type": "cart_quantity", "operator": ">=", "value": 6 },
+      "reward": { "type": "fixed_amount_off", "value": 12 }
+    }
+  ]
+}
+
+user_query: buy 2 items from any collection get 10% off
+Note: set scope.collectionTitles to the string "all" when the user says all collections/products.
+
+user_query: Buy 2 extra 15% OFF & Buy 3 extra 25% OFF from all collections
+output:
+{
+  "tiers": [
+    {
+      "trigger": { "type": "cart_quantity", "operator": ">=", "value": 2 },
+      "reward": { "type": "percentage_off", "value": 15 }
+    },
+    {
+      "trigger": { "type": "cart_quantity", "operator": ">=", "value": 3 },
+      "reward": { "type": "percentage_off", "value": 25 }
     }
   ]
 }
 '''
 """
+
+
 
 DATA_GENERATION_SYSTEM_PROMPT = """
 You are a training-data engineer for a Shopify e-commerce intent classifier.

@@ -1,9 +1,12 @@
 import json
 from langsmith import traceable
+from pydantic import ValidationError
 from app.llm import llm
+from app.models import TierModel, RewardModel
 from app.pormpts import (
     INTENT_CLASSIFICATION_PROMPT,
     TRIGGER_ONLY_CLASSIFICATION_PROMPT,
+    TIEREED_DISCOUNT_TRIGGER_ONLY_CLASSIFICATION_PROMPT,
     VALIDATION_CLASSIFICATION_PROMPT,
 )
 from app.state import PromotionState
@@ -129,11 +132,97 @@ def clarification_node(state: PromotionState) -> PromotionState:
 
 @traceable(name="trigger_detection_node", run_type="chain")
 def trigger_detection_node(state: PromotionState) -> PromotionState:
-    # Pass history so trigger LLM knows the full conversation context
-    raw = llm(TRIGGER_ONLY_CLASSIFICATION_PROMPT, state["message"], history=state.get("history"))
+    # Use the intent-specific prompt so tiered_discount gets the correct
+    # reward schema (percentage_off / fixed_amount_off) instead of the
+    # buy_x_get_y schema (percentage_off_y with y_target) which would fail
+    # RewardModel validation for tiered_discount intents.
+    feature = state.get("feature", "")
+    if feature == "tiered_discount":
+        prompt = TIEREED_DISCOUNT_TRIGGER_ONLY_CLASSIFICATION_PROMPT
+    else:
+        prompt = TRIGGER_ONLY_CLASSIFICATION_PROMPT
+
+    raw = llm(prompt, state["message"], history=state.get("history"))
     result = json.loads(raw)
     state["tiers"] = result.get("tiers", [])
     return state
+
+
+@traceable(name="schema_validation_node", run_type="chain")
+def schema_validation_node(state: PromotionState) -> PromotionState:
+    """Combined schema validation node — runs after trigger_detection_node.
+
+    Validates BOTH the trigger and reward objects inside every tier in one pass:
+
+    Trigger checks (via TierModel / TriggerModel):
+    - trigger.type is a valid TriggerType
+    - trigger.operator is a valid TriggerOperator
+    - trigger.value > 0
+    - trigger.currency present when type is *_subtotal
+    - trigger.scope present (and valid) when type is collection_* or product_*
+
+    Reward checks (via RewardModel):
+    - reward.type is a valid RewardType
+    - reward.value present for percentage_off / fixed_amount_off / free_gift_product
+    - reward.y_target + reward.quantity present for *_off_y types
+    - reward.gift_product + reward.quantity present for free_gift type
+
+    On any failure: state["status"] = "schema_error", all errors collected in
+    state["blockers"] and failed tier indices in state["missing_fields"].
+    On success: blockers and missing_fields are cleared.
+    """
+    tiers: list = state.get("tiers") or []
+    schema_blockers = []
+    failed_indices = set()
+
+    for idx, tier in enumerate(tiers):
+        # ── Trigger validation ──────────────────────────────────────────────
+        try:
+            TierModel.model_validate(tier)
+        except ValidationError as exc:
+            failed_indices.add(idx)
+            for error in exc.errors():
+                # loc already starts with 'trigger' (e.g. ['trigger', 'currency'])
+                field_path = " -> ".join(str(loc) for loc in error["loc"])
+                schema_blockers.append(
+                    {
+                        "field": f"tiers[{idx}].{field_path}",
+                        "reason": error["msg"],
+                    }
+                )
+
+        # ── Reward validation ───────────────────────────────────────────────
+        raw_reward = tier.get("reward") if isinstance(tier, dict) else getattr(tier, "reward", None)
+        if raw_reward is not None:
+            try:
+                RewardModel.model_validate(
+                    raw_reward if isinstance(raw_reward, dict) else raw_reward.model_dump()
+                )
+            except ValidationError as exc:
+                failed_indices.add(idx)
+                for error in exc.errors():
+                    field_path = " -> ".join(str(loc) for loc in error["loc"])
+                    schema_blockers.append(
+                        {
+                            "field": f"tiers[{idx}].reward.{field_path}",
+                            "reason": error["msg"],
+                        }
+                    )
+
+    if schema_blockers:
+        state["status"] = "schema_error"
+        state["blockers"] = schema_blockers
+        state["missing_fields"] = [
+            f"tiers[{i}]" for i in sorted(failed_indices)
+        ]
+    else:
+        state["blockers"] = []
+        state["missing_fields"] = []
+
+    return state
+
+
+
 
 
 @traceable(name="state_assembly_node", run_type="chain")

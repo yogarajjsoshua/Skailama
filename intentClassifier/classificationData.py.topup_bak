@@ -1,0 +1,71 @@
+
+
+import csv
+import random
+import os
+from pathlib import Path
+
+random.seed(42)
+
+LABELS = {
+    "free_gift": 0,
+    "buy_x_get_y": 1,
+    "tiered_discount": 2,
+    "unsupported": 3,
+    "clarification": 4,
+}
+
+GENERATED_CLEAN = 
+
+def build_dataset():
+    all_examples = GENERATED_CLEAN
+    random.shuffle(all_examples)
+
+    # Convert label strings to ints
+    data = [(text, label, LABELS[label]) for text, label in all_examples]
+
+    total = len(data)
+    train_end = int(total * 0.70)
+    val_end   = int(total * 0.85)
+
+    train = data[:train_end]
+    val   = data[train_end:val_end]
+    test  = data[val_end:]
+
+    return train, val, test
+
+
+def write_csv(rows, path):
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["text", "label_str", "label"])
+        writer.writerows(rows)
+
+
+def main():
+    train, val, test = build_dataset()
+
+    write_csv(train, "data/train.csv")
+    write_csv(val,   "data/val.csv")
+    write_csv(test,  "data/test.csv")
+
+    print("✅ Dataset generated")
+    print(f"   Train : {len(train)} examples")
+    print(f"   Val   : {len(val)} examples")
+    print(f"   Test  : {len(test)} examples")
+    print(f"   Total : {len(train)+len(val)+len(test)} examples")
+    print()
+
+    # Class distribution in training set
+    from collections import Counter
+    dist = Counter(row[1] for row in train)
+    print("📊 Training class distribution:")
+    for label, count in sorted(dist.items()):
+        print(f"   {label:<20} {count}")
+
+
+if __name__ == "__main__":
+    main()
+
+
